@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <link rel="icon" href="data:," />
+    <title>Cozy Gun Restoration</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        overscroll-behavior: none;
+        background: #0d0a08;
+        font-family: 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      #app {
+        display: block;
+        width: 100%;
+        height: 100%;
+        touch-action: none; /* the game owns all gestures — no browser pan/zoom */
+      }
+
+      /* ---- HUD: tools + progress (locked in pitch: "HUD: tools + progresso") ---- */
+      .hud-toolbar {
+        position: fixed;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 10;
+      }
+      .hud-tool {
+        width: 54px;
+        height: 54px;
+        border-radius: 12px;
+        border: 1px solid rgba(214, 186, 140, 0.18);
+        background: rgba(24, 18, 13, 0.72);
+        backdrop-filter: blur(4px);
+        color: #cbb894;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
+      }
+      .hud-tool:hover {
+        border-color: rgba(214, 186, 140, 0.45);
+        transform: scale(1.04);
+      }
+      .hud-tool svg {
+        width: 24px;
+        height: 24px;
+        display: block;
+      }
+      .hud-tool.active {
+        border-color: rgba(230, 196, 138, 0.9);
+        background: rgba(52, 39, 25, 0.85);
+        box-shadow: 0 0 18px rgba(230, 178, 96, 0.25);
+      }
+      .hud-tool span.label {
+        position: absolute;
+        left: 62px;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(214, 186, 140, 0.75);
+        opacity: 0;
+        transition: opacity 0.15s ease;
+        pointer-events: none;
+        white-space: nowrap;
+      }
+      .hud-tool:hover span.label {
+        opacity: 1;
+      }
+
+      .hud-progress {
+        position: fixed;
+        top: 20px;
+        right: 22px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(214, 186, 140, 0.18);
+        background: rgba(24, 18, 13, 0.72);
+        backdrop-filter: blur(4px);
+        z-index: 10;
+      }
+      .hud-progress .pct {
+        color: #e8d5ac;
+        font-size: 15px;
+        font-weight: 600;
+        min-width: 42px;
+        text-align: right;
+      }
+      .hud-progress .track {
+        width: 160px;
+        height: 6px;
+        border-radius: 999px;
+        background: rgba(214, 186, 140, 0.12);
+        overflow: hidden;
+      }
+      .hud-progress .fill {
+        height: 100%;
+        width: 0%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #a8823f, #e6c47a);
+        transition: width 0.2s ease;
+      }
+
+      .hud-toolbar.dimmed .hud-tool {
+        opacity: 0.25;
+        pointer-events: none;
+        filter: grayscale(0.7);
+      }
+      .hud-toolbar.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .hud-progress.dimmed {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .hud-toolbar,
+      .hud-progress {
+        transition: opacity 0.5s ease;
+      }
+
+      .hud-caption {
+        position: fixed;
+        bottom: 7%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 70%;
+        padding: 8px 18px;
+        border-radius: 8px;
+        background: rgba(12, 9, 7, 0.55);
+        color: #e9dcc0;
+        font-size: 17px;
+        font-style: italic;
+        letter-spacing: 0.01em;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        pointer-events: none;
+        z-index: 10;
+      }
+      .hud-caption.visible {
+        opacity: 1;
+      }
+
+      .hud-tool .key {
+        position: absolute;
+        top: 3px;
+        right: 5px;
+        font-size: 9px;
+        font-weight: 700;
+        color: rgba(214, 186, 140, 0.55);
+        pointer-events: none;
+      }
+      .hud-tool {
+        position: relative;
+      }
+
+      .brush-ring {
+        position: fixed;
+        top: 0;
+        left: 0;
+        border: 1.5px solid rgba(232, 205, 150, 0.85);
+        border-radius: 50%;
+        box-shadow: 0 0 6px rgba(20, 12, 6, 0.5) inset, 0 0 4px rgba(20, 12, 6, 0.4);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.15s ease;
+        z-index: 20;
+        mix-blend-mode: screen;
+      }
+      .brush-dot {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: rgba(232, 205, 150, 0.9);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.15s ease;
+        z-index: 20;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-BX6gxJvW.js"></script>
+  </head>
+  <body>
+    <canvas id="app"></canvas>
+  </body>
+</html>

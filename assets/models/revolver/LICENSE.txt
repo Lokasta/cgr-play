@@ -1,0 +1,16 @@
+revolver.glb
+============
+
+Source:  "Old Revolver" by Lucian Pavel
+         https://opengameart.org/content/old-revolver
+Original download: https://opengameart.org/sites/default/files/Old%20Revolver.zip
+License: CC0 1.0 (public domain dedication) — no attribution required.
+         License stated on the OpenGameArt asset page: "CC0".
+
+Original format: FBX + 2K textures (diffuse, normal, specular).
+Converted to GLB with Blender 5.2 (Principled BSDF: base color + normal map;
+roughness derived as inverted specular map). Retrieved 2026-08-26.
+
+Contents: two nodes — "Revolver" (main gun) and "SpareCylinder"
+(a loaded spare cylinder prop, split out so it can be hidden or
+positioned independently). ~4,042 triangles total.
