@@ -526,6 +526,37 @@
       }
       .tune-panel.open { display: block; }
       .tune-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 14px; }
+      .tune-tabs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px;
+        padding: 3px;
+        border: 1px solid rgba(214, 186, 140, 0.16);
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.22);
+      }
+      .tune-tab {
+        border: 0;
+        border-radius: 7px;
+        padding: 7px 8px;
+        background: transparent;
+        color: rgba(216, 196, 154, 0.62);
+        font: inherit;
+        font-weight: 650;
+        cursor: pointer;
+      }
+      .tune-tab.active {
+        background: linear-gradient(180deg, rgba(133, 94, 48, 0.72), rgba(75, 52, 30, 0.8));
+        color: #f2dfb8;
+        box-shadow: inset 0 0 0 1px rgba(239, 202, 141, 0.2);
+      }
+      .tune-tab:focus-visible { outline: 2px solid #dcb975; outline-offset: 2px; }
+      .tune-hint {
+        margin: 8px 2px 2px;
+        color: rgba(216, 196, 154, 0.58);
+        font-size: 10px;
+        line-height: 1.4;
+      }
       .tune-section h4 {
         margin: 12px 0 6px;
         font-size: 11px;
@@ -571,7 +602,7 @@
       .tune-phase-row { display: flex; gap: 4px; flex-wrap: wrap; }
       .tune-phase-row .tune-btn { padding: 4px 8px; font-size: 11px; }
     </style>
-    <script type="module" crossorigin src="./assets/index-CYaHYZI2.js"></script>
+    <script type="module" crossorigin src="./assets/index-BifpBq6W.js"></script>
   </head>
   <body>
     <canvas id="app"></canvas>

@@ -1,0 +1,7 @@
+Model: "GameReady: Colt Python Revolver"
+Author: HYQQM (Sketchfab)
+Source: https://sketchfab.com/3d-models/gameready-colt-python-revolver-3def6e3980e64dfa832f298004ce1b94
+License: CC Attribution 4.0 (CC-BY 4.0) — https://creativecommons.org/licenses/by/4.0/
+Required credit line: "Colt Python Revolver" by HYQQM, licensed under CC-BY 4.0.
+Modifications: textures resized to 2K and converted to WebP (gltf-transform);
+no geometry changes. Downloaded by the project owner on 2026-08-26.
