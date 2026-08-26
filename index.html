@@ -497,6 +497,12 @@
           max-width: calc(100vw - 30px);
         }
       }
+      @media (hover: none) {
+        .hud-tool:not(.active) span.label {
+          opacity: 0;
+          transform: translate(-50%, 4px);
+        }
+      }
       @keyframes progress-bump-mobile {
         0% { transform: translateX(-50%) scale(1); }
         45% { transform: translateX(-50%) scale(1.025); }
@@ -641,7 +647,7 @@
         transition: opacity 0.12s ease;
       }
     </style>
-    <script type="module" crossorigin src="./assets/index-m-8sKdSr.js"></script>
+    <script type="module" crossorigin src="./assets/index-fGvc9OVu.js"></script>
   </head>
   <body>
     <canvas id="app"></canvas>
