@@ -1,0 +1,11 @@
+Asset: Cleaning Pads
+Creator: MilkAndBanana
+Source: https://poly.pizza/m/MtaaEWkLbK
+Acquired: 2026-08-26
+License: Creative Commons Zero 1.0 Universal (CC0 1.0)
+License URL: https://creativecommons.org/publicdomain/zero/1.0/
+Attribution: not required; source recorded for provenance.
+Downloaded file: cloth.glb
+Direct source: https://static.poly.pizza/ce86af76-1070-48cb-a2d7-7a894100f125.glb
+SHA-256: 957e5f1d91ee434e947797eec2525be5b88a1df251af9800936d290dea873d3f
+Local edits: none at acquisition; runtime scale/material normalization is permitted by the license.

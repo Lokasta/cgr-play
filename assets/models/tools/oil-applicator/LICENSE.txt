@@ -1,0 +1,11 @@
+Asset: Glue
+Creator: Zsky
+Source: https://poly.pizza/m/WJZd92bzHC
+Acquired: 2026-08-26
+License: Creative Commons Attribution 3.0 (CC BY 3.0)
+License URL: https://creativecommons.org/licenses/by/3.0/
+Attribution: "Glue" by Zsky, via Poly Pizza, licensed under CC BY 3.0. Used as a prototype precision oil applicator.
+Downloaded file: oil-applicator.glb
+Direct source: https://static.poly.pizza/67d08e11-bf75-472a-9a66-2bc9a16870a8.glb
+SHA-256: b51d20a5a5c296122d22ae407b85856936475b3bf0d4684ac5a32f9eabbfe0c0
+Local edits: none at acquisition; runtime scale/material normalization is permitted by the license.

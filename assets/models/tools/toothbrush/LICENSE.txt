@@ -1,0 +1,11 @@
+Asset: Toothbrush
+Creator: Poly by Google
+Source: https://poly.pizza/m/86_j33-JyYM
+Acquired: 2026-08-26
+License: Creative Commons Attribution 3.0 (CC BY 3.0)
+License URL: https://creativecommons.org/licenses/by/3.0/
+Attribution: "Toothbrush" by Poly by Google, via Poly Pizza, licensed under CC BY 3.0.
+Downloaded file: toothbrush.glb
+Direct source: https://static.poly.pizza/bb0ff025-dc9a-4d9f-8bcc-bfe3e396cf7b.glb
+SHA-256: 295b90588323fb1cacf8c380a14ac0416365f157d23e1879aadb248cd3ca4dad
+Local edits: none at acquisition; runtime scale/material normalization is permitted by the license.

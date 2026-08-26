@@ -1,0 +1,11 @@
+Asset: Flashlight
+Creator: Robert Ramsay
+Source: https://poly.pizza/m/bJaT8R5j3uD
+Acquired: 2026-08-26
+License: Creative Commons Attribution 3.0 (CC BY 3.0)
+License URL: https://creativecommons.org/licenses/by/3.0/
+Attribution: "Flashlight" by Robert Ramsay, via Poly Pizza, licensed under CC BY 3.0.
+Downloaded file: flashlight.glb
+Direct source: https://static.poly.pizza/7db871f3-e36d-4ab7-9c39-2a3fb134a314.glb
+SHA-256: 83fa2e3b77fd1079742df96a09af11aa7746897fe90cf645b685bd5c5ab9704e
+Local edits: none at acquisition; runtime scale/material normalization is permitted by the license.
