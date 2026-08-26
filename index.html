@@ -9,6 +9,17 @@
     <link rel="icon" href="data:," />
     <title>Cozy Gun Restoration</title>
     <style>
+      :root {
+        color-scheme: dark;
+        --ui-ink: 23 17 13;
+        --ui-cream: 242 228 197;
+        --ui-gold: 217 184 108;
+        --ui-muted: 176 155 119;
+        --safe-left: max(18px, env(safe-area-inset-left));
+        --safe-right: max(18px, env(safe-area-inset-right));
+        --safe-top: max(18px, env(safe-area-inset-top));
+        --safe-bottom: max(18px, env(safe-area-inset-bottom));
+      }
       * {
         margin: 0;
         padding: 0;
@@ -25,6 +36,16 @@
         user-select: none;
         -webkit-user-select: none;
       }
+      body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        z-index: 4;
+        pointer-events: none;
+        background:
+          radial-gradient(circle at 22% 22%, rgba(255, 204, 137, 0.025), transparent 34%),
+          linear-gradient(180deg, rgba(8, 10, 10, 0.02), rgba(8, 6, 4, 0.08));
+      }
       #app {
         display: block;
         width: 100%;
@@ -35,97 +56,181 @@
       /* ---- HUD: tools + progress (locked in pitch: "HUD: tools + progresso") ---- */
       .hud-toolbar {
         position: fixed;
-        left: 18px;
+        left: var(--safe-left);
         top: 50%;
         transform: translateY(-50%);
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 9px;
         z-index: 10;
       }
       .hud-tool {
-        width: 54px;
-        height: 54px;
-        border-radius: 12px;
-        border: 1px solid rgba(214, 186, 140, 0.18);
-        background: rgba(24, 18, 13, 0.72);
-        backdrop-filter: blur(4px);
-        color: #cbb894;
+        position: relative;
+        width: 58px;
+        height: 58px;
+        border-radius: 14px;
+        border: 1px solid rgba(var(--ui-cream), 0.15);
+        background:
+          linear-gradient(145deg, rgba(48, 37, 27, 0.92), rgba(var(--ui-ink), 0.97));
+        -webkit-backdrop-filter: blur(10px) saturate(0.8);
+        backdrop-filter: blur(10px) saturate(0.8);
+        box-shadow:
+          0 10px 28px rgba(5, 3, 2, 0.24),
+          inset 0 1px rgba(255, 240, 205, 0.05);
+        color: rgb(var(--ui-muted));
         font-size: 22px;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
+        transition:
+          border-color 0.16s ease,
+          background 0.16s ease,
+          color 0.16s ease,
+          transform 0.16s cubic-bezier(0.2, 0.8, 0.2, 1),
+          box-shadow 0.16s ease;
       }
-      .hud-tool:hover {
-        border-color: rgba(214, 186, 140, 0.45);
-        transform: scale(1.04);
+      .hud-tool::after {
+        content: '';
+        position: absolute;
+        left: -1px;
+        top: 15px;
+        bottom: 15px;
+        width: 2px;
+        border-radius: 3px;
+        background: rgb(var(--ui-gold));
+        box-shadow: 0 0 12px rgba(var(--ui-gold), 0.65);
+        opacity: 0;
+        transform: scaleY(0.25);
+        transition: opacity 0.16s ease, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .hud-tool:hover,
+      .hud-tool:focus-visible {
+        border-color: rgba(var(--ui-cream), 0.42);
+        color: rgb(var(--ui-cream));
+        transform: translateX(2px) scale(1.035);
+        outline: none;
       }
       .hud-tool svg {
-        width: 24px;
-        height: 24px;
+        width: 25px;
+        height: 25px;
         display: block;
+        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.35));
       }
       .hud-tool.active {
-        border-color: rgba(230, 196, 138, 0.9);
-        background: rgba(52, 39, 25, 0.85);
-        box-shadow: 0 0 18px rgba(230, 178, 96, 0.25);
+        border-color: rgba(var(--ui-gold), 0.82);
+        background: linear-gradient(145deg, rgba(91, 68, 39, 0.94), rgba(37, 27, 19, 0.94));
+        color: rgb(var(--ui-cream));
+        box-shadow:
+          0 10px 30px rgba(5, 3, 2, 0.32),
+          0 0 20px rgba(var(--ui-gold), 0.16),
+          inset 0 1px rgba(255, 237, 193, 0.1);
+      }
+      .hud-tool.active::after {
+        opacity: 1;
+        transform: scaleY(1);
       }
       .hud-tool span.label {
         position: absolute;
-        left: 62px;
+        left: 68px;
+        padding: 6px 9px;
+        border: 1px solid rgba(var(--ui-cream), 0.12);
+        border-radius: 7px;
+        background: rgba(var(--ui-ink), 0.86);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         font-size: 11px;
-        letter-spacing: 0.12em;
+        font-weight: 650;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: rgba(214, 186, 140, 0.75);
+        color: rgba(var(--ui-cream), 0.9);
         opacity: 0;
-        transition: opacity 0.15s ease;
+        transform: translateX(-4px);
+        transition: opacity 0.15s ease, transform 0.18s ease;
         pointer-events: none;
         white-space: nowrap;
       }
-      .hud-tool:hover span.label {
+      .hud-tool:hover span.label,
+      .hud-tool:focus-visible span.label,
+      .hud-tool.active span.label {
         opacity: 1;
+        transform: translateX(0);
+      }
+      .hud-tool.working {
+        animation: tool-work 0.16s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .hud-tool.blocked {
+        animation: tool-blocked 0.22s ease-out;
       }
 
       .hud-progress {
         position: fixed;
-        top: 20px;
-        right: 22px;
+        top: var(--safe-top);
+        right: var(--safe-right);
         display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 10px 16px;
-        border-radius: 999px;
-        border: 1px solid rgba(214, 186, 140, 0.18);
-        background: rgba(24, 18, 13, 0.72);
-        backdrop-filter: blur(4px);
+        flex-direction: column;
+        gap: 7px;
+        width: min(238px, calc(100vw - 36px));
+        padding: 11px 15px 13px;
+        border-radius: 15px;
+        border: 1px solid rgba(var(--ui-cream), 0.14);
+        background: linear-gradient(145deg, rgba(48, 36, 25, 0.78), rgba(var(--ui-ink), 0.88));
+        -webkit-backdrop-filter: blur(10px) saturate(0.8);
+        backdrop-filter: blur(10px) saturate(0.8);
+        box-shadow:
+          0 12px 30px rgba(4, 3, 2, 0.24),
+          inset 0 1px rgba(255, 240, 205, 0.05);
         z-index: 10;
+        transform-origin: top right;
+      }
+      .hud-progress .copy {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .hud-progress .eyebrow {
+        color: rgba(var(--ui-muted), 0.78);
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
       }
       .hud-progress .pct {
-        color: #e8d5ac;
-        font-size: 15px;
-        font-weight: 600;
+        color: rgb(var(--ui-cream));
+        font-size: 16px;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
         min-width: 42px;
         text-align: right;
       }
       .hud-progress .track {
-        width: 160px;
-        height: 6px;
+        width: 100%;
+        height: 5px;
         border-radius: 999px;
-        background: rgba(214, 186, 140, 0.12);
+        background: rgba(var(--ui-cream), 0.1);
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.34);
         overflow: hidden;
       }
       .hud-progress .fill {
         height: 100%;
         width: 0%;
         border-radius: 999px;
-        background: linear-gradient(90deg, #a8823f, #e6c47a);
-        transition: width 0.2s ease;
+        background: linear-gradient(90deg, #8f6d35, rgb(var(--ui-gold)) 72%, #f4d795);
+        box-shadow: 0 0 10px rgba(var(--ui-gold), 0.28);
+        transition: width 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .hud-progress.bump {
+        animation: progress-bump 0.24s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .hud-progress.settled {
+        animation: progress-settled 0.58s ease-out;
+      }
+      .hud-progress.complete {
+        border-color: rgba(var(--ui-gold), 0.72);
+        animation: progress-complete 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
       }
 
       .hud-toolbar.dimmed .hud-tool {
-        opacity: 0.25;
+        opacity: 0.28;
         pointer-events: none;
         filter: grayscale(0.7);
       }
@@ -144,47 +249,52 @@
 
       .hud-caption {
         position: fixed;
-        bottom: 7%;
+        bottom: max(7%, calc(var(--safe-bottom) + 20px));
         left: 50%;
         transform: translateX(-50%);
-        max-width: 70%;
-        padding: 8px 18px;
-        border-radius: 8px;
-        background: rgba(12, 9, 7, 0.55);
-        color: #e9dcc0;
-        font-size: 17px;
+        max-width: min(680px, calc(100vw - 44px));
+        padding: 9px 17px 10px;
+        border: 1px solid rgba(var(--ui-cream), 0.08);
+        border-radius: 9px;
+        background: rgba(var(--ui-ink), 0.68);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+        color: rgba(var(--ui-cream), 0.96);
+        font-size: clamp(14px, 1.35vw, 17px);
         font-style: italic;
         letter-spacing: 0.01em;
         text-align: center;
         opacity: 0;
-        transition: opacity 0.6s ease;
+        transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
         pointer-events: none;
         z-index: 10;
       }
       .hud-caption.visible {
         opacity: 1;
+        transform: translateX(-50%) translateY(-3px);
       }
 
       .hud-tool .key {
         position: absolute;
-        top: 3px;
-        right: 5px;
-        font-size: 9px;
+        top: 5px;
+        right: 7px;
+        font-size: 8px;
         font-weight: 700;
-        color: rgba(214, 186, 140, 0.55);
+        color: rgba(var(--ui-muted), 0.66);
         pointer-events: none;
-      }
-      .hud-tool {
-        position: relative;
       }
 
       .brush-ring {
         position: fixed;
         top: 0;
         left: 0;
-        border: 1.5px solid rgba(232, 205, 150, 0.85);
+        border: 1.5px solid rgba(var(--ui-cream), 0.88);
         border-radius: 50%;
-        box-shadow: 0 0 6px rgba(20, 12, 6, 0.5) inset, 0 0 4px rgba(20, 12, 6, 0.4);
+        box-shadow:
+          0 0 8px rgba(20, 12, 6, 0.55) inset,
+          0 0 5px rgba(20, 12, 6, 0.4),
+          0 0 0 1px rgba(9, 7, 5, 0.22);
         pointer-events: none;
         opacity: 0;
         transition: opacity 0.15s ease;
@@ -198,14 +308,219 @@
         width: 4px;
         height: 4px;
         border-radius: 50%;
-        background: rgba(232, 205, 150, 0.9);
+        background: rgba(var(--ui-cream), 0.94);
+        box-shadow: 0 0 7px rgba(var(--ui-gold), 0.48);
         pointer-events: none;
         opacity: 0;
         transition: opacity 0.15s ease;
         z-index: 20;
       }
+      .brush-ring.tool-cloth { border-color: rgba(235, 219, 186, 0.92); }
+      .brush-ring.tool-brush { border-color: rgba(202, 169, 111, 0.94); }
+      .brush-ring.tool-oil { border-color: rgba(149, 190, 204, 0.95); }
+      .brush-ring.is-biting { animation: brush-bite 0.15s ease-out; }
+      .brush-ring.is-blocked { animation: brush-blocked 0.24s ease-out; border-color: rgba(206, 126, 82, 0.95); }
+      .brush-ring.is-settled { animation: brush-settled 0.55s ease-out; }
+      .brush-fleck {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 2px;
+        border-radius: 999px;
+        background: #c9ad7c;
+        pointer-events: none;
+        z-index: 19;
+        transform: translate(var(--x), var(--y));
+        animation: fleck-out 0.34s ease-out forwards;
+      }
+      .brush-fleck.tool-cloth { background: #c7b596; }
+      .brush-fleck.tool-brush { background: #8c7048; }
+      .brush-fleck.tool-oil { width: 3px; height: 3px; background: #a9d4dc; box-shadow: 0 0 5px rgba(141, 205, 217, 0.55); }
+
+      @keyframes tool-work {
+        0% { transform: translateX(2px) scale(1.04); }
+        50% { transform: translateX(3px) scale(0.96); }
+        100% { transform: translateX(2px) scale(1); }
+      }
+      @keyframes tool-blocked {
+        0%, 100% { transform: translateX(2px); }
+        35% { transform: translateX(-2px); }
+        70% { transform: translateX(5px); }
+      }
+      @keyframes progress-bump {
+        0% { transform: scale(1); }
+        45% { transform: scale(1.025); }
+        100% { transform: scale(1); }
+      }
+      @keyframes progress-settled {
+        0% { box-shadow: 0 12px 30px rgba(4, 3, 2, 0.24); }
+        35% { box-shadow: 0 12px 30px rgba(4, 3, 2, 0.24), 0 0 30px rgba(var(--ui-gold), 0.38); }
+        100% { box-shadow: 0 12px 30px rgba(4, 3, 2, 0.24); }
+      }
+      @keyframes progress-complete {
+        0% { transform: scale(1); }
+        28% { transform: scale(1.06); box-shadow: 0 0 42px rgba(var(--ui-gold), 0.42); }
+        100% { transform: scale(1); }
+      }
+      @keyframes brush-bite {
+        0% { scale: 1; }
+        45% { scale: 0.86; }
+        100% { scale: 1; }
+      }
+      @keyframes brush-blocked {
+        0%, 100% { translate: 0 0; }
+        35% { translate: -3px 0; }
+        70% { translate: 3px 0; }
+      }
+      @keyframes brush-settled {
+        0% { scale: 1; opacity: 1; }
+        55% { scale: 1.6; opacity: 1; box-shadow: 0 0 22px rgba(var(--ui-gold), 0.6); }
+        100% { scale: 1; opacity: 1; }
+      }
+      @keyframes fleck-out {
+        from { opacity: 0.9; transform: translate(var(--x), var(--y)) rotate(var(--rot)); }
+        to { opacity: 0; transform: translate(calc(var(--x) + var(--dx)), calc(var(--y) + var(--dy))) rotate(calc(var(--rot) + 55deg)); }
+      }
+
+      @media (max-width: 640px), (orientation: portrait) {
+        .hud-toolbar {
+          left: 50%;
+          top: auto;
+          bottom: var(--safe-bottom);
+          transform: translateX(-50%);
+          flex-direction: row;
+          gap: 8px;
+        }
+        .hud-tool {
+          width: 54px;
+          height: 54px;
+        }
+        .hud-tool::after {
+          left: 15px;
+          right: 15px;
+          top: auto;
+          bottom: -1px;
+          width: auto;
+          height: 2px;
+          transform: scaleX(0.25);
+        }
+        .hud-tool.active::after { transform: scaleX(1); }
+        .hud-tool:hover,
+        .hud-tool:focus-visible { transform: translateY(-2px) scale(1.025); }
+        .hud-tool span.label {
+          left: 50%;
+          bottom: 64px;
+          transform: translate(-50%, 4px);
+        }
+        .hud-tool:hover span.label,
+        .hud-tool:focus-visible span.label,
+        .hud-tool.active span.label { transform: translate(-50%, 0); }
+        .hud-progress {
+          left: 50%;
+          right: auto;
+          width: min(220px, calc(100vw - 36px));
+          transform: translateX(-50%);
+          transform-origin: top center;
+        }
+        .hud-progress.bump { animation-name: progress-bump-mobile; }
+        .hud-progress.complete { animation-name: progress-complete-mobile; }
+        .hud-caption {
+          top: calc(var(--safe-top) + 126px);
+          bottom: auto;
+          max-width: calc(100vw - 30px);
+        }
+      }
+      @keyframes progress-bump-mobile {
+        0% { transform: translateX(-50%) scale(1); }
+        45% { transform: translateX(-50%) scale(1.025); }
+        100% { transform: translateX(-50%) scale(1); }
+      }
+      @keyframes progress-complete-mobile {
+        0% { transform: translateX(-50%) scale(1); }
+        28% { transform: translateX(-50%) scale(1.06); box-shadow: 0 0 42px rgba(var(--ui-gold), 0.42); }
+        100% { transform: translateX(-50%) scale(1); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+        }
+      }
+
+      /* ---- tuning panel (designer's knobs) ---- */
+      .tune-gear {
+        position: fixed;
+        right: 14px;
+        bottom: 14px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid rgba(214, 186, 140, 0.2);
+        background: rgba(24, 18, 13, 0.6);
+        color: rgba(214, 186, 140, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 30;
+      }
+      .tune-gear svg { width: 20px; height: 20px; }
+      .tune-gear:hover { color: #e8d5ac; }
+      .tune-panel {
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        bottom: 64px;
+        width: min(320px, calc(100vw - 24px));
+        overflow-y: auto;
+        padding: 12px;
+        border-radius: 14px;
+        border: 1px solid rgba(214, 186, 140, 0.2);
+        background: rgba(18, 13, 9, 0.92);
+        backdrop-filter: blur(8px);
+        color: #d8c49a;
+        font-size: 12px;
+        z-index: 31;
+        display: none;
+      }
+      .tune-panel.open { display: block; }
+      .tune-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 14px; }
+      .tune-section h4 {
+        margin: 12px 0 6px;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(214, 186, 140, 0.55);
+      }
+      .tune-row { display: grid; grid-template-columns: 92px 1fr 58px; gap: 6px; align-items: center; margin: 4px 0; }
+      .tune-row label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .tune-row input[type='range'] { width: 100%; accent-color: #c9a25e; }
+      .tune-row input[type='number'] {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.35);
+        border: 1px solid rgba(214, 186, 140, 0.2);
+        border-radius: 6px;
+        color: #e8d5ac;
+        padding: 2px 4px;
+        font-size: 11px;
+      }
+      .tune-actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+      .tune-btn {
+        border: 1px solid rgba(214, 186, 140, 0.25);
+        background: rgba(42, 32, 22, 0.8);
+        color: #e8d5ac;
+        border-radius: 8px;
+        padding: 6px 10px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      .tune-btn.primary { background: rgba(94, 66, 32, 0.9); border-color: rgba(230, 196, 138, 0.5); }
+      .tune-status { margin-top: 8px; min-height: 16px; color: #a9de9a; font-size: 11px; }
     </style>
-    <script type="module" crossorigin src="./assets/index-B5u8y0P0.js"></script>
+    <script type="module" crossorigin src="./assets/index-D6V1149J.js"></script>
   </head>
   <body>
     <canvas id="app"></canvas>
