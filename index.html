@@ -308,6 +308,36 @@
       .hud-tool[data-tool='lamp'][data-mode='grease'].active { color: #76edff; }
       .hud-tool[data-tool='lamp'][data-mode='grime'].active { color: #ff78bf; }
       .hud-tool[data-tool='lamp'][data-mode='dry'].active { color: #caff70; }
+      .hud-tool .brush-condition {
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        bottom: 5px;
+        height: 3px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: rgba(var(--ui-cream), 0.1);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+      }
+      .hud-tool .brush-condition i {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, #cbb986, #9c653c 72%, #672e20);
+        transform: scaleX(var(--brush-soil, 0));
+        transform-origin: left;
+        transition: transform 0.14s linear, filter 0.18s ease;
+      }
+      .hud-tool[data-condition='saturated'] .brush-condition i {
+        filter: brightness(1.55) saturate(1.45);
+        box-shadow: 0 0 7px #b75d36;
+      }
+      .hud-tool.contaminating { animation: tool-contaminating 0.28s ease-out; }
+      .hud-tool.care-working .brush-condition i {
+        filter: brightness(1.8) saturate(0.7);
+      }
 
       .brush-ring {
         position: fixed;
@@ -412,6 +442,11 @@
       .brush-ring.is-biting { animation: brush-bite 0.15s ease-out; }
       .brush-ring.is-blocked { animation: brush-blocked 0.24s ease-out; border-color: rgba(206, 126, 82, 0.95); }
       .brush-ring.is-settled { animation: brush-settled 0.55s ease-out; }
+      .brush-ring.is-contaminating {
+        animation: brush-contaminating 0.27s ease-out;
+        border-color: #bd623a;
+        box-shadow: 0 0 0 1.5px rgba(23, 10, 6, 0.95), 0 0 15px rgba(189, 98, 58, 0.75);
+      }
       .brush-fleck {
         position: fixed;
         left: 0;
@@ -438,6 +473,11 @@
         0%, 100% { transform: translateX(2px); }
         35% { transform: translateX(-2px); }
         70% { transform: translateX(5px); }
+      }
+      @keyframes tool-contaminating {
+        0%, 100% { transform: translateX(2px) rotate(0); }
+        35% { transform: translateX(0) rotate(-2deg); }
+        70% { transform: translateX(4px) rotate(2deg); }
       }
       @keyframes progress-bump {
         0% { transform: scale(1); }
@@ -468,6 +508,11 @@
         0% { scale: 1; opacity: 1; }
         55% { scale: 1.6; opacity: 1; box-shadow: 0 0 22px rgba(var(--ui-gold), 0.6); }
         100% { scale: 1; opacity: 1; }
+      }
+      @keyframes brush-contaminating {
+        0% { scale: 1; }
+        45% { scale: 1.16; }
+        100% { scale: 1; }
       }
       @keyframes fleck-out {
         from { opacity: 0.9; transform: translate(var(--x), var(--y)) rotate(var(--rot)); }
@@ -672,7 +717,7 @@
         transition: opacity 0.12s ease;
       }
     </style>
-    <script type="module" crossorigin src="./assets/index-DtCYzWPi.js"></script>
+    <script type="module" crossorigin src="./assets/index-BXimvvLs.js"></script>
   </head>
   <body>
     <canvas id="app"></canvas>
