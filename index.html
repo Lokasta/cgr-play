@@ -355,6 +355,31 @@
           0 0 14px currentColor,
           inset 0 0 18px color-mix(in srgb, currentColor 26%, transparent);
       }
+      .brush-ring[data-tool='lamp']::before {
+        inset: 3px;
+        opacity: 0.34;
+        mix-blend-mode: screen;
+        -webkit-mask: radial-gradient(circle, #000 0 72%, transparent 96%);
+        mask: radial-gradient(circle, #000 0 72%, transparent 96%);
+      }
+      .brush-ring[data-tool='lamp'][data-mode='grease']::before {
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(39, 225, 255, 0.26) 0 2px,
+          transparent 2px 10px
+        );
+      }
+      .brush-ring[data-tool='lamp'][data-mode='grime']::before {
+        background-image: radial-gradient(circle, rgba(255, 61, 174, 0.5) 0 1.5px, transparent 2.4px);
+        background-size: 13px 13px;
+      }
+      .brush-ring[data-tool='lamp'][data-mode='dry']::before {
+        background: repeating-linear-gradient(
+          135deg,
+          rgba(182, 255, 56, 0.3) 0 2px,
+          transparent 2px 11px
+        );
+      }
       .brush-ring[data-tool='lamp'][data-mode='grease'] { color: #27e1ff; border-color: #27e1ff; background: transparent; }
       .brush-ring[data-tool='lamp'][data-mode='grime'] { color: #ff3dae; border-color: #ff3dae; background: transparent; }
       .brush-ring[data-tool='lamp'][data-mode='dry'] { color: #b6ff38; border-color: #b6ff38; background: transparent; }
@@ -647,7 +672,7 @@
         transition: opacity 0.12s ease;
       }
     </style>
-    <script type="module" crossorigin src="./assets/index-DAuUemn7.js"></script>
+    <script type="module" crossorigin src="./assets/index-DoJvlg-f.js"></script>
   </head>
   <body>
     <canvas id="app"></canvas>
