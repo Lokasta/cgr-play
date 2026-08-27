@@ -730,315 +730,456 @@
         transition: opacity 0.35s ease;
         background: radial-gradient(120% 120% at 50% 55%, rgba(12, 9, 7, 0.35), rgba(8, 6, 5, 0.88));
       }
-      .laptop-os.open {
-        opacity: 1;
-        pointer-events: auto;
-      }
+      .laptop-os.open { opacity: 1; pointer-events: auto; }
       .los-screen {
         position: relative;
-        width: min(92vw, 1060px);
-        height: min(86vh, 700px);
+        width: min(94vw, 1120px);
+        height: min(88vh, 720px);
         display: flex;
         flex-direction: column;
-        border-radius: 14px;
-        border: 1px solid rgba(var(--ui-cream), 0.14);
-        background: linear-gradient(160deg, #241d2b 0%, #1d1720 45%, #241a14 100%);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 235, 200, 0.12);
+        background: linear-gradient(155deg, #3b2f45 0%, #472f35 55%, #59391f 100%);
         box-shadow:
-          0 0 0 10px #14110f,
-          0 0 60px rgba(255, 181, 107, 0.14),
-          inset 0 0 90px rgba(0, 0, 0, 0.55);
+          0 0 0 12px #14110f,
+          0 0 60px rgba(255, 181, 107, 0.16),
+          inset 0 0 60px rgba(0, 0, 0, 0.35);
         overflow: hidden;
-        color: rgb(var(--ui-cream));
       }
       .los-screen::after {
         content: '';
         position: absolute;
         inset: 0;
         pointer-events: none;
-        background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.016) 0 1px, transparent 1px 3px);
+        background:
+          linear-gradient(115deg, rgba(255, 255, 255, 0.05) 0%, transparent 22%),
+          repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.028) 0 1px, transparent 1px 3px);
       }
-      .los-menubar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 7px 14px;
-        font-size: 12px;
-        letter-spacing: 0.06em;
-        color: rgba(var(--ui-cream), 0.75);
-        background: rgba(10, 8, 7, 0.55);
-        border-bottom: 1px solid rgba(var(--ui-cream), 0.08);
-      }
-      .los-brand { font-weight: 700; color: rgb(var(--ui-gold)); }
-      .los-right { display: flex; align-items: center; gap: 12px; }
-      .los-close {
-        font: inherit;
-        font-size: 13px;
-        line-height: 1;
-        width: 28px;
-        height: 28px;
-        border-radius: 7px;
-        border: 1px solid rgba(var(--ui-cream), 0.2);
-        background: rgba(var(--ui-ink), 0.6);
-        color: rgba(var(--ui-cream), 0.85);
-        cursor: pointer;
-      }
-      .los-close:hover { border-color: rgba(var(--ui-gold), 0.7); color: rgb(var(--ui-cream)); }
-      .los-window {
-        flex: 1;
-        overflow-y: auto;
-        padding: 14px 18px 10px;
-        scrollbar-width: thin;
-      }
+      .los-desktop { position: absolute; inset: 0 0 34px 0; padding: 7px; }
 
-      /* --- forum: board index --- */
-      .los-fhead {
+      /* --- window chrome --- */
+      .los-win {
         display: flex;
         flex-direction: column;
-        gap: 2px;
-        margin-bottom: 12px;
-        padding-bottom: 8px;
-        border-bottom: 2px solid rgba(var(--ui-gold), 0.35);
+        width: 100%;
+        height: 100%;
+        border: 1px solid #1c2c44;
+        border-radius: 6px 6px 3px 3px;
+        background: #ece9d8;
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        font-family: Tahoma, Verdana, 'Segoe UI', sans-serif;
+        font-size: 12px;
+        color: #1d1a14;
       }
-      .los-flogo { font-size: 17px; font-weight: 700; color: rgb(var(--ui-gold)); letter-spacing: 0.02em; }
-      .los-fcrumb { font-size: 11px; color: rgba(var(--ui-muted), 1); }
-      .los-fcrumb .los-back { color: rgb(var(--ui-gold)); text-decoration: none; }
-      .los-fcrumb .los-back:hover { text-decoration: underline; }
+      .los-titlebar {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 6px 4px 9px;
+        background: linear-gradient(180deg, #5a82b8 0%, #2c4d80 55%, #24406b 100%);
+        color: #fff;
+        font-weight: 700;
+        font-size: 12px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+        flex-shrink: 0;
+      }
+      .los-title { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .los-wbtns { display: flex; gap: 3px; }
+      .los-wbtn {
+        width: 22px;
+        height: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font: inherit;
+        font-size: 11px;
+        line-height: 1;
+        color: #fff;
+        background: linear-gradient(180deg, #7d9cc4, #48699a);
+        border: 1px solid #223a5e;
+        border-radius: 3px;
+        cursor: pointer;
+        text-shadow: none;
+      }
+      .los-wbtn.dis { opacity: 0.55; cursor: default; }
+      button.los-wbtn.los-close { background: linear-gradient(180deg, #d9825f, #b04a2c); border-color: #6e2a15; }
+      button.los-wbtn.los-close:hover { background: linear-gradient(180deg, #e89571, #c65a3a); }
+
+      /* --- browser (forum) --- */
+      .los-btoolbar {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 7px;
+        background: linear-gradient(180deg, #f2efe2, #dcd7c2);
+        border-bottom: 1px solid #b3ab92;
+        flex-shrink: 0;
+      }
+      .los-bbtn {
+        width: 24px;
+        height: 22px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        color: #4a4230;
+        background: linear-gradient(180deg, #fdfbf1, #e2dcc6);
+        border: 1px solid #a89f84;
+        border-radius: 3px;
+      }
+      .los-bbtn.dis { opacity: 0.45; }
+      .los-address {
+        flex: 1;
+        padding: 3px 8px;
+        background: #fff;
+        border: 1px solid #9a916f;
+        border-radius: 3px;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 11px;
+        color: #333;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .los-page {
+        flex: 1;
+        overflow-y: auto;
+        background: #f6f2e4;
+        padding: 12px 14px 8px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        color: #2a251c;
+        scrollbar-width: thin;
+      }
+      .los-page a { color: #1f4e9c; text-decoration: none; }
+      .los-page a:hover { text-decoration: underline; }
+      .los-sitehead {
+        background: linear-gradient(180deg, #33507a, #27405f);
+        border: 1px solid #1d3049;
+        border-radius: 4px 4px 0 0;
+        padding: 10px 14px 8px;
+        color: #f2e4c5;
+      }
+      .los-sitelogo { font-family: Georgia, 'Times New Roman', serif; font-size: 22px; font-weight: 700; letter-spacing: 0.01em; }
+      .los-sitetag { font-size: 10px; color: #b7c6dd; margin-top: 1px; }
+      .los-sitenav { font-size: 10px; margin-top: 7px; color: #b7c6dd; }
+      .los-sitenav a { color: #dfe8f5; text-decoration: underline; }
+      .los-crumb { font-size: 10.5px; margin: 8px 2px; color: #5c5340; }
+      .los-crumb a { font-weight: 700; }
       .los-tlist {
         width: 100%;
         border-collapse: collapse;
-        font-size: 12.5px;
-        border: 1px solid rgba(var(--ui-cream), 0.12);
+        border: 1px solid #b7ad90;
+        background: #fffdf4;
       }
-      .los-tlist th {
-        text-align: left;
-        font-size: 10px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: rgba(var(--ui-muted), 1);
-        background: rgba(var(--ui-ink), 0.75);
-        padding: 6px 10px;
-        border-bottom: 1px solid rgba(var(--ui-cream), 0.12);
-      }
-      .los-tlist td { padding: 9px 10px; border-bottom: 1px solid rgba(var(--ui-cream), 0.07); vertical-align: top; }
-      .los-tlist .r { width: 52px; text-align: center; color: rgba(var(--ui-muted), 1); }
-      .los-tlist .l { width: 130px; font-size: 11px; color: rgba(var(--ui-muted), 1); }
-      .los-thread { cursor: pointer; }
-      .los-thread:hover td { background: rgba(var(--ui-gold), 0.06); }
-      .los-thread:nth-child(even) td { background: rgba(var(--ui-ink), 0.35); }
-      .los-thread:nth-child(even):hover td { background: rgba(var(--ui-gold), 0.06); }
-      .los-thread .title { color: rgb(var(--ui-cream)); font-weight: 600; }
-      .los-thread .starter { display: block; font-size: 10.5px; color: rgba(var(--ui-muted), 1); margin-top: 2px; }
-      .los-thread.sticky .title { color: rgb(var(--ui-gold)); }
-      .los-chip {
-        display: inline-block;
-        margin-left: 6px;
-        padding: 1px 7px;
-        border-radius: 8px;
-        font-size: 9.5px;
-        letter-spacing: 0.06em;
-        border: 1px solid rgba(var(--ui-gold), 0.55);
-        color: rgb(var(--ui-gold));
-      }
-      .los-chip.offer { border-color: rgba(var(--ui-cream), 0.3); color: rgba(var(--ui-cream), 0.75); }
-      .los-chip.done { border-color: rgba(150, 200, 140, 0.55); color: #a9de9a; }
-      .los-fnote { margin-top: 8px; font-size: 10.5px; color: rgba(var(--ui-muted), 0.8); font-style: italic; }
-
-      /* --- forum: thread view --- */
-      .los-post {
-        display: grid;
-        grid-template-columns: 128px 1fr;
-        border: 1px solid rgba(var(--ui-cream), 0.1);
-        border-radius: 8px;
-        overflow: hidden;
-        margin-bottom: 10px;
-        background: rgba(var(--ui-ink), 0.45);
-      }
-      .los-post.you { border-color: rgba(var(--ui-gold), 0.45); }
-      .los-pauthor {
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-        padding: 10px;
+      .los-tlist th, .los-tlist td { border: 1px solid #d8d0b4; }
+      .los-tlist tr.cat th {
+        background: linear-gradient(180deg, #55759f, #3d5a82);
+        color: #fff;
         font-size: 11px;
-        background: rgba(var(--ui-ink), 0.75);
-        border-right: 1px solid rgba(var(--ui-cream), 0.08);
+        text-align: left;
+        padding: 5px 9px;
+        border: 1px solid #2c4361;
       }
-      .los-pauthor strong { font-size: 12.5px; }
-      .los-pauthor .rank { color: rgb(var(--ui-gold)); font-size: 10px; letter-spacing: 0.06em; }
-      .los-pauthor .count { color: rgba(var(--ui-muted), 1); font-size: 10px; }
+      .los-tlist thead tr:not(.cat) th {
+        background: #ded6ba;
+        font-size: 10px;
+        color: #55492f;
+        padding: 3px 8px;
+        text-align: left;
+      }
+      .los-tlist td { padding: 6px 8px; vertical-align: top; font-size: 11.5px; }
+      .los-tlist td.i { width: 22px; text-align: center; font-size: 13px; background: #f4eeda; }
+      .los-tlist td.n, .los-tlist th.n { width: 46px; text-align: center; color: #6a5f45; }
+      .los-tlist td.l, .los-tlist th.l { width: 128px; font-size: 10px; color: #6a5f45; }
+      .los-thread { cursor: pointer; }
+      .los-thread:nth-child(even) td { background: #f6f1de; }
+      .los-thread:nth-child(even) td.i { background: #efe8d0; }
+      .los-thread:hover td { background: #fdf6d9; }
+      .los-thread .t a { font-weight: 700; }
+      .los-thread .starter { display: block; font-size: 10px; color: #8a7d5d; margin-top: 2px; }
+      .los-sticky-label { color: #a3392c; }
+      .los-ttag { color: #a05e14; font-weight: 700; font-size: 10.5px; }
+      .los-claim { color: #3c7a3c; font-size: 10px; font-style: italic; }
+      .los-listfoot {
+        display: flex;
+        justify-content: space-between;
+        font-size: 10px;
+        color: #6a5f45;
+        padding: 6px 3px;
+      }
+      .los-pagefoot { text-align: center; font-size: 9.5px; color: #99906f; padding: 10px 0 4px; }
+
+      /* forum thread (post table) */
+      .los-posts td.who {
+        width: 150px;
+        background: #efe8d2;
+        font-size: 10px;
+        color: #5c5340;
+        padding: 8px 9px;
+      }
+      .los-posts .uname { display: block; color: #1f4e9c; font-size: 12px; margin-bottom: 5px; }
+      .los-posts .rank { display: block; color: #a05e14; font-size: 9.5px; letter-spacing: 0.04em; margin: 4px 0 6px; }
+      .los-posts .meta { display: block; margin-top: 1px; }
       .los-avatar {
-        width: 34px;
-        height: 34px;
-        border-radius: 6px;
+        width: 56px;
+        height: 56px;
+        border-radius: 3px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: 700;
-        font-size: 16px;
-        color: rgba(20, 14, 10, 0.9);
-        margin-bottom: 3px;
+        font-size: 26px;
+        color: rgba(255, 250, 235, 0.92);
+        border: 1px solid rgba(0, 0, 0, 0.25);
       }
-      .los-pbody { padding: 8px 12px 12px; }
-      .los-pdate {
+      .los-posts td.msg { background: #fffdf4; padding: 0; }
+      .los-post.you td.msg { background: #f3f6ec; }
+      .los-post.you td.who { background: #e6ecd8; }
+      .los-posts .phead {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
         font-size: 10px;
-        color: rgba(var(--ui-muted), 0.9);
-        border-bottom: 1px solid rgba(var(--ui-cream), 0.07);
-        padding-bottom: 5px;
-        margin-bottom: 7px;
+        color: #6a5f45;
+        background: #f4eeda;
+        border-bottom: 1px solid #e2d9bd;
+        padding: 5px 10px;
       }
-      .los-pbody p { font-size: 12.5px; line-height: 1.55; color: rgba(var(--ui-cream), 0.88); }
+      .los-posts .pbody { padding: 10px 12px 12px; font-size: 12px; line-height: 1.55; }
+      .los-posts .psig { padding: 0 12px 10px; font-size: 10.5px; color: #99906f; line-height: 1.5; }
       .los-action {
         display: flex;
         align-items: center;
         gap: 12px;
-        padding: 11px 14px;
-        border: 1px dashed rgba(var(--ui-gold), 0.5);
-        border-radius: 8px;
-        font-size: 12px;
-        color: rgba(var(--ui-cream), 0.8);
+        margin-top: 10px;
+        padding: 10px 12px;
+        background: #fdf7d8;
+        border: 1px solid #cbb96a;
+        border-radius: 3px;
+        font-size: 11.5px;
+        color: #5c5340;
       }
-      .los-action.done { border-style: solid; color: rgb(var(--ui-gold)); }
+      .los-action.done { background: #eef4e4; border-color: #9ab87e; color: #3c6a2f; }
       .los-order-btn {
         font: inherit;
-        font-size: 12px;
-        padding: 7px 14px;
-        border-radius: 8px;
-        border: 1px solid rgba(var(--ui-gold), 0.6);
-        background: rgba(94, 66, 32, 0.55);
-        color: rgb(var(--ui-cream));
-        cursor: pointer;
-      }
-      .los-order-btn:hover:not([disabled]) { background: rgba(120, 84, 40, 0.75); }
-      .los-order-btn[disabled] { opacity: 0.45; cursor: default; }
-
-      /* --- mail: two panes --- */
-      .los-mailwrap { display: grid; grid-template-columns: 250px 1fr; gap: 12px; height: 100%; min-height: 0; }
-      .los-mlist { border: 1px solid rgba(var(--ui-cream), 0.12); border-radius: 8px; overflow-y: auto; background: rgba(var(--ui-ink), 0.45); }
-      .los-mhead {
-        display: flex;
-        justify-content: space-between;
-        padding: 8px 10px;
-        font-size: 11px;
+        font-size: 11.5px;
         font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: rgb(var(--ui-gold));
-        background: rgba(var(--ui-ink), 0.75);
-        border-bottom: 1px solid rgba(var(--ui-cream), 0.1);
-      }
-      .los-mhead span { color: rgba(var(--ui-muted), 1); font-weight: 400; text-transform: none; letter-spacing: 0; }
-      .los-mrow {
-        display: block;
-        width: 100%;
-        text-align: left;
-        font: inherit;
-        padding: 8px 10px;
-        border: none;
-        border-bottom: 1px solid rgba(var(--ui-cream), 0.07);
-        background: transparent;
-        color: rgba(var(--ui-cream), 0.85);
+        padding: 5px 14px;
+        border-radius: 3px;
+        border: 1px solid #7a6a35;
+        background: linear-gradient(180deg, #fdf3cd, #e8d590);
+        color: #4a3c14;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
         cursor: pointer;
       }
-      .los-mrow:hover { background: rgba(var(--ui-gold), 0.07); }
-      .los-mrow.sel { background: rgba(var(--ui-gold), 0.12); }
-      .los-mrow .top { display: flex; justify-content: space-between; gap: 8px; font-size: 11px; }
-      .los-mrow .from { font-weight: 600; }
-      .los-mrow .when { color: rgba(var(--ui-muted), 1); flex-shrink: 0; }
-      .los-mrow .subj { display: block; font-size: 11.5px; color: rgba(var(--ui-muted), 1); margin-top: 2px; }
-      .los-mrow.unread .from::before {
-        content: '';
-        display: inline-block;
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: rgb(var(--ui-gold));
-        margin-right: 6px;
+      .los-order-btn:hover:not([disabled]) { background: linear-gradient(180deg, #fff8dd, #f0dfa0); }
+      .los-order-btn[disabled] { opacity: 0.5; cursor: default; }
+
+      /* --- mail client --- */
+      .los-mtoolbar {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 5px 7px;
+        background: linear-gradient(180deg, #f2efe2, #dcd7c2);
+        border-bottom: 1px solid #b3ab92;
+        flex-shrink: 0;
       }
-      .los-mrow.unread .from, .los-mrow.unread .subj { color: rgb(var(--ui-cream)); }
-      .los-mpane { min-width: 0; padding: 4px 6px; overflow-y: auto; }
-      .los-mpane h3 { font-size: 15px; margin-bottom: 8px; color: rgb(var(--ui-cream)); }
+      .los-tbtn {
+        font: inherit;
+        font-size: 11px;
+        padding: 4px 10px;
+        color: #3d3524;
+        background: linear-gradient(180deg, #fdfbf1, #e2dcc6);
+        border: 1px solid #a89f84;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .los-tbtn:hover { background: linear-gradient(180deg, #fffef8, #ece6d2); }
+      .los-tbtn:active { background: #d8d2bc; box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15); }
+      .los-tsep { width: 1px; height: 18px; background: #b3ab92; margin: 0 4px; }
+      .los-mailbody { flex: 1; display: flex; min-height: 0; }
+      .los-folders {
+        width: 132px;
+        flex-shrink: 0;
+        background: #f5f2e6;
+        border-right: 1px solid #c4bca0;
+        padding: 6px 0;
+        font-size: 11.5px;
+        color: #4a4230;
+      }
+      .los-folders .fol { padding: 4px 12px; cursor: default; }
+      .los-folders .fol.sel { background: #cfdcf0; border-top: 1px solid #b3c6e4; border-bottom: 1px solid #b3c6e4; font-weight: 700; }
+      .los-mmain { flex: 1; display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+      .los-mtable {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fffef8;
+        font-size: 11.5px;
+        flex-shrink: 0;
+      }
+      .los-mtable th {
+        text-align: left;
+        font-size: 10.5px;
+        font-weight: 700;
+        color: #55492f;
+        background: linear-gradient(180deg, #f0ecda, #ded6ba);
+        border: 1px solid #c4bca0;
+        border-top: none;
+        padding: 3px 8px;
+      }
+      .los-mtable th.ic, .los-mtable td.ic { width: 22px; text-align: center; }
+      .los-mtable th.w, .los-mtable td.w { width: 92px; }
+      .los-mtable th.f, .los-mtable td.f { width: 130px; }
+      .los-mtable td { padding: 4px 8px; border-bottom: 1px solid #efe9d6; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 0; }
+      .los-mtable td.ic, .los-mtable td.w { max-width: none; }
+      .los-mrow.unread td { font-weight: 700; }
+      .los-mrow:hover td { background: #f3eed9; }
+      .los-mrow.sel td { background: #316ac5; color: #fff; }
+      .los-mpane {
+        flex: 1;
+        overflow-y: auto;
+        background: #fffef8;
+        border-top: 3px double #c4bca0;
+        min-height: 0;
+      }
       .los-mmeta {
         display: flex;
         flex-direction: column;
         gap: 2px;
+        background: #f4f0e0;
+        border-bottom: 1px solid #ddd5b9;
+        padding: 8px 12px;
         font-size: 11px;
-        color: rgba(var(--ui-muted), 1);
-        border-bottom: 1px solid rgba(var(--ui-cream), 0.1);
-        padding-bottom: 8px;
-        margin-bottom: 10px;
+        color: #5c5340;
       }
-      .los-mmeta b { color: rgba(var(--ui-cream), 0.7); font-weight: 600; }
-      .los-mbody { font-size: 12.5px; line-height: 1.6; white-space: pre-line; color: rgba(var(--ui-cream), 0.88); }
-      .los-mempty { display: grid; place-items: center; height: 100%; color: rgba(var(--ui-muted), 0.7); font-size: 12px; font-style: italic; }
+      .los-mmeta h3 { font-size: 13px; color: #1d1a14; margin-bottom: 4px; }
+      .los-mmeta b { color: #3d3524; }
+      .los-mbody { padding: 12px 14px; font-size: 12px; line-height: 1.6; color: #2a251c; }
+      .los-mempty { display: grid; place-items: center; height: 100%; color: #99906f; font-size: 11.5px; font-style: italic; }
       .los-mback { display: none; }
-
-      /* --- dock --- */
-      .los-dock {
+      .los-statusbar {
         display: flex;
-        gap: 8px;
-        justify-content: center;
-        padding: 8px 0 10px;
-        background: rgba(10, 8, 7, 0.55);
-        border-top: 1px solid rgba(var(--ui-cream), 0.08);
+        justify-content: space-between;
+        gap: 10px;
+        padding: 3px 10px;
+        background: #e4dfc9;
+        border-top: 1px solid #b3ab92;
+        font-size: 10.5px;
+        color: #6a5f45;
+        flex-shrink: 0;
+      }
+      .los-msay { font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+      /* --- taskbar --- */
+      .los-taskbar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 0 8px;
+        background: linear-gradient(180deg, #e8e4d2, #cfc9b0);
+        border-top: 1px solid #fffef2;
+        box-shadow: 0 -1px 0 #97906f;
+        font-family: Tahoma, Verdana, sans-serif;
+      }
+      .los-start {
+        font-size: 12px;
+        font-weight: 700;
+        color: #3d3524;
+        padding: 4px 12px 4px 8px;
+        background: linear-gradient(180deg, #f6dfa6, #dcb96a);
+        border: 1px solid #97803f;
+        border-radius: 4px;
       }
       .los-dock-btn {
         position: relative;
         font: inherit;
-        font-size: 12px;
-        letter-spacing: 0.04em;
-        padding: 6px 18px;
-        border-radius: 9px;
-        border: 1px solid rgba(var(--ui-cream), 0.14);
-        background: rgba(var(--ui-ink), 0.7);
-        color: rgba(var(--ui-cream), 0.8);
+        font-size: 11.5px;
+        padding: 4px 14px;
+        min-width: 92px;
+        text-align: left;
+        color: #3d3524;
+        background: linear-gradient(180deg, #fdfbf1, #e2dcc6);
+        border: 1px solid #a89f84;
+        border-radius: 4px;
         cursor: pointer;
       }
       .los-dock-btn.active {
-        border-color: rgba(var(--ui-gold), 0.7);
-        color: rgb(var(--ui-cream));
-        box-shadow: 0 0 14px rgba(var(--ui-gold), 0.12);
+        background: #d5cfb8;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.22);
+        font-weight: 700;
       }
       .los-badge {
         position: absolute;
-        top: -6px;
-        right: -6px;
+        top: -7px;
+        right: -7px;
         min-width: 16px;
         height: 16px;
         border-radius: 8px;
-        background: rgb(var(--ui-gold));
-        color: rgb(var(--ui-ink));
+        background: #c14b3a;
+        border: 1px solid #8e2f21;
+        color: #fff;
         font-size: 10px;
         font-weight: 700;
-        line-height: 16px;
+        line-height: 15px;
         text-align: center;
         padding: 0 4px;
       }
+      .los-tray { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+      .los-clock {
+        font-size: 11px;
+        color: #4a4230;
+        padding: 3px 10px;
+        border: 1px solid #b3ab92;
+        border-radius: 3px;
+        background: #ded9c4;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
 
-      /* --- narrow screens: forum table slims down, mail becomes list→reader --- */
+      /* --- narrow screens --- */
       @media (max-width: 640px) {
-        .los-screen { width: 96vw; height: 90vh; }
-        .los-tlist .r, .los-tlist .l, .los-tlist th.r, .los-tlist th.l { display: none; }
-        .los-post { grid-template-columns: 1fr; }
-        .los-pauthor { flex-direction: row; align-items: center; gap: 8px; border-right: none; border-bottom: 1px solid rgba(var(--ui-cream), 0.08); padding: 7px 10px; }
-        .los-avatar { width: 24px; height: 24px; font-size: 12px; margin-bottom: 0; }
-        .los-mailwrap { grid-template-columns: 1fr; }
-        .los-mailwrap.reading .los-mlist { display: none; }
-        .los-mailwrap:not(.reading) .los-mpane { display: none; }
+        .los-screen { width: 97vw; height: 92vh; }
+        .los-desktop { padding: 5px; }
+        .los-tlist td.n, .los-tlist th.n, .los-tlist td.l, .los-tlist th.l { display: none; }
+        .los-posts td.who {
+          display: block;
+          width: auto;
+          border-bottom: none;
+          padding: 6px 9px 4px;
+        }
+        .los-posts .uname, .los-posts .rank { display: inline; margin: 0 6px 0 0; }
+        .los-posts .meta { display: none; }
+        .los-avatar { display: none; }
+        .los-posts td.msg { display: block; }
+        .los-posts tr { display: block; border-bottom: 1px solid #d8d0b4; }
+        .los-folders { display: none; }
+        .los-mtable th.w, .los-mtable td.w { display: none; }
+        .los-mailbody.reading .los-mtable { display: none; }
+        .los-mailbody:not(.reading) .los-mpane { display: none; }
         .los-mback {
           display: inline-block;
           font: inherit;
-          font-size: 12px;
-          margin-bottom: 8px;
-          padding: 4px 10px;
-          border-radius: 7px;
-          border: 1px solid rgba(var(--ui-cream), 0.2);
-          background: rgba(var(--ui-ink), 0.6);
-          color: rgb(var(--ui-gold));
+          font-size: 11px;
+          margin: 8px 0 0 10px;
+          padding: 3px 10px;
+          border-radius: 3px;
+          border: 1px solid #a89f84;
+          background: linear-gradient(180deg, #fdfbf1, #e2dcc6);
+          color: #3d3524;
           cursor: pointer;
         }
+        .los-dock-btn { min-width: 0; }
       }
     </style>
-    <script type="module" crossorigin src="./assets/index-PnQ-uHeh.js"></script>
+    <script type="module" crossorigin src="./assets/index-Dk_rLSTY.js"></script>
   </head>
   <body>
     <canvas id="app"></canvas>
