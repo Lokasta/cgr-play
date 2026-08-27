@@ -716,8 +716,139 @@
         opacity: 0;
         transition: opacity 0.12s ease;
       }
+
+      /* ---- laptop OS (diegetic screen, not HUD) ---- */
+      .laptop-os {
+        position: fixed;
+        inset: 0;
+        z-index: 26;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.35s ease;
+        background: radial-gradient(120% 120% at 50% 55%, rgba(12, 9, 7, 0.35), rgba(8, 6, 5, 0.88));
+      }
+      .laptop-os.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .los-screen {
+        position: relative;
+        width: min(88vw, 1.5 * 82vh, 1060px);
+        height: min(82vh, 0.66 * 88vw, 700px);
+        display: flex;
+        flex-direction: column;
+        border-radius: 14px;
+        border: 1px solid rgba(var(--ui-cream), 0.14);
+        background: linear-gradient(160deg, #241d2b 0%, #1d1720 45%, #241a14 100%);
+        box-shadow:
+          0 0 0 10px #14110f,
+          0 0 60px rgba(255, 181, 107, 0.14),
+          inset 0 0 90px rgba(0, 0, 0, 0.55);
+        overflow: hidden;
+        color: rgb(var(--ui-cream));
+      }
+      .los-screen::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.016) 0 1px, transparent 1px 3px);
+      }
+      .los-menubar {
+        display: flex;
+        justify-content: space-between;
+        padding: 9px 16px;
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        color: rgba(var(--ui-cream), 0.75);
+        background: rgba(10, 8, 7, 0.55);
+        border-bottom: 1px solid rgba(var(--ui-cream), 0.08);
+      }
+      .los-brand { font-weight: 700; color: rgb(var(--ui-gold)); }
+      .los-window {
+        flex: 1;
+        overflow-y: auto;
+        padding: 18px 22px 12px;
+        scrollbar-width: thin;
+      }
+      .los-title {
+        font-size: 17px;
+        margin-bottom: 14px;
+        color: rgb(var(--ui-gold));
+        letter-spacing: 0.02em;
+      }
+      .los-title span { font-size: 12px; font-weight: 400; color: rgba(var(--ui-muted), 1); }
+      .los-listing,
+      .los-mail {
+        border: 1px solid rgba(var(--ui-cream), 0.1);
+        border-radius: 10px;
+        background: rgba(var(--ui-ink), 0.55);
+        padding: 12px 14px;
+        margin-bottom: 10px;
+      }
+      .los-listing h3 { font-size: 14px; margin-bottom: 3px; }
+      .los-meta { font-size: 11px; color: rgba(var(--ui-muted), 1); margin-bottom: 6px; }
+      .los-blurb { font-size: 12.5px; line-height: 1.5; color: rgba(var(--ui-cream), 0.85); margin-bottom: 8px; }
+      .los-mail.unread { border-color: rgba(var(--ui-gold), 0.55); }
+      .los-note { font-size: 11px; color: rgba(var(--ui-muted), 1); font-style: italic; }
+      .los-note.ordered { color: rgb(var(--ui-gold)); }
+      .los-order-btn {
+        font: inherit;
+        font-size: 12px;
+        padding: 6px 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(var(--ui-gold), 0.6);
+        background: rgba(94, 66, 32, 0.55);
+        color: rgb(var(--ui-cream));
+        cursor: pointer;
+      }
+      .los-order-btn:hover:not([disabled]) { background: rgba(120, 84, 40, 0.75); }
+      .los-order-btn[disabled] { opacity: 0.45; cursor: default; }
+      .los-dock {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        padding: 8px 0 10px;
+        background: rgba(10, 8, 7, 0.55);
+        border-top: 1px solid rgba(var(--ui-cream), 0.08);
+      }
+      .los-dock-btn {
+        position: relative;
+        font: inherit;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        padding: 6px 18px;
+        border-radius: 9px;
+        border: 1px solid rgba(var(--ui-cream), 0.14);
+        background: rgba(var(--ui-ink), 0.7);
+        color: rgba(var(--ui-cream), 0.8);
+        cursor: pointer;
+      }
+      .los-dock-btn.active {
+        border-color: rgba(var(--ui-gold), 0.7);
+        color: rgb(var(--ui-cream));
+        box-shadow: 0 0 14px rgba(var(--ui-gold), 0.12);
+      }
+      .los-badge {
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        min-width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        background: rgb(var(--ui-gold));
+        color: rgb(var(--ui-ink));
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 16px;
+        text-align: center;
+        padding: 0 4px;
+      }
     </style>
-    <script type="module" crossorigin src="./assets/index-xvt1w147.js"></script>
+    <script type="module" crossorigin src="./assets/index-CntoGMrE.js"></script>
   </head>
   <body>
     <canvas id="app"></canvas>
