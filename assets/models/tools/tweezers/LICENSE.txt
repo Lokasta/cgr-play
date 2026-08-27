@@ -1,0 +1,11 @@
+Asset: Tweezers
+Creator: Poly by Google
+Source: https://poly.pizza/m/c9O6aCDFY2R
+Acquired: 2026-08-27
+License: Creative Commons Attribution 3.0 (CC BY 3.0)
+License URL: https://creativecommons.org/licenses/by/3.0/
+Attribution: "Tweezers" by Poly by Google, via Poly Pizza, licensed under CC BY 3.0.
+Downloaded file: tweezers.glb
+Direct source: https://static.poly.pizza/ff4f41ce-f018-4f96-bad5-5b43c8cddc09.glb
+SHA-256: aad7dbf6f8ff4b2dca54a0b8791eaa0aade0e48561c86deba7c894418d97fb36
+Local edits: none at acquisition; runtime scale, orientation and material normalization are permitted by the license.
