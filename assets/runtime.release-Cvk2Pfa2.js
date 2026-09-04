@@ -1,1 +1,0 @@
-var e=()=>{},t=class{group=null;toggle(){}update(){}},n=class{constructor(e){}},r=()=>{},i=()=>{};export{t as RigGizmos,n as TuningPanel,e as installDebugApi,i as saveTuningLocal,r as undoTuning};
