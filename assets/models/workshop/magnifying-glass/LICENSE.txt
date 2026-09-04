@@ -1,0 +1,14 @@
+Magnifying Glass 01
+Creator: Nazar Borodavka
+Source: https://polyhaven.com/a/magnifying_glass_01
+Acquired: 2026-09-04 (official Poly Haven 1K glTF bundle)
+
+License: CC0 1.0 Universal
+License terms: https://polyhaven.com/license
+Attribution is not required, but is appreciated.
+
+Runtime file: magnifying_glass_01.glb
+SHA-256: 1b92c9f08fdecadeae46985332fa09dbe213f5faf271c9b592e23760b35907c3
+The runtime GLB preserves the official source geometry, downsizes the
+background prop's JPEG textures to 512x512, and shares duplicate image
+references. See SOURCE.json for source URLs, checksums, and transformation.

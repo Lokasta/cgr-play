@@ -1,0 +1,14 @@
+Bench Vice 01
+Creators: Antanas Kep (modeling and texturing), Yann Kervran (rigging)
+Source: https://polyhaven.com/a/bench_vice_01
+Acquired: 2026-09-04 (official Poly Haven 1K glTF bundle)
+
+License: CC0 1.0 Universal
+License terms: https://polyhaven.com/license
+Attribution is not required, but is appreciated.
+
+Runtime file: bench_vice_01.glb
+SHA-256: f354b862b9511b93626b81a6f36bbbb986b856a0ecc61b79794195a579ce27fd
+The runtime GLB preserves the official source geometry and downsizes the
+background prop's JPEG textures to 512x512. See SOURCE.json for source URLs,
+source checksums, and the exact runtime transformation.

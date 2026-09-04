@@ -1,0 +1,14 @@
+Screwdrivers 02
+Creator: BKS
+Source: https://polyhaven.com/a/screwdrivers_02
+Acquired: 2026-09-04 (official Poly Haven 1K glTF bundle)
+
+License: CC0 1.0 Universal
+License terms: https://polyhaven.com/license
+Attribution is not required, but is appreciated.
+
+Runtime file: screwdrivers_02.glb
+SHA-256: 1f7a5532eeaf7cfdbc192b3fd48e97dae1695527ea3ba9caf9df274485d622de
+The runtime GLB preserves the official source geometry and downsizes the
+background prop's JPEG textures to 512x512. See SOURCE.json for source URLs,
+source checksums, and the exact runtime transformation.

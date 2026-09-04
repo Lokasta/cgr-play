@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "asset": "Screwdrivers 02",
+  "slug": "screwdrivers_02",
+  "creator": {
+    "BKS": "All"
+  },
+  "source_page": "https://polyhaven.com/a/screwdrivers_02",
+  "api_info": "https://api.polyhaven.com/info/screwdrivers_02",
+  "acquired_at": "2026-09-04T11:01:09.062Z",
+  "source_resolution": "1k",
+  "source_format": "gltf+bin+jpeg",
+  "runtime_format": "glb",
+  "runtime_texture_resolution": "512x512",
+  "runtime_image_count": 3,
+  "license": "CC0 1.0",
+  "license_url": "https://polyhaven.com/license",
+  "source_polycount": 3548,
+  "source_dimensions_mm": [
+    100.45838262885809,
+    269.9327766895294,
+    27.07698941230774
+  ],
+  "source_files": [
+    {
+      "path": "screwdrivers_02_1k.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/screwdrivers_02/screwdrivers_02_1k.gltf",
+      "bytes": 4293,
+      "md5": "c1003780afe867ae6805014392b1b91a"
+    },
+    {
+      "path": "textures/screwdrivers_02_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/screwdrivers_02/screwdrivers_02_nor_gl_1k.jpg",
+      "bytes": 673685,
+      "md5": "4b224d7db9b38783e0c7852f00ee8462"
+    },
+    {
+      "path": "textures/screwdrivers_02_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/screwdrivers_02/screwdrivers_02_diff_1k.jpg",
+      "bytes": 642727,
+      "md5": "5c372914e0abccd1cb96f2c8e4774474"
+    },
+    {
+      "path": "textures/screwdrivers_02_arm_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/screwdrivers_02/screwdrivers_02_arm_1k.jpg",
+      "bytes": 656498,
+      "md5": "1baf85c1455267bddd0198f4c081774c"
+    },
+    {
+      "path": "screwdrivers_02.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/screwdrivers_02/screwdrivers_02.bin",
+      "bytes": 103720,
+      "md5": "933a66ae1ae77bd47d03dd1000dff33e"
+    }
+  ],
+  "output": {
+    "path": "public/assets/models/workshop/screwdrivers/screwdrivers_02.glb",
+    "bytes": 346908,
+    "sha256": "1f7a5532eeaf7cfdbc192b3fd48e97dae1695527ea3ba9caf9df274485d622de",
+    "conversion": "GLB 2 container pack; source geometry preserved; source JPEG textures downsampled to 512x512 with macOS sips; duplicate image references deduplicated; no Meshopt/KTX2 extension"
+  }
+}

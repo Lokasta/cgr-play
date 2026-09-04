@@ -1,0 +1,14 @@
+Asset: Cleaning Cotton Tip
+Creator: MilkAndBanana
+Source: https://poly.pizza/m/ZT16Nvi46U
+Acquired: 2026-09-04
+
+License: CC0 1.0 Universal (Public Domain Dedication)
+License URL: https://creativecommons.org/publicdomain/zero/1.0/
+Attribution is not required. Courtesy credit:
+"Cleaning Cotton Tip" by MilkAndBanana, via Poly Pizza, released under CC0 1.0.
+
+Runtime file: cotton-swab.glb
+Direct source: https://static.poly.pizza/d0b9d3a8-3ac5-4a0d-aee8-d557b66e1f1e.glb
+SHA-256: 597859942e47516467072280f6ca4462fab86c7c5fe82f0305b75a2a574073b5
+Local edits: none; official Poly Pizza GLB copied byte-for-byte and renamed.

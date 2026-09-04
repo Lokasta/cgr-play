@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "asset": "Cleaning Cotton Tip",
+  "asset_role": "Cotton swab / Q-tip cleaning tool",
+  "creator": "MilkAndBanana",
+  "source_page": "https://poly.pizza/m/ZT16Nvi46U",
+  "direct_download": "https://static.poly.pizza/d0b9d3a8-3ac5-4a0d-aee8-d557b66e1f1e.glb",
+  "acquired_at": "2026-09-04T12:49:29Z",
+  "license": "CC0 1.0 Universal",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "courtesy_attribution": "\"Cleaning Cotton Tip\" by MilkAndBanana, via Poly Pizza, released under CC0 1.0.",
+  "source_format": "GLB 2.0",
+  "source_triangles": 188,
+  "runtime_upload_vertices": 96,
+  "runtime_mesh_count": 1,
+  "runtime_material_count": 1,
+  "runtime_texture_count": 1,
+  "runtime_texture_resolution": "256x1",
+  "output": {
+    "path": "public/assets/models/tools/cotton-swab/cotton-swab.glb",
+    "bytes": 7100,
+    "sha256": "597859942e47516467072280f6ca4462fab86c7c5fe82f0305b75a2a574073b5",
+    "transformation": "None; official Poly Pizza GLB copied byte-for-byte and renamed for its runtime role."
+  },
+  "validation": {
+    "tool": "@gltf-transform/cli validate",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "hints": 0
+  }
+}

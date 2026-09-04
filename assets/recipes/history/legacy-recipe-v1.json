@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 2,
+  "profile": "legacy-v1",
+  "id": "legacy-fixture-v1",
+  "revision": 0,
+  "transitionVersion": "legacy-direct-v1",
+  "codecVersion": "dirt2-rgba8-v1",
+  "progressVersion": "legacy-progress-v1",
+  "rasterVersion": "uv-center-top-left-v1",
+  "registrations": [
+    {
+      "assetId": "assets/recipes/history/legacy-quad-registration-v1.json",
+      "assetHash": "sha256:e1b0c7baad25945968608c8f1b77be77e4991c9c31776cb84f0fdc9c86dac4d3",
+      "meshStableId": "legacy-fixture-quad",
+      "surfaceId": "legacy-surface",
+      "regionId": "legacy-region"
+    }
+  ],
+  "surfaces": [
+    {
+      "surfaceId": "legacy-surface",
+      "materialTag": "unknown"
+    }
+  ],
+  "regions": [
+    {
+      "surfaceId": "legacy-surface",
+      "regionId": "legacy-region",
+      "oilEligible": true
+    }
+  ],
+  "targets": [
+    {
+      "surfaceId": "legacy-surface",
+      "regionId": "legacy-region",
+      "family": "carbon",
+      "required": true,
+      "weightPPM": 350000
+    },
+    {
+      "surfaceId": "legacy-surface",
+      "regionId": "legacy-region",
+      "family": "grease",
+      "required": true,
+      "weightPPM": 350000
+    },
+    {
+      "surfaceId": "legacy-surface",
+      "regionId": "legacy-region",
+      "family": "oil",
+      "required": true,
+      "weightPPM": 300000
+    }
+  ],
+  "thresholds": {
+    "settlePPM": 30000,
+    "occlusionByteExclusive": 16
+  },
+  "ranks": {
+    "grease": {
+      "intact": 0,
+      "cleared": 255
+    },
+    "carbon": {
+      "intact": 0,
+      "cleared": 255
+    },
+    "oil": {
+      "absent": 0,
+      "buffed": 255
+    }
+  },
+  "seed": {
+    "generator": "legacy-mask-v1"
+  }
+}

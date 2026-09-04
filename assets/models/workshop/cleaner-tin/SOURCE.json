@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "asset": "Cleaner Tin 01",
+  "slug": "cleaner_tin_01",
+  "creator": {
+    "Tom Phillips": "All"
+  },
+  "source_page": "https://polyhaven.com/a/cleaner_tin_01",
+  "api_info": "https://api.polyhaven.com/info/cleaner_tin_01",
+  "acquired_at": "2026-09-04T11:01:08.466Z",
+  "source_resolution": "1k",
+  "source_format": "gltf+bin+jpeg",
+  "runtime_format": "glb",
+  "runtime_texture_resolution": "512x512",
+  "runtime_image_count": 3,
+  "license": "CC0 1.0",
+  "license_url": "https://polyhaven.com/license",
+  "source_polycount": 3560,
+  "source_dimensions_mm": [
+    87.5563956797123,
+    87.54613995552063,
+    130.41614861867856
+  ],
+  "source_files": [
+    {
+      "path": "cleaner_tin_01_1k.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/cleaner_tin_01/cleaner_tin_01_1k.gltf",
+      "bytes": 3154,
+      "md5": "3f49a75444779efc1b344837c61114bd"
+    },
+    {
+      "path": "textures/cleaner_tin_01_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cleaner_tin_01/cleaner_tin_01_nor_gl_1k.jpg",
+      "bytes": 252884,
+      "md5": "c12d425140d5bd260e1bf071357d859b"
+    },
+    {
+      "path": "textures/cleaner_tin_01_arm_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cleaner_tin_01/cleaner_tin_01_arm_1k.jpg",
+      "bytes": 722544,
+      "md5": "3ccb6677c533be0af6b9267e57f37428"
+    },
+    {
+      "path": "cleaner_tin_01.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/cleaner_tin_01/cleaner_tin_01.bin",
+      "bytes": 81968,
+      "md5": "ba56546f91b4dbd31928cc7a13eebec6"
+    },
+    {
+      "path": "textures/cleaner_tin_01_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cleaner_tin_01/cleaner_tin_01_diff_1k.jpg",
+      "bytes": 758954,
+      "md5": "1b76e7d312989d592fbdbd6774efe268"
+    }
+  ],
+  "output": {
+    "path": "public/assets/models/workshop/cleaner-tin/cleaner_tin_01.glb",
+    "bytes": 287660,
+    "sha256": "e6f1489224b4b6a4179b413f720a508118241b53aacbc59c51218c914e2a28b7",
+    "conversion": "GLB 2 container pack; source geometry preserved; source JPEG textures downsampled to 512x512 with macOS sips; duplicate image references deduplicated; no Meshopt/KTX2 extension"
+  }
+}

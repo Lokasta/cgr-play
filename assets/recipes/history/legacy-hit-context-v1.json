@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "legacy-colt-hit-context-v1",
+  "profile": "legacy-v1",
+  "rasterVersion": "uv-center-top-left-v1",
+  "assetId": "assets/models/colt_python/colt_python_dirt2.glb",
+  "assetHash": "sha256:28b03107757c996bd9da8c4b8c9748d5abddab608a7601911caa3ed3755a704c",
+  "sourceAssetHash": "sha256:1cc6810fedfadceb0d6b1a3cea2f6410b8bcddc0ec0792eb1416b1bf4fc75ff0",
+  "surfaceId": "legacy-surface",
+  "regionId": "legacy-region",
+  "regionOrdinal": 1,
+  "islandOrdinal": 1,
+  "meshes": [
+    { "meshStableId": "airtight", "sourceNodeName": "airtight_low.001_M_WP_Revolver_0", "runtimeNodeName": "airtight_low001_M_WP_Revolver_0" },
+    { "meshStableId": "barrel", "sourceNodeName": "barrel_low.001_M_WP_Revolver_0", "runtimeNodeName": "barrel_low001_M_WP_Revolver_0" },
+    { "meshStableId": "body", "sourceNodeName": "body_low.001_M_WP_Revolver_0", "runtimeNodeName": "body_low001_M_WP_Revolver_0" },
+    { "meshStableId": "grip", "sourceNodeName": "grip_low.001_M_WP_Revolver_0", "runtimeNodeName": "grip_low001_M_WP_Revolver_0" },
+    { "meshStableId": "hammer", "sourceNodeName": "Hammer_low.001_M_WP_Revolver_0", "runtimeNodeName": "Hammer_low001_M_WP_Revolver_0" },
+    { "meshStableId": "handle", "sourceNodeName": "handle_low.001_M_WP_Revolver_0", "runtimeNodeName": "handle_low001_M_WP_Revolver_0" },
+    { "meshStableId": "sight", "sourceNodeName": "sight_low.001_M_WP_Revolver_0", "runtimeNodeName": "sight_low001_M_WP_Revolver_0" },
+    { "meshStableId": "sight-fixed", "sourceNodeName": "sight_fixed_low.001_M_WP_Revolver_0", "runtimeNodeName": "sight_fixed_low001_M_WP_Revolver_0" },
+    { "meshStableId": "slot", "sourceNodeName": "slot_low.001_M_WP_Revolver_0", "runtimeNodeName": "slot_low001_M_WP_Revolver_0" },
+    { "meshStableId": "slot-ball", "sourceNodeName": "slot_ball_low.001_M_WP_Revolver_0", "runtimeNodeName": "slot_ball_low001_M_WP_Revolver_0" },
+    { "meshStableId": "trigger", "sourceNodeName": "trigger_low.001_M_WP_Revolver_0", "runtimeNodeName": "trigger_low001_M_WP_Revolver_0" },
+    { "meshStableId": "wheel", "sourceNodeName": "wheel_low.001_M_WP_Revolver_0", "runtimeNodeName": "wheel_low001_M_WP_Revolver_0" },
+    { "meshStableId": "wheel-pan", "sourceNodeName": "wheel_pan_low.001_M_WP_Revolver_0", "runtimeNodeName": "wheel_pan_low001_M_WP_Revolver_0" },
+    { "meshStableId": "wheel-rot", "sourceNodeName": "wheel_rot_low.001_M_WP_Revolver_0", "runtimeNodeName": "wheel_rot_low001_M_WP_Revolver_0" },
+    { "meshStableId": "wheel-stop", "sourceNodeName": "wheel_stop_low.001_M_WP_Revolver_0", "runtimeNodeName": "wheel_stop_low001_M_WP_Revolver_0" }
+  ]
+}
