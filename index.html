@@ -138,9 +138,13 @@
         transition: opacity 0.58s cubic-bezier(0.4, 0, 0.2, 1);
       }
       .boot-intro__content {
+        position: relative;
+        z-index: 1;
         display: grid;
         justify-items: center;
         gap: clamp(22px, 4.5vh, 42px);
+        min-width: 0;
+        min-height: 0;
         width: min(72vw, 720px);
         transform: scale(1);
         transition: transform 0.58s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -339,13 +343,9 @@
       .boot-intro[data-state='exit'] .boot-intro__content {
         gap: clamp(18px, 3.2vh, 30px);
         width: min(90vw, 760px);
-        max-height: calc(100dvh - max(48px, env(safe-area-inset-top) + env(safe-area-inset-bottom)));
         padding: 4px clamp(2px, 1vw, 10px) 10px;
-        overflow-x: hidden;
-        overflow-y: auto;
-        overscroll-behavior: contain;
-        scrollbar-width: thin;
-        scrollbar-color: rgba(255, 255, 255, 0.28) transparent;
+        overflow: visible;
+        overscroll-behavior: none;
       }
       .boot-intro[data-state='title'] .boot-intro__logo,
       .boot-intro[data-state='menu'] .boot-intro__logo,
@@ -357,6 +357,7 @@
         width: min(82%, 500px);
       }
       .boot-intro__menu {
+        min-width: 0;
         width: min(100%, 560px);
       }
       .boot-intro__menu[hidden],
@@ -456,7 +457,15 @@
         outline: 2px solid #fff;
         outline-offset: 3px;
         border-color: #fff;
-        transform: translateX(5px);
+        transform: translateX(0);
+      }
+      .title-action:hover:not(:disabled) .title-action__icon,
+      .title-action:hover:not(:disabled) .title-action__label,
+      .title-action:focus-visible:not(:disabled) .title-action__icon,
+      .title-action:focus-visible:not(:disabled) .title-action__label,
+      .boot-intro[data-input='gamepad'] .title-action:focus:not(:disabled) .title-action__icon,
+      .boot-intro[data-input='gamepad'] .title-action:focus:not(:disabled) .title-action__label {
+        transform: translateX(3px);
       }
       .title-action:hover:not(:disabled)::before,
       .title-action:focus-visible:not(:disabled)::before,
@@ -464,7 +473,7 @@
         transform: scaleX(1);
       }
       .title-action:active:not(:disabled) {
-        transform: translateX(5px) scale(0.985);
+        transform: scale(0.985);
       }
       .title-action:disabled {
         opacity: 0.34;
@@ -504,6 +513,7 @@
         place-items: center;
         width: 27px;
         height: 27px;
+        transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .title-action__icon svg {
         width: 100%;
@@ -524,6 +534,7 @@
         display: grid;
         gap: 2px;
         min-width: 0;
+        transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .title-action__label strong {
         font-size: clamp(12px, 1.45vw, 14px);
@@ -795,15 +806,14 @@
       }
       .title-menu__watermark {
         position: absolute;
-        right: clamp(-110px, -6vw, -40px);
-        bottom: clamp(-120px, -9vw, -55px);
-        z-index: -1;
+        right: clamp(12px, 3vw, 40px);
+        bottom: clamp(12px, 3vw, 40px);
+        z-index: 0;
         display: none;
-        width: clamp(220px, 31vw, 470px);
+        width: clamp(140px, 24vw, 360px);
         height: auto;
-        opacity: 0.025;
+        opacity: 0.016;
         pointer-events: none;
-        animation: title-watermark-turn 38s linear infinite;
       }
       .boot-intro[data-state='menu'] .title-menu__watermark,
       .boot-intro[data-state='exit'] .title-menu__watermark { display: block; }
@@ -838,40 +848,216 @@
         from { opacity: 0; transform: translateY(15px) scale(0.985); }
         to { opacity: 1; transform: translateY(0) scale(1); }
       }
-      @keyframes title-watermark-turn { to { transform: rotate(1turn); } }
-      @media (max-width: 640px) {
+      @media (min-width: 800px) and (min-height: 501px) {
         .boot-intro[data-state='title'] .boot-intro__content,
         .boot-intro[data-state='menu'] .boot-intro__content,
         .boot-intro[data-state='exit'] .boot-intro__content {
-          width: min(100%, 560px);
-        }
-        .title-social-row { grid-template-columns: 1fr; }
-        .option-row { grid-template-columns: 1fr; gap: 10px; }
-        .option-volume { grid-template-columns: minmax(0, 1fr) 42px; width: 100%; }
-        .option-switch { justify-self: start; }
-        .option-button { justify-self: start; }
-        .title-menu__watermark { right: -100px; bottom: -80px; }
-      }
-      @media (max-width: 380px) {
-        .collection-slots { grid-template-columns: repeat(2, 1fr); }
-        .title-confirm-actions { grid-template-columns: 1fr; }
-      }
-      @media (max-height: 560px) and (orientation: landscape) {
-        .boot-intro[data-state='title'] .boot-intro__content,
-        .boot-intro[data-state='menu'] .boot-intro__content,
-        .boot-intro[data-state='exit'] .boot-intro__content {
-          gap: 12px;
-          width: min(84vw, 720px);
-          max-height: calc(100dvh - 24px);
+          grid-template-columns: minmax(240px, 0.75fr) minmax(460px, 1.25fr);
+          align-items: center;
+          gap: clamp(40px, 6vw, 88px);
+          width: min(calc(100vw - 48px), 1100px);
+          padding: 4px 0 10px;
         }
         .boot-intro[data-state='title'] .boot-intro__logo,
         .boot-intro[data-state='menu'] .boot-intro__logo,
         .boot-intro[data-state='exit'] .boot-intro__logo {
-          width: min(58%, 390px);
+          width: 100%;
+          max-width: 410px;
         }
-        .title-screen { gap: 10px; }
-        .title-action { min-height: 46px; padding-block: 7px; }
-        .title-panel { padding: 14px 18px; gap: 10px; }
+        .boot-intro[data-state='title'] .boot-intro__menu,
+        .boot-intro[data-state='menu'] .boot-intro__menu,
+        .boot-intro[data-state='exit'] .boot-intro__menu {
+          width: 100%;
+          max-width: 610px;
+          padding-left: clamp(28px, 4vw, 52px);
+          border-left: 1px solid rgba(255, 255, 255, 0.14);
+        }
+      }
+      @media (max-height: 720px) {
+        .boot-intro {
+          padding:
+            max(16px, env(safe-area-inset-top))
+            max(16px, env(safe-area-inset-right))
+            max(16px, env(safe-area-inset-bottom))
+            max(16px, env(safe-area-inset-left));
+        }
+        .boot-intro[data-state='title'] .boot-intro__content,
+        .boot-intro[data-state='menu'] .boot-intro__content,
+        .boot-intro[data-state='exit'] .boot-intro__content { gap: 10px; }
+        .title-screen { gap: 8px; }
+        .title-panel__head { gap: 3px; }
+        .title-menu-list,
+        .title-actions { gap: 5px; }
+        .title-action {
+          min-height: 46px;
+          padding: 6px 11px;
+          gap: 9px;
+        }
+        .title-action--wishlist { min-height: 48px; }
+        .title-action__icon { width: 23px; height: 23px; }
+        .title-action__label small { display: none; }
+        .title-menu-divider { margin: 0; }
+        .title-screen[data-title-screen='menu'] > .title-menu-footnote,
+        .title-panel > .title-menu-footnote { display: none; }
+        .title-panel { gap: 7px; padding: 12px 16px; }
+        .option-row { min-height: 48px; padding: 2px 0; }
+        .option-copy small { display: none; }
+        .collection-summary { padding-bottom: 7px; }
+        .collection-count { font-size: 34px; }
+        .collection-slots { gap: 6px; }
+      }
+      @media (min-width: 641px) and (max-width: 799px) and (max-height: 720px) {
+        .boot-intro[data-state='title'] .boot-intro__logo,
+        .boot-intro[data-state='menu'] .boot-intro__logo,
+        .boot-intro[data-state='exit'] .boot-intro__logo {
+          width: min(44vw, 280px);
+        }
+      }
+      @media (max-width: 640px) {
+        .boot-intro {
+          padding:
+            max(12px, env(safe-area-inset-top))
+            max(14px, env(safe-area-inset-right))
+            max(12px, env(safe-area-inset-bottom))
+            max(14px, env(safe-area-inset-left));
+        }
+        .boot-intro[data-state='title'] .boot-intro__content,
+        .boot-intro[data-state='menu'] .boot-intro__content,
+        .boot-intro[data-state='exit'] .boot-intro__content {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 10px;
+          width: min(100%, 560px);
+          padding: 2px;
+        }
+        .boot-intro[data-state='title'] .boot-intro__logo,
+        .boot-intro[data-state='menu'] .boot-intro__logo,
+        .boot-intro[data-state='exit'] .boot-intro__logo {
+          width: min(72vw, 280px);
+        }
+        .boot-intro[data-state='title'] .boot-intro__menu,
+        .boot-intro[data-state='menu'] .boot-intro__menu,
+        .boot-intro[data-state='exit'] .boot-intro__menu {
+          width: 100%;
+          max-width: 560px;
+          padding-left: 0;
+          border-left: 0;
+        }
+        .title-screen { gap: 8px; }
+        .title-heading { font-size: clamp(24px, 8vw, 31px); }
+        .title-panel__head { gap: 3px; }
+        .title-menu-list,
+        .title-actions { gap: 6px; }
+        .title-action { min-height: 46px; padding: 6px 11px; gap: 9px; }
+        .title-action--wishlist { min-height: 50px; }
+        .title-action__icon { width: 23px; height: 23px; }
+        .title-action__label strong { font-size: 11px; letter-spacing: 0.1em; }
+        .title-menu-divider { margin: 0; }
+        .title-social-row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+        .title-social-row .title-action { gap: 7px; padding-inline: 9px; }
+        .title-social-row .title-action__icon { width: 20px; height: 20px; }
+        .title-social-row .title-action__label strong { font-size: 10px; letter-spacing: 0.075em; }
+        .option-row { grid-template-columns: minmax(82px, 1fr) auto; gap: 10px; }
+        .option-volume {
+          grid-template-columns: minmax(70px, 1fr) 36px;
+          gap: 6px;
+          width: min(43vw, 174px);
+        }
+        .option-volume input[type='range'] { min-height: 44px; }
+        .option-switch,
+        .option-button { justify-self: end; }
+        .collection-slots { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .title-menu__watermark { right: 12px; bottom: 12px; width: 150px; }
+      }
+      @media (max-width: 380px) {
+        .title-action__number { display: none; }
+        .title-confirm-actions { gap: 6px; }
+        .title-confirm-actions .title-action { padding-inline: 8px; }
+        .option-copy strong { font-size: 10px; letter-spacing: 0.09em; }
+        .option-button { padding-inline: 10px; font-size: 9px; }
+      }
+      @media (max-height: 560px) and (orientation: landscape) {
+        .boot-intro {
+          padding:
+            max(10px, env(safe-area-inset-top))
+            max(10px, env(safe-area-inset-right))
+            max(10px, env(safe-area-inset-bottom))
+            max(10px, env(safe-area-inset-left));
+        }
+        .boot-intro[data-state='title'] .boot-intro__content,
+        .boot-intro[data-state='menu'] .boot-intro__content,
+        .boot-intro[data-state='exit'] .boot-intro__content {
+          grid-template-columns: minmax(118px, 26vw) minmax(0, 1fr);
+          align-items: center;
+          gap: 14px;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+        }
+        .boot-intro[data-state='title'] .boot-intro__logo,
+        .boot-intro[data-state='menu'] .boot-intro__logo,
+        .boot-intro[data-state='exit'] .boot-intro__logo {
+          width: 100%;
+          max-width: 150px;
+        }
+        .boot-intro[data-state='title'] .boot-intro__menu,
+        .boot-intro[data-state='menu'] .boot-intro__menu,
+        .boot-intro[data-state='exit'] .boot-intro__menu {
+          width: 100%;
+          max-width: none;
+          padding-left: 14px;
+          border-left: 1px solid rgba(255, 255, 255, 0.14);
+        }
+        .title-screen { gap: 5px; }
+        .title-eyebrow { font-size: 8px; letter-spacing: 0.24em; }
+        .title-heading { font-size: clamp(22px, 5vw, 28px); }
+        .title-copy { font-size: 11px; line-height: 1.35; }
+        .title-menu-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 5px;
+        }
+        .title-menu-divider,
+        .title-action--wishlist,
+        .title-social-row { grid-column: 1 / -1; }
+        .title-social-row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
+        .title-action {
+          min-height: 44px;
+          padding: 4px 8px;
+          gap: 7px;
+        }
+        .title-action--wishlist { min-height: 44px; }
+        .title-action__icon { width: 20px; height: 20px; }
+        .title-action__number,
+        .title-action__label small,
+        .title-menu-footnote,
+        .option-copy small { display: none; }
+        .title-action__label strong { font-size: 10px; letter-spacing: 0.07em; }
+        .title-menu-divider { margin: 0; font-size: 8px; line-height: 1.2; }
+        .title-social-row .title-action__label strong { font-size: 9px; }
+        .title-screen[data-title-screen='menu'] > .title-back,
+        .title-screen[data-title-screen='collection'] > .title-back,
+        .title-screen[data-title-screen='options'] > .title-back {
+          position: absolute;
+          top: -5px;
+          right: 0;
+          z-index: 2;
+          justify-self: auto;
+        }
+        .title-screen[data-title-screen='menu'] > .title-panel__head,
+        .title-screen[data-title-screen='collection'] .title-panel__head,
+        .title-screen[data-title-screen='options'] .title-panel__head { padding-right: 112px; }
+        .title-panel { padding: 8px 12px; gap: 4px; }
+        .option-row {
+          grid-template-columns: minmax(100px, 1fr) auto;
+          gap: 8px;
+          min-height: 44px;
+          padding: 0;
+        }
+        .option-volume { width: min(40vw, 190px); }
+        .collection-summary { padding-bottom: 5px; }
+        .collection-count { font-size: 30px; }
+        .collection-slots { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; }
+        .title-confirm-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
+        .title-menu__watermark { right: 10px; bottom: 10px; width: 140px; }
       }
       @media (forced-colors: active) {
         .title-action,
@@ -2408,7 +2594,7 @@
         .los-dock-btn { min-width: 0; }
       }
     </style>
-    <script type="module" crossorigin src="./assets/main-ClFjGX4Q.js"></script>
+    <script type="module" crossorigin src="./assets/main-DG3gorF_.js"></script>
   </head>
   <body>
     <div
@@ -2668,16 +2854,16 @@
           </section>
         </div>
 
-        <img
-          class="title-menu__watermark"
-          src="./assets/branding/cozy-gun-restoration-mark-white.png"
-          alt=""
-          width="512"
-          height="512"
-          aria-hidden="true"
-        />
-        <div class="title-toast" data-title-toast role="status" aria-live="polite"></div>
       </div>
+      <img
+        class="title-menu__watermark"
+        src="./assets/branding/cozy-gun-restoration-mark-white.png"
+        alt=""
+        width="512"
+        height="512"
+        aria-hidden="true"
+      />
+      <div class="title-toast" data-title-toast role="status" aria-live="polite"></div>
     </div>
     <canvas id="app"></canvas>
   </body>
