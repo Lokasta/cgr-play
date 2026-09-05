@@ -153,6 +153,53 @@
       }
       .lab-toast.show { opacity: 1; }
 
+      /* ---- mode strip ---- */
+      .lab-modes { display: flex; gap: 4px; padding: 8px 4px 4px; }
+      .lab-mode {
+        flex: 1;
+        border: 1px solid var(--lab-line);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--lab-ink-dim);
+        border-radius: 7px;
+        padding: 6px 0;
+        cursor: pointer;
+        font-size: 11.5px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+      .lab-mode.on { background: var(--lab-accent-dim); border-color: rgba(224, 182, 103, 0.6); color: var(--lab-ink-hi); }
+
+      /* ---- outliner tree ---- */
+      .lab-tree { display: flex; flex-direction: column; gap: 1px; }
+      .lab-treehead { font-size: 11px; font-weight: 600; color: var(--lab-ink-dim); padding: 6px 2px 3px; }
+      .lab-treerow {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 1px 2px 1px 10px;
+        border-radius: 5px;
+      }
+      .lab-treerow.sel { background: rgba(255, 225, 74, 0.12); }
+      .lab-treerow.off .lab-treename { opacity: 0.45; text-decoration: line-through; }
+      .lab-treename {
+        flex: 1;
+        text-align: left;
+        border: none;
+        background: transparent;
+        color: var(--lab-ink);
+        font-size: 11.5px;
+        padding: 3px 4px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      .lab-treename:hover { background: rgba(255, 255, 255, 0.05); color: var(--lab-ink-hi); }
+      .lab-treecount { font: 10px var(--lab-mono); color: var(--lab-ink-dim); }
+      .lab-treerow.anchor .lab-dot { width: 8px; height: 8px; }
+      .lab-dot.kind-front { background: #ff3b3b; }
+      .lab-dot.kind-breech { background: #ff9a3b; }
+      .lab-dot.kind-gap { background: #ffe14a; }
+      .lab-dot.kind-muzzle { background: #4ad8ff; }
+
       /* ---- sections ---- */
       .lab-sec { border-bottom: 1px solid var(--lab-line); }
       .lab-sec h4 {
@@ -376,8 +423,8 @@
       }
       .lab-legend b { color: var(--lab-ink); font-weight: 600; }
     </style>
-    <script type="module" crossorigin src="./assets/lab-ek8ycIrs.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/postProcessing-BUkMx5d2.js">
+    <script type="module" crossorigin src="./assets/lab-DWZDYRp4.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/postProcessing-DzyjV52P.js">
   </head>
   <body>
     <canvas id="lab"></canvas>
@@ -385,7 +432,7 @@
     <div class="lab-tags"></div>
     <div class="lab-legend">
       <b>Dirt Lab</b> · arrastar = orbitar · roda = zoom · dir. = pan<br />
-      1 patch · 2 escova · 3 cotonete · 0 orbitar · D sujar · M máscara · C cavidades · A âncoras · R câmera · ⌘Z desfaz · ` painel
+      1 patch · 2 escova · 3 cotonete · 0 orbitar · D sujar · M máscara · C cavidades · A âncoras · O orto · G grade · ⇧1/⇧7/⇧3 lado/topo/ponta · R início · ⌘Z desfaz · ` painel
     </div>
     <button class="lab-gear" title="painel (`)">⚙</button>
     <aside class="lab-panel"></aside>
