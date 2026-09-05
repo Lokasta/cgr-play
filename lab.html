@@ -343,6 +343,26 @@
         overflow-x: auto;
       }
 
+      /* ---- anchor labels (projected each frame) ---- */
+      .lab-tags { position: fixed; inset: 0; pointer-events: none; z-index: 12; }
+      .lab-tag {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-9999px, -9999px);
+        margin: -22px 0 0 8px;
+        font: 10.5px var(--lab-mono);
+        color: var(--lab-ink-hi);
+        background: rgba(10, 12, 16, 0.78);
+        border: 1px solid var(--tag, #fff);
+        border-radius: 4px;
+        padding: 1px 5px;
+        white-space: nowrap;
+        pointer-events: none;
+      }
+      .lab-tag::before { content: ''; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--tag, #fff); margin-right: 5px; vertical-align: 0; }
+      .lab-tag.sel { background: var(--tag, #fff); color: #101214; font-weight: 700; }
+
       /* ---- corner legend ---- */
       .lab-legend {
         position: fixed;
@@ -356,12 +376,13 @@
       }
       .lab-legend b { color: var(--lab-ink); font-weight: 600; }
     </style>
-    <script type="module" crossorigin src="./assets/lab-C9ify1k4.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/postProcessing-NOT2Q-PB.js">
+    <script type="module" crossorigin src="./assets/lab-QN0ktn88.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/postProcessing-WKOg8qxs.js">
   </head>
   <body>
     <canvas id="lab"></canvas>
     <div class="lab-ring" hidden></div>
+    <div class="lab-tags"></div>
     <div class="lab-legend">
       <b>Dirt Lab</b> · arrastar = orbitar · roda = zoom · dir. = pan<br />
       1 patch · 2 escova · 3 cotonete · 0 orbitar · D sujar · M máscara · C cavidades · A âncoras · R câmera · ⌘Z desfaz · ` painel
