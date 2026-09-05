@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
     <meta name="theme-color" content="#000000" />
     <meta name="color-scheme" content="dark" />
@@ -285,6 +285,610 @@
         }
         .boot-intro__loader-track { width: min(36vw, 220px); }
         .boot-intro__drum { width: 52px; }
+      }
+
+      /* ---- title gate + main menu: one monochrome screen stack ---- */
+      .boot-intro::before,
+      .boot-intro::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        pointer-events: none;
+      }
+      .boot-intro::before {
+        background:
+          radial-gradient(circle at 50% 36%, rgba(255, 255, 255, 0.055), transparent 32%),
+          radial-gradient(circle at 84% 84%, rgba(255, 255, 255, 0.025), transparent 24%),
+          #000;
+      }
+      .boot-intro::after {
+        z-index: -1;
+        opacity: 0;
+        background:
+          linear-gradient(90deg, transparent 0 10%, rgba(255, 255, 255, 0.035) 10% calc(10% + 1px), transparent calc(10% + 1px) 90%, rgba(255, 255, 255, 0.035) 90% calc(90% + 1px), transparent calc(90% + 1px)),
+          linear-gradient(180deg, transparent 0 12%, rgba(255, 255, 255, 0.025) 12% calc(12% + 1px), transparent calc(12% + 1px));
+        transition: opacity 0.8s ease;
+      }
+      .boot-intro[data-state='title'],
+      .boot-intro[data-state='menu'],
+      .boot-intro[data-state='starting'],
+      .boot-intro[data-state='exit'] {
+        cursor: default;
+      }
+      .boot-intro[data-state='title']::after,
+      .boot-intro[data-state='menu']::after,
+      .boot-intro[data-state='exit']::after {
+        opacity: 1;
+      }
+      .boot-intro[data-state='ready'] .boot-intro__loader-track,
+      .boot-intro[data-state='title'] .boot-intro__loader-track,
+      .boot-intro[data-state='menu'] .boot-intro__loader-track,
+      .boot-intro[data-state='exit'] .boot-intro__loader-track {
+        opacity: 0;
+        transform: translateY(-7px) scale(0.96);
+        pointer-events: none;
+        animation: none;
+        transition: opacity 0.22s ease, transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .boot-intro__loader-track[hidden] {
+        display: none !important;
+      }
+      .boot-intro[data-state='title'] .boot-intro__content,
+      .boot-intro[data-state='menu'] .boot-intro__content,
+      .boot-intro[data-state='exit'] .boot-intro__content {
+        gap: clamp(18px, 3.2vh, 30px);
+        width: min(90vw, 760px);
+        max-height: calc(100dvh - max(48px, env(safe-area-inset-top) + env(safe-area-inset-bottom)));
+        padding: 4px clamp(2px, 1vw, 10px) 10px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.28) transparent;
+      }
+      .boot-intro[data-state='title'] .boot-intro__logo,
+      .boot-intro[data-state='menu'] .boot-intro__logo,
+      .boot-intro[data-state='exit'] .boot-intro__logo {
+        width: min(100%, 570px);
+        animation: title-logo-settle 0.72s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+      .boot-intro[data-state='menu'] .boot-intro__logo {
+        width: min(82%, 500px);
+      }
+      .boot-intro__menu {
+        width: min(100%, 560px);
+      }
+      .boot-intro__menu[hidden],
+      .title-screen[hidden] {
+        display: none !important;
+      }
+      .title-screen {
+        position: relative;
+        display: grid;
+        justify-items: stretch;
+        gap: 18px;
+        width: 100%;
+        padding: 2px;
+        animation: title-screen-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+      .boot-intro[data-state='starting'] .title-screen {
+        opacity: 0;
+        transform: translateY(-7px) scale(0.99);
+        animation: none;
+        transition: opacity 0.16s ease, transform 0.18s ease;
+      }
+      .title-screen--center {
+        justify-items: center;
+        text-align: center;
+      }
+      .title-eyebrow {
+        color: rgba(255, 255, 255, 0.58);
+        font-size: clamp(9px, 1.1vw, 11px);
+        font-weight: 750;
+        letter-spacing: 0.34em;
+        line-height: 1.5;
+        text-transform: uppercase;
+      }
+      .title-heading {
+        color: #fff;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(25px, 4vw, 40px);
+        font-weight: 500;
+        letter-spacing: 0.035em;
+        line-height: 1.05;
+      }
+      .title-copy {
+        max-width: 440px;
+        color: rgba(255, 255, 255, 0.58);
+        font-size: clamp(12px, 1.4vw, 14px);
+        line-height: 1.65;
+      }
+      .title-actions,
+      .title-menu-list {
+        display: grid;
+        gap: 8px;
+        width: 100%;
+      }
+      .title-actions {
+        width: min(100%, 350px);
+      }
+      .title-action {
+        --action-ink: #fff;
+        position: relative;
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 13px;
+        width: 100%;
+        min-height: 54px;
+        padding: 10px 16px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.018);
+        color: var(--action-ink);
+        font: inherit;
+        text-align: left;
+        cursor: pointer;
+        transform: translateX(0);
+        transition:
+          color 0.18s ease,
+          background 0.18s ease,
+          border-color 0.18s ease,
+          transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .title-action::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: #fff;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .title-action:hover:not(:disabled),
+      .title-action:focus-visible:not(:disabled),
+      .boot-intro[data-input='gamepad'] .title-action:focus:not(:disabled) {
+        --action-ink: #000;
+        z-index: 1;
+        outline: 2px solid #fff;
+        outline-offset: 3px;
+        border-color: #fff;
+        transform: translateX(5px);
+      }
+      .title-action:hover:not(:disabled)::before,
+      .title-action:focus-visible:not(:disabled)::before,
+      .boot-intro[data-input='gamepad'] .title-action:focus:not(:disabled)::before {
+        transform: scaleX(1);
+      }
+      .title-action:active:not(:disabled) {
+        transform: translateX(5px) scale(0.985);
+      }
+      .title-action:disabled {
+        opacity: 0.34;
+        cursor: not-allowed;
+      }
+      .title-action--primary {
+        --action-ink: #000;
+        border-color: #fff;
+        background: #fff;
+      }
+      .title-action--primary::before {
+        background: #000;
+      }
+      .title-action--primary:hover:not(:disabled),
+      .title-action--primary:focus-visible:not(:disabled),
+      .boot-intro[data-input='gamepad'] .title-action--primary:focus:not(:disabled) {
+        --action-ink: #fff;
+      }
+      .title-action--wishlist {
+        --action-ink: #000;
+        min-height: 61px;
+        border-color: #fff;
+        background: #fff;
+        box-shadow: 0 0 36px rgba(255, 255, 255, 0.1);
+      }
+      .title-action--wishlist::before {
+        background:
+          repeating-linear-gradient(-45deg, #000 0 6px, #090909 6px 12px);
+      }
+      .title-action--wishlist:hover:not(:disabled),
+      .title-action--wishlist:focus-visible:not(:disabled),
+      .boot-intro[data-input='gamepad'] .title-action--wishlist:focus:not(:disabled) {
+        --action-ink: #fff;
+      }
+      .title-action__icon {
+        display: grid;
+        place-items: center;
+        width: 27px;
+        height: 27px;
+      }
+      .title-action__icon svg {
+        width: 100%;
+        height: 100%;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .title-action__number {
+        color: currentColor;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 10px;
+        opacity: 0.56;
+      }
+      .title-action__label {
+        display: grid;
+        gap: 2px;
+        min-width: 0;
+      }
+      .title-action__label strong {
+        font-size: clamp(12px, 1.45vw, 14px);
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+      .title-action__label small {
+        overflow: hidden;
+        font-size: 10px;
+        letter-spacing: 0.04em;
+        line-height: 1.35;
+        opacity: 0.52;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .title-menu-divider {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 12px;
+        margin: 5px 0;
+        color: rgba(255, 255, 255, 0.36);
+        font-size: 9px;
+        font-weight: 750;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+      }
+      .title-menu-divider::before,
+      .title-menu-divider::after {
+        content: '';
+        height: 1px;
+        background: rgba(255, 255, 255, 0.14);
+      }
+      .title-social-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .title-social-row .title-action {
+        grid-template-columns: auto minmax(0, 1fr);
+      }
+      .title-social-row .title-action__number { display: none; }
+      .title-feedback {
+        justify-self: center;
+        min-height: 44px;
+        padding: 9px 16px;
+        border: 0;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.55);
+        font: inherit;
+        font-size: 10px;
+        font-weight: 750;
+        letter-spacing: 0.22em;
+        text-decoration: underline;
+        text-decoration-color: rgba(255, 255, 255, 0.24);
+        text-underline-offset: 5px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .title-feedback:hover,
+      .title-feedback:focus-visible,
+      .boot-intro[data-input='gamepad'] .title-feedback:focus {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+        color: #fff;
+      }
+      .title-back {
+        justify-self: start;
+        min-height: 44px;
+        padding: 8px 12px;
+        border: 0;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.62);
+        font: inherit;
+        font-size: 10px;
+        font-weight: 750;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .title-back:hover,
+      .title-back:focus-visible,
+      .boot-intro[data-input='gamepad'] .title-back:focus {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+        color: #fff;
+      }
+      .title-menu-footnote {
+        justify-self: center;
+        color: rgba(255, 255, 255, 0.52);
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        line-height: 1.5;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .title-panel {
+        display: grid;
+        gap: 18px;
+        padding: clamp(18px, 3vw, 28px);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(255, 255, 255, 0.018);
+      }
+      .title-panel__head {
+        display: grid;
+        gap: 7px;
+      }
+      .collection-summary {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 18px;
+        padding-bottom: 13px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .collection-count {
+        color: #fff;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(32px, 7vw, 56px);
+        line-height: 1;
+      }
+      .collection-slots {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+      }
+      .collection-slot {
+        display: grid;
+        place-items: center;
+        aspect-ratio: 1;
+        min-width: 0;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(255, 255, 255, 0.015);
+      }
+      .collection-slot img {
+        width: 48%;
+        height: auto;
+        opacity: 0.13;
+        filter: grayscale(1);
+      }
+      .collection-slot[data-filled='true'] {
+        border-color: rgba(255, 255, 255, 0.68);
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .collection-slot[data-filled='true'] img { opacity: 0.9; }
+      .option-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 18px;
+        min-height: 64px;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .option-row:last-child { border-bottom: 0; }
+      .option-copy {
+        display: grid;
+        gap: 4px;
+      }
+      .option-copy strong {
+        font-size: 12px;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .option-copy small {
+        color: rgba(255, 255, 255, 0.48);
+        font-size: 10px;
+        line-height: 1.4;
+      }
+      .option-volume {
+        display: grid;
+        grid-template-columns: minmax(100px, 180px) 42px;
+        align-items: center;
+        gap: 10px;
+      }
+      .option-volume input[type='range'] {
+        width: 100%;
+        min-height: 44px;
+        accent-color: #fff;
+        cursor: pointer;
+      }
+      .option-volume input[type='range']:focus-visible,
+      .boot-intro[data-input='gamepad'] .option-volume input[type='range']:focus {
+        outline: 2px solid #fff;
+        outline-offset: 3px;
+      }
+      .option-volume output {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 11px;
+        text-align: right;
+      }
+      .option-switch {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 44px;
+        padding: 7px 4px;
+        cursor: pointer;
+      }
+      .option-switch input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+      }
+      .option-switch__track {
+        width: 52px;
+        height: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 99px;
+        background: transparent;
+        transition: background 0.2s ease;
+      }
+      .option-switch__track::after {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: 9px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #fff;
+        transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease;
+      }
+      .option-switch input:checked + .option-switch__track { background: #fff; }
+      .option-switch input:checked + .option-switch__track::after {
+        background: #000;
+        transform: translateX(22px);
+      }
+      .option-switch input:focus-visible + .option-switch__track {
+        outline: 2px solid #fff;
+        outline-offset: 4px;
+      }
+      .boot-intro[data-input='gamepad'] .option-switch input:focus + .option-switch__track {
+        outline: 2px solid #fff;
+        outline-offset: 4px;
+      }
+      .option-button {
+        min-height: 44px;
+        padding: 9px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 2px;
+        background: transparent;
+        color: #fff;
+        font: inherit;
+        font-size: 10px;
+        font-weight: 750;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .option-button:hover,
+      .option-button:focus-visible,
+      .boot-intro[data-input='gamepad'] .option-button:focus {
+        outline: 2px solid #fff;
+        outline-offset: 3px;
+        background: #fff;
+        color: #000;
+      }
+      .title-confirm-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        width: min(100%, 420px);
+      }
+      .title-menu__watermark {
+        position: absolute;
+        right: clamp(-110px, -6vw, -40px);
+        bottom: clamp(-120px, -9vw, -55px);
+        z-index: -1;
+        display: none;
+        width: clamp(220px, 31vw, 470px);
+        height: auto;
+        opacity: 0.025;
+        pointer-events: none;
+        animation: title-watermark-turn 38s linear infinite;
+      }
+      .boot-intro[data-state='menu'] .title-menu__watermark,
+      .boot-intro[data-state='exit'] .title-menu__watermark { display: block; }
+      .title-toast {
+        position: fixed;
+        left: 50%;
+        bottom: max(22px, env(safe-area-inset-bottom));
+        z-index: 4;
+        max-width: min(88vw, 480px);
+        padding: 11px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.34);
+        background: #080808;
+        color: #fff;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        line-height: 1.4;
+        text-align: center;
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(-50%, 12px);
+        transition: opacity 0.2s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .title-toast.visible {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+      @keyframes title-logo-settle {
+        from { opacity: 0.72; transform: translateY(9px) scale(1.025); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      @keyframes title-screen-in {
+        from { opacity: 0; transform: translateY(15px) scale(0.985); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      @keyframes title-watermark-turn { to { transform: rotate(1turn); } }
+      @media (max-width: 640px) {
+        .boot-intro[data-state='title'] .boot-intro__content,
+        .boot-intro[data-state='menu'] .boot-intro__content,
+        .boot-intro[data-state='exit'] .boot-intro__content {
+          width: min(100%, 560px);
+        }
+        .title-social-row { grid-template-columns: 1fr; }
+        .option-row { grid-template-columns: 1fr; gap: 10px; }
+        .option-volume { grid-template-columns: minmax(0, 1fr) 42px; width: 100%; }
+        .option-switch { justify-self: start; }
+        .option-button { justify-self: start; }
+        .title-menu__watermark { right: -100px; bottom: -80px; }
+      }
+      @media (max-width: 380px) {
+        .collection-slots { grid-template-columns: repeat(2, 1fr); }
+        .title-confirm-actions { grid-template-columns: 1fr; }
+      }
+      @media (max-height: 560px) and (orientation: landscape) {
+        .boot-intro[data-state='title'] .boot-intro__content,
+        .boot-intro[data-state='menu'] .boot-intro__content,
+        .boot-intro[data-state='exit'] .boot-intro__content {
+          gap: 12px;
+          width: min(84vw, 720px);
+          max-height: calc(100dvh - 24px);
+        }
+        .boot-intro[data-state='title'] .boot-intro__logo,
+        .boot-intro[data-state='menu'] .boot-intro__logo,
+        .boot-intro[data-state='exit'] .boot-intro__logo {
+          width: min(58%, 390px);
+        }
+        .title-screen { gap: 10px; }
+        .title-action { min-height: 46px; padding-block: 7px; }
+        .title-panel { padding: 14px 18px; gap: 10px; }
+      }
+      @media (forced-colors: active) {
+        .title-action,
+        .title-panel,
+        .collection-slot,
+        .option-button { border: 1px solid CanvasText; }
+        .title-action:focus-visible,
+        .title-feedback:focus-visible,
+        .title-back:focus-visible,
+        .option-button:focus-visible { outline: 3px solid Highlight; }
+      }
+      html[data-reduce-motion='true'] *,
+      html[data-reduce-motion='true'] *::before,
+      html[data-reduce-motion='true'] *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
       }
 
       /* ---- HUD: tools + progress (locked in pitch: "HUD: tools + progresso") ---- */
@@ -1804,10 +2408,19 @@
         .los-dock-btn { min-width: 0; }
       }
     </style>
-    <script type="module" crossorigin src="./assets/main-FPZehOJi.js"></script>
+    <script type="module" crossorigin src="./assets/main-ClFjGX4Q.js"></script>
   </head>
   <body>
-    <div id="boot-intro" class="boot-intro" data-state="loading" aria-busy="true">
+    <div
+      id="boot-intro"
+      class="boot-intro"
+      data-state="loading"
+      data-input="keyboard"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Cozy Gun Restoration"
+      aria-busy="true"
+    >
       <div class="boot-intro__content">
         <img
           class="boot-intro__logo"
@@ -1842,6 +2455,228 @@
           <p>The workshop couldn't open.</p>
           <button class="boot-intro__retry" type="button">Reload</button>
         </div>
+
+        <div class="boot-intro__menu" data-title-menu hidden>
+          <section
+            class="title-screen title-screen--center"
+            data-title-screen="gate"
+            aria-labelledby="title-gate-heading"
+            hidden
+          >
+            <p class="title-eyebrow">Workshop ready</p>
+            <h1 id="title-gate-heading" class="title-heading">Take your time.</h1>
+            <p class="title-copy">A quiet bench, one careful restoration, and nowhere else to be.</p>
+            <div class="title-actions" aria-label="Title actions">
+              <button
+                class="title-action title-action--primary"
+                type="button"
+                data-title-action="open-menu"
+                data-autofocus
+              >
+                <span class="title-action__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m9 5 8 7-8 7Z" /></svg>
+                </span>
+                <span class="title-action__label"><strong>Play Game</strong><small>Enter the workshop</small></span>
+                <span class="title-action__number">A</span>
+              </button>
+              <button class="title-action" type="button" data-title-action="exit-request">
+                <span class="title-action__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M14 5h5v14h-5M10 8l-4 4 4 4M6 12h9" /></svg>
+                </span>
+                <span class="title-action__label"><strong>Exit</strong><small>Leave for now</small></span>
+                <span class="title-action__number">B</span>
+              </button>
+            </div>
+            <p class="title-menu-footnote">Enter / A to select · Arrow keys / D-pad to navigate</p>
+          </section>
+
+          <section class="title-screen" data-title-screen="menu" aria-labelledby="main-menu-heading" hidden>
+            <div class="title-panel__head">
+              <p class="title-eyebrow">Main menu</p>
+              <h2 id="main-menu-heading" class="title-heading">The workshop</h2>
+            </div>
+            <nav class="title-menu-list" aria-label="Main menu">
+              <button class="title-action" type="button" data-title-action="new" data-autofocus>
+                <span class="title-action__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /><path d="M12 8v8M8 12h8" /></svg>
+                </span>
+                <span class="title-action__label"><strong>Create New Game</strong><small>Begin a fresh collection</small></span>
+                <span class="title-action__number">01</span>
+              </button>
+              <button class="title-action" type="button" data-title-action="continue" disabled aria-disabled="true">
+                <span class="title-action__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M5 12a7 7 0 1 0 2-4.9M5 5v7h7" /><path d="m11 9 4 3-4 3Z" /></svg>
+                </span>
+                <span class="title-action__label"><strong>Continue</strong><small data-continue-detail>No save found</small></span>
+                <span class="title-action__number">02</span>
+              </button>
+              <button class="title-action" type="button" data-title-action="collection">
+                <span class="title-action__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16M6 5v14M18 5v14" /></svg>
+                </span>
+                <span class="title-action__label"><strong>Collection Room</strong><small>See your restored pieces</small></span>
+                <span class="title-action__number">03</span>
+              </button>
+              <button class="title-action" type="button" data-title-action="options">
+                <span class="title-action__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 7h5M15 7h5M4 17h9M17 17h3" /><circle cx="12" cy="7" r="3" /><circle cx="15" cy="17" r="2" /></svg>
+                </span>
+                <span class="title-action__label"><strong>Options</strong><small>Sound, motion, and display</small></span>
+                <span class="title-action__number">04</span>
+              </button>
+
+              <div class="title-menu-divider" aria-hidden="true">Community</div>
+
+              <button
+                class="title-action title-action--wishlist"
+                type="button"
+                data-external="steam"
+                data-url=""
+              >
+                <span class="title-action__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="16.2" cy="8" r="3.1" />
+                    <circle cx="7.7" cy="15.8" r="2.5" />
+                    <path d="m9.7 14.3 4.4-4.4M5.4 14.7l-3-1.3" />
+                  </svg>
+                </span>
+                <span class="title-action__label"><strong>Wishlist on Steam!</strong><small>Store page coming soon</small></span>
+                <span class="title-action__number">★</span>
+              </button>
+
+              <div class="title-social-row">
+                <button class="title-action" type="button" data-external="discord" data-url="">
+                  <span class="title-action__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M7.5 7.2A13 13 0 0 1 12 6.4a13 13 0 0 1 4.5.8c1.4 2 2.1 4.3 2.2 6.8-1.5 1.3-3 2-4.5 2.4l-1.1-1.5M10.9 14.9l-1.1 1.5C8.3 16 6.8 15.3 5.3 14c.1-2.5.8-4.8 2.2-6.8" /><circle cx="9.3" cy="12" r="1" /><circle cx="14.7" cy="12" r="1" /></svg>
+                  </span>
+                  <span class="title-action__label"><strong>Discord</strong><small>Join the server</small></span>
+                </button>
+                <button
+                  class="title-action"
+                  type="button"
+                  data-external="feedback"
+                  data-url="https://github.com/Lokasta/cgr-play/issues/new?title=Cozy%20Gun%20Restoration%20feedback"
+                >
+                  <span class="title-action__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M5 5h14v11H9l-4 3Z" /><path d="M9 9h6M9 12h4" /></svg>
+                  </span>
+                  <span class="title-action__label"><strong>Give Feedback</strong><small>Tell us what you felt</small></span>
+                </button>
+              </div>
+            </nav>
+            <button class="title-back" type="button" data-title-action="back">← Back to title</button>
+            <p class="title-menu-footnote">Current playtest gameplay uses mouse or touch</p>
+          </section>
+
+          <section class="title-screen" data-title-screen="collection" aria-labelledby="collection-heading" hidden>
+            <button class="title-back" type="button" data-title-action="back" data-autofocus>← Back</button>
+            <div class="title-panel">
+              <div class="title-panel__head">
+                <p class="title-eyebrow">Your quiet archive</p>
+                <h2 id="collection-heading" class="title-heading">Collection Room</h2>
+              </div>
+              <div class="collection-summary">
+                <p class="title-copy" data-collection-copy>No restorations yet. Your finished pieces will live here.</p>
+                <strong class="collection-count" data-collection-count>0/4</strong>
+              </div>
+              <div class="collection-slots" aria-label="Four collection slots">
+                <div class="collection-slot" data-collection-slot data-filled="false"><img src="./assets/branding/cozy-gun-restoration-mark-white.png" alt="" /></div>
+                <div class="collection-slot" data-collection-slot data-filled="false"><img src="./assets/branding/cozy-gun-restoration-mark-white.png" alt="" /></div>
+                <div class="collection-slot" data-collection-slot data-filled="false"><img src="./assets/branding/cozy-gun-restoration-mark-white.png" alt="" /></div>
+                <div class="collection-slot" data-collection-slot data-filled="false"><img src="./assets/branding/cozy-gun-restoration-mark-white.png" alt="" /></div>
+              </div>
+              <p class="title-menu-footnote">Progress saves after each completed restoration</p>
+            </div>
+          </section>
+
+          <section class="title-screen" data-title-screen="options" aria-labelledby="options-heading" hidden>
+            <button class="title-back" type="button" data-title-action="back" data-autofocus>← Back</button>
+            <div class="title-panel">
+              <div class="title-panel__head">
+                <p class="title-eyebrow">Make it yours</p>
+                <h2 id="options-heading" class="title-heading">Options</h2>
+              </div>
+              <div class="option-row">
+                <label class="option-copy" for="title-master-volume">
+                  <strong>Master Volume</strong>
+                  <small>Controls every audio bus while preserving mix headroom.</small>
+                </label>
+                <div class="option-volume">
+                  <input id="title-master-volume" type="range" min="0" max="100" step="1" value="82" data-option-volume />
+                  <output for="title-master-volume" data-option-volume-output>82%</output>
+                </div>
+              </div>
+              <div class="option-row">
+                <div class="option-copy">
+                  <strong>Reduced Motion</strong>
+                  <small>Shortens interface movement; system accessibility settings still take priority.</small>
+                </div>
+                <label class="option-switch">
+                  <span class="boot-intro__status">Toggle reduced motion</span>
+                  <input type="checkbox" data-option-motion />
+                  <span class="option-switch__track" aria-hidden="true"></span>
+                </label>
+              </div>
+              <div class="option-row">
+                <div class="option-copy">
+                  <strong>Display</strong>
+                  <small>Use the whole screen when your browser allows it.</small>
+                </div>
+                <button class="option-button" type="button" data-option-fullscreen>Go Fullscreen</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="title-screen title-screen--center" data-title-screen="new-confirm" aria-labelledby="new-confirm-heading" hidden>
+            <p class="title-eyebrow">Replace current save?</p>
+            <h2 id="new-confirm-heading" class="title-heading">Begin again</h2>
+            <p class="title-copy">Your current collection will be backed up, then a new workshop save will begin.</p>
+            <div class="title-confirm-actions">
+              <button class="title-action" type="button" data-title-action="back" data-autofocus>
+                <span class="title-action__label"><strong>Cancel</strong><small>Keep this save</small></span>
+              </button>
+              <button class="title-action title-action--primary" type="button" data-title-action="confirm-new">
+                <span class="title-action__label"><strong>Start New Game</strong><small>Back up and replace</small></span>
+              </button>
+            </div>
+          </section>
+
+          <section class="title-screen title-screen--center" data-title-screen="exit-confirm" aria-labelledby="exit-confirm-heading" hidden>
+            <p class="title-eyebrow">Leave the workshop?</p>
+            <h2 id="exit-confirm-heading" class="title-heading">Exit game</h2>
+            <p class="title-copy">Browsers may ask you to close the tab yourself.</p>
+            <div class="title-confirm-actions">
+              <button class="title-action title-action--primary" type="button" data-title-action="back" data-autofocus>
+                <span class="title-action__label"><strong>Stay</strong><small>Return to the title</small></span>
+              </button>
+              <button class="title-action" type="button" data-title-action="exit-confirm">
+                <span class="title-action__label"><strong>Exit</strong><small>Close when possible</small></span>
+              </button>
+            </div>
+          </section>
+
+          <section class="title-screen title-screen--center" data-title-screen="exit" aria-labelledby="exit-heading" hidden>
+            <p class="title-eyebrow">Until next time</p>
+            <h2 id="exit-heading" class="title-heading">The bench will wait.</h2>
+            <p class="title-copy">You can safely close this tab or window now.</p>
+            <div class="title-actions">
+              <button class="title-action" type="button" data-title-action="exit-back" data-autofocus>
+                <span class="title-action__label"><strong>Back to Title</strong><small>One more restoration?</small></span>
+              </button>
+            </div>
+          </section>
+        </div>
+
+        <img
+          class="title-menu__watermark"
+          src="./assets/branding/cozy-gun-restoration-mark-white.png"
+          alt=""
+          width="512"
+          height="512"
+          aria-hidden="true"
+        />
+        <div class="title-toast" data-title-toast role="status" aria-live="polite"></div>
       </div>
     </div>
     <canvas id="app"></canvas>
