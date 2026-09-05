@@ -1,19 +1,67 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="booting">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
     />
-    <meta name="theme-color" content="#173526" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="application-name" content="Cozy Gun Restoration" />
+    <meta
+      name="description"
+      content="A cozy, tactile game about carefully cleaning and restoring old revolvers at home."
+    />
+    <meta name="msapplication-TileColor" content="#000000" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Cozy Gun" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
-    <link rel="manifest" href="./site.webmanifest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Cozy Gun Restoration" />
+    <meta property="og:title" content="Cozy Gun Restoration" />
+    <meta
+      property="og:description"
+      content="Restore worn revolvers, piece by piece, in a quiet late-night workshop."
+    />
+    <meta property="og:url" content="https://lokasta.github.io/cgr-play/" />
+    <meta
+      property="og:image"
+      content="https://lokasta.github.io/cgr-play/assets/branding/cozy-gun-restoration-social-1200x630.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Cozy Gun Restoration monochrome wordmark" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cozy Gun Restoration" />
+    <meta
+      name="twitter:description"
+      content="Restore worn revolvers, piece by piece, in a quiet late-night workshop."
+    />
+    <meta
+      name="twitter:image"
+      content="https://lokasta.github.io/cgr-play/assets/branding/cozy-gun-restoration-social-1200x630.png"
+    />
+    <meta name="twitter:image:alt" content="Cozy Gun Restoration monochrome wordmark" />
+    <link rel="canonical" href="https://lokasta.github.io/cgr-play/" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png?v=2" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png?v=2" />
+    <link rel="mask-icon" href="./icons/safari-pinned-tab.svg?v=2" color="#000000" />
+    <link rel="manifest" href="./site.webmanifest?v=2" />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/branding/cozy-gun-restoration-logo-white.png"
+      type="image/png"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/branding/cozy-gun-restoration-mark-white.png"
+      type="image/png"
+    />
     <title>Cozy Gun Restoration</title>
     <style>
       :root {
@@ -58,6 +106,185 @@
         width: 100%;
         height: 100%;
         touch-action: none; /* the game owns all gestures — no browser pan/zoom */
+      }
+
+      /* ---- boot: the title exists before the JS bundle does ---- */
+      html.booting,
+      html.booting body {
+        background: #000;
+      }
+      .boot-intro {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        display: grid;
+        place-items: center;
+        min-width: 100%;
+        min-height: 100%;
+        min-height: 100dvh;
+        padding:
+          max(24px, env(safe-area-inset-top))
+          max(24px, env(safe-area-inset-right))
+          max(24px, env(safe-area-inset-bottom))
+          max(24px, env(safe-area-inset-left));
+        overflow: hidden;
+        isolation: isolate;
+        background: #000;
+        color: #fff;
+        cursor: wait;
+        pointer-events: auto;
+        touch-action: none;
+        opacity: 1;
+        transition: opacity 0.58s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .boot-intro__content {
+        display: grid;
+        justify-items: center;
+        gap: clamp(22px, 4.5vh, 42px);
+        width: min(72vw, 720px);
+        transform: scale(1);
+        transition: transform 0.58s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .boot-intro__logo {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        animation: boot-logo-reveal 0.82s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+      .boot-intro__loader-track {
+        display: grid;
+        grid-template-columns: minmax(36px, 1fr) auto minmax(36px, 1fr);
+        align-items: center;
+        gap: clamp(12px, 2vw, 20px);
+        width: min(46vw, 280px);
+        opacity: 0;
+        animation: boot-loader-in 0.34s 0.42s ease-out forwards;
+      }
+      .boot-intro__loader-track::before,
+      .boot-intro__loader-track::after {
+        content: '';
+        height: 1px;
+        background: rgba(255, 255, 255, 0.24);
+        transform: scaleX(0.72);
+        animation: boot-rule-breathe 1.8s ease-in-out infinite alternate;
+      }
+      .boot-intro__loader-track::before { transform-origin: right center; }
+      .boot-intro__loader-track::after { transform-origin: left center; }
+      .boot-intro__drum {
+        display: block;
+        width: clamp(58px, 5.2vw, 74px);
+        height: auto;
+        aspect-ratio: 1;
+        object-fit: contain;
+        transform-origin: 50% 50%;
+        animation: boot-drum-turn 1.8s steps(6, end) infinite;
+        will-change: transform;
+      }
+      .boot-intro__status {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .boot-intro__error {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        color: #fff;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+      .boot-intro__retry {
+        min-width: 112px;
+        min-height: 42px;
+        padding: 10px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 999px;
+        background: #000;
+        color: #fff;
+        font: inherit;
+        letter-spacing: inherit;
+        text-transform: inherit;
+        cursor: pointer;
+      }
+      .boot-intro__retry:hover,
+      .boot-intro__retry:focus-visible {
+        outline: none;
+        background: #fff;
+        color: #000;
+      }
+      .boot-intro[data-state='ready'] .boot-intro__drum {
+        animation-duration: 0.9s;
+      }
+      .boot-intro[data-state='exiting'] {
+        opacity: 0;
+        cursor: default;
+        pointer-events: none;
+      }
+      .boot-intro[data-state='exiting'] .boot-intro__content {
+        transform: scale(1.018);
+      }
+      .boot-intro[data-state='exiting'] .boot-intro__logo,
+      .boot-intro[data-state='exiting'] .boot-intro__loader-track {
+        animation: none;
+      }
+      .boot-intro[data-state='error'] {
+        cursor: default;
+      }
+      .boot-intro[data-state='error'] .boot-intro__loader-track {
+        display: none;
+      }
+      .boot-intro[data-state='error'] .boot-intro__error {
+        display: flex;
+      }
+      @keyframes boot-logo-reveal {
+        0% {
+          opacity: 0;
+          clip-path: inset(0 50% 0 50%);
+          transform: translateY(5px) scale(0.985);
+        }
+        100% {
+          opacity: 1;
+          clip-path: inset(0 0 0 0);
+          transform: translateY(0) scale(1);
+        }
+      }
+      @keyframes boot-loader-in {
+        from { opacity: 0; transform: translateY(5px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes boot-drum-turn {
+        to { transform: rotate(1turn); }
+      }
+      @keyframes boot-rule-breathe {
+        from { opacity: 0.38; transform: scaleX(0.68); }
+        to { opacity: 1; transform: scaleX(1); }
+      }
+      @media (max-width: 640px) {
+        .boot-intro__content {
+          gap: clamp(18px, 4vh, 30px);
+          width: min(88vw, 520px);
+        }
+        .boot-intro__loader-track { width: min(58vw, 240px); }
+        .boot-intro__drum { width: clamp(58px, 17vw, 66px); }
+      }
+      @media (max-height: 480px) and (orientation: landscape) {
+        .boot-intro__content {
+          gap: 10px;
+          width: min(62vw, 520px);
+        }
+        .boot-intro__loader-track { width: min(36vw, 220px); }
+        .boot-intro__drum { width: 52px; }
       }
 
       /* ---- HUD: tools + progress (locked in pitch: "HUD: tools + progresso") ---- */
@@ -1577,10 +1804,46 @@
         .los-dock-btn { min-width: 0; }
       }
     </style>
-    <script type="module" crossorigin src="./assets/main-zZXBatiB.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/brushCleaningStation-CdMOaDSo.js">
+    <script type="module" crossorigin src="./assets/main-VJpJu1Yo.js"></script>
   </head>
   <body>
+    <div id="boot-intro" class="boot-intro" data-state="loading" aria-busy="true">
+      <div class="boot-intro__content">
+        <img
+          class="boot-intro__logo"
+          src="./assets/branding/cozy-gun-restoration-logo-white.png"
+          alt="Cozy Gun Restoration"
+          width="1692"
+          height="486"
+          decoding="sync"
+          fetchpriority="high"
+        />
+        <div
+          id="boot-progress"
+          class="boot-intro__loader-track"
+          role="progressbar"
+          aria-label="Loading the workshop"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+        >
+          <img
+            class="boot-intro__drum"
+            src="./assets/branding/cozy-gun-restoration-mark-white.png"
+            alt=""
+            width="512"
+            height="512"
+            aria-hidden="true"
+            decoding="async"
+          />
+        </div>
+        <p id="boot-status" class="boot-intro__status" aria-live="polite">Loading the workshop</p>
+        <div class="boot-intro__error" aria-live="assertive">
+          <p>The workshop couldn't open.</p>
+          <button class="boot-intro__retry" type="button">Reload</button>
+        </div>
+      </div>
+    </div>
     <canvas id="app"></canvas>
   </body>
 </html>
