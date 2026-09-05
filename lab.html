@@ -62,6 +62,21 @@
       .lab-ring.over { border-color: var(--lab-accent); }
       .lab-ring[data-mode='dirty'] { border-style: dashed; border-color: var(--lab-grime); }
       .lab-ring[data-tool='oil'].over { border-color: var(--lab-oil); }
+      /* the rod: a thin sight with a centre dot; brass target when seated, filled while pushing */
+      .lab-ring[data-tool='rod'] { border-width: 1px; transition: border-color 0.12s ease, width 0.12s ease, height 0.12s ease, background 0.12s ease; }
+      .lab-ring[data-tool='rod']::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 3px;
+        height: 3px;
+        margin: -1.5px 0 0 -1.5px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+      }
+      .lab-ring[data-tool='rod'][data-state='seated'] { border-color: #c99c45; border-width: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5), 0 0 8px rgba(201, 156, 69, 0.55); }
+      .lab-ring[data-tool='rod'][data-state='pushing'] { border-color: #c99c45; border-width: 2px; background: rgba(201, 156, 69, 0.28); }
 
       /* ---- gear ---- */
       .lab-gear {
@@ -423,8 +438,8 @@
       }
       .lab-legend b { color: var(--lab-ink); font-weight: 600; }
     </style>
-    <script type="module" crossorigin src="./assets/lab-BUx5pqtT.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/brushCleaningStation-C6VWyWR8.js">
+    <script type="module" crossorigin src="./assets/lab-DNT7PLMb.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/brushCleaningStation-CdMOaDSo.js">
   </head>
   <body>
     <canvas id="lab"></canvas>
