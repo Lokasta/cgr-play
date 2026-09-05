@@ -1,0 +1,5 @@
+{
+  "savedAt": null,
+  "note": "camada do usuário: valores salvos pelo painel/lab; carregados no boot e tratados como padrão (rebaseline). O agente pode dobrar no código quando quiser.",
+  "values": {}
+}
