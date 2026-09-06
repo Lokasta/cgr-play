@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "cues": {
+    "cyl.latch.press": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -24, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [[1500, 0.04, 1], [2600, 0.03, 0.6], [3900, 0.02, 0.4]], "noiseMs": 4, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 90, "variants": 6 }
+    },
+    "cyl.latch.hiss": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -34, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [], "noiseMs": 12, "noiseGain": 1, "noiseTiltDbPerOct": -6, "lengthMs": 20, "variants": 6 }
+    },
+    "cyl.latch.return": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -22, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [[3300, 0.025, 1], [4600, 0.025, 0.6]], "noiseMs": 2, "noiseGain": 0.4, "noiseTiltDbPerOct": 0, "lengthMs": 60, "variants": 6 }
+    },
+    "cyl.crane.stop": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -14, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [[220, 0.09, 1], [480, 0.07, 0.6], [760, 0.05, 0.35], [1240, 0.14, 0.12], [2710, 0.057, 0.08]], "noiseMs": 12, "noiseGain": 0.6, "noiseTiltDbPerOct": -6, "lengthMs": 160, "variants": 6 }
+    },
+    "cyl.crane.settleTick": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -26, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [[2900, 0.03, 1], [4400, 0.025, 0.6]], "noiseMs": 2, "noiseGain": 0.3, "noiseTiltDbPerOct": 0, "lengthMs": 50, "variants": 6 }
+    },
+    "cyl.spin.flick": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -22, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [], "noiseMs": 40, "noiseGain": 1, "noiseTiltDbPerOct": -4, "lengthMs": 60, "variants": 6, "attackMs": 5 }
+    },
+    "cyl.spin.whir": {
+      "kind": "loop", "bus": "tex", "peakDb": -22, "pitchCents": 0, "gainJitterDb": 0, "noRepeat": 0,
+      "takes": [],
+      "synth": null
+    },
+    "cyl.spin.tick": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -34, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [[2400, 0.008, 1], [3600, 0.006, 0.7], [5100, 0.005, 0.4]], "noiseMs": 1.5, "noiseGain": 0.4, "noiseTiltDbPerOct": 0, "lengthMs": 30, "variants": 12, "tags": { "soft": { "gainDb": -6, "lpHz": 3000 } } }
+    },
+    "cyl.spin.settle": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -22, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [[180, 0.06, 1], [410, 0.05, 0.6]], "noiseMs": 8, "noiseGain": 0.5, "noiseTiltDbPerOct": -6, "lengthMs": 120, "variants": 6 }
+    },
+    "cyl.close.nudge": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -26, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [], "noiseMs": 350, "noiseGain": 1, "noiseTiltDbPerOct": 0, "lengthMs": 360, "variants": 6 }
+    },
+    "cyl.close.thud": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -12, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [[220, 0.09, 1], [480, 0.07, 0.6], [760, 0.05, 0.35]], "noiseMs": 10, "noiseGain": 0.5, "noiseTiltDbPerOct": -6, "lengthMs": 150, "variants": 6 }
+    },
+    "cyl.close.bolt": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -9, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [[3300, 0.04, 1], [4600, 0.03, 0.7], [6100, 0.025, 0.5]], "noiseMs": 2, "noiseGain": 0.6, "noiseTiltDbPerOct": 0, "lengthMs": 110, "variants": 6 }
+    },
+    "cyl.close.latchSnap": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -11, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [[2700, 0.06, 1], [3900, 0.06, 0.6]], "noiseMs": 2, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 120, "variants": 6 }
+    },
+    "cyl.close.frontDetent": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -18, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [[3000, 0.03, 1], [4200, 0.025, 0.5]], "noiseMs": 2, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 60, "variants": 6 }
+    },
+    "cyl.close.rattle": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -26, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [[2600, 0.02, 1], [3900, 0.015, 0.5]], "noiseMs": 1.5, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 40, "variants": 6 }
+    },
+    "cyl.ejector.slide": {
+      "kind": "loop", "bus": "tex", "peakDb": -26, "pitchCents": 0, "gainJitterDb": 0, "noRepeat": 0,
+      "takes": [],
+      "synth": null
+    },
+    "cyl.ejector.stop": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -16, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [[2400, 0.05, 1], [3800, 0.035, 0.6]], "noiseMs": 2, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 90, "variants": 6 }
+    },
+    "cyl.ejector.reseat": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -10, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": { "modes": [[2400, 0.05, 1], [3800, 0.035, 0.8], [5600, 0.025, 0.6]], "noiseMs": 3, "noiseGain": 0.7, "noiseTiltDbPerOct": 0, "lengthMs": 110, "variants": 6, "tags": { "quiet": { "gainDb": -6 } } }
+    }
+  }
+}
