@@ -1,0 +1,10 @@
+WORKSHOP ROOM — original user-directed game environment, 2026-09-08.
+Geometry and assembly authored in Blender; layered materials authored in Adobe Substance 3D Painter.
+Concept images, fictional archive photos and garden backdrop: native OpenAI image generation.
+Original generated rug reused from this project's collection-room asset.
+Original metric hand tools reused from this project's workbench-hutch asset.
+CC0 base texture photographs reused from the project:
+https://polyhaven.com/a/wood_table_worn
+https://polyhaven.com/a/brown_leather
+Sources, prompts and provenance: art/substance/workshop-room and docs/workshop-room.md.
+No new firearm geometry is included in this environment.

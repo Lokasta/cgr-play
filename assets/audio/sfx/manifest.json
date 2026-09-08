@@ -200,6 +200,339 @@
       "kind": "loop", "bus": "tex", "peakDb": -26, "pitchCents": 0, "gainJitterDb": 0, "noRepeat": 0,
       "takes": [],
       "synth": null
+    },
+    "part.land.wood": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -16, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "part.land",
+      "takes": [],
+      "synth": {"modes": [[180, 0.12, 1], [320, 0.09, 0.6], [640, 0.05, 0.3]], "noiseMs": 14, "noiseGain": 0.5, "noiseTiltDbPerOct": -6, "lengthMs": 220, "variants": 6}
+    },
+    "part.land.steel": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -15, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "part.land",
+      "takes": [],
+      "synth": {"modes": [[210, 0.10, 1], [1240, 0.06, 0.25], [2710, 0.04, 0.12]], "noiseMs": 10, "noiseGain": 0.5, "noiseTiltDbPerOct": -6, "lengthMs": 200, "variants": 6}
+    },
+    "part.land.desk": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -14, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "part.land",
+      "takes": [
+        { "url": "sfx/part/part.land.desk-1.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/part/part.land.desk-2.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/part/part.land.desk-3.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/part/part.land.desk-4.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/part/part.land.desk-5.wav", "trimDb": 0, "tag": null }
+      ],
+      "synth": {"modes": [[800, 0.05, 1], [1600, 0.03, 0.5]], "noiseMs": 6, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 110, "variants": 6}
+    },
+    "part.free": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -20, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "part.free",
+      "takes": [],
+      "synth": {"modes": [[3100, 0.025, 1]], "noiseMs": 40, "noiseGain": 0.7, "noiseTiltDbPerOct": -3, "lengthMs": 90, "variants": 6}
+    },
+    "part.grab": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -24, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "part.grab",
+      "takes": [
+        { "url": "sfx/part/part.grab-1.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/part/part.grab-2.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/part/part.grab-3.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/part/part.grab-4.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/part/part.grab-5.wav", "trimDb": 0, "tag": null }
+      ],
+      "synth": {"modes": [[180, 0.06, 1], [420, 0.05, 0.5], [3100, 0.015, 0.15]], "noiseMs": 20, "noiseGain": 0.6, "noiseTiltDbPerOct": -6, "lengthMs": 120, "variants": 6}
+    },
+    "part.snap": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -12, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "part.snap",
+      "takes": [],
+      "synth": {"modes": [[2600, 0.05, 1], [3900, 0.04, 0.6], [5200, 0.03, 0.3]], "noiseMs": 2, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 100, "variants": 6}
+    },
+    "part.seat": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -18, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": {"modes": [[2200, 0.04, 1], [3300, 0.03, 0.5]], "noiseMs": 3, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 80, "variants": 6}
+    },
+    "focus.lift": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -24, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "focus",
+      "takes": [
+        { "url": "sfx/focus/focus.lift-1.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/focus/focus.lift-2.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/focus/focus.lift-3.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/focus/focus.lift-4.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/focus/focus.lift-5.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/focus/focus.lift-6.wav", "trimDb": 0, "tag": null }
+      ],
+      "synth": {"modes": [[220, 0.05, 1], [3100, 0.012, 0.25]], "noiseMs": 90, "noiseGain": 1, "noiseTiltDbPerOct": -21, "lengthMs": 140, "variants": 6, "attackMs": 5}
+    },
+    "focus.creak": {
+      "kind": "loop", "bus": "tex", "peakDb": -36, "pitchCents": 0, "gainJitterDb": 0, "noRepeat": 0,
+      "takes": [],
+      "synth": null
+    },
+    "focus.set": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -15, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "part.land",
+      "takes": [],
+      "synth": {"modes": [[190, 0.12, 1], [420, 0.08, 0.5], [1240, 0.06, 0.2]], "noiseMs": 12, "noiseGain": 0.5, "noiseTiltDbPerOct": -6, "lengthMs": 220, "variants": 6}
+    },
+    "tool.pick.cloth": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -26, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "tool.pick",
+      "takes": [
+        { "url": "sfx/tool/tool.pick.cloth-1.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.pick.cloth-2.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.pick.cloth-3.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.pick.cloth-4.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.pick.cloth-5.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.pick.cloth-6.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.pick.cloth-7.wav", "trimDb": 0, "tag": null }
+      ],
+      "synth": {"modes": [], "noiseMs": 90, "noiseGain": 1, "noiseTiltDbPerOct": 0, "lengthMs": 100, "variants": 6, "attackMs": 8}
+    },
+    "tool.put.cloth": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -24, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "tool.put",
+      "takes": [
+        { "url": "sfx/tool/tool.put.cloth-1.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.put.cloth-2.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.put.cloth-3.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.put.cloth-4.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.put.cloth-5.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.put.cloth-6.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.put.cloth-7.wav", "trimDb": 0, "tag": null }
+      ],
+      "synth": {"modes": [], "noiseMs": 120, "noiseGain": 1, "noiseTiltDbPerOct": -6, "lengthMs": 140, "variants": 6, "attackMs": 6}
+    },
+    "tool.pick.brush": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -26, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "tool.pick",
+      "takes": [],
+      "synth": {"modes": [], "noiseMs": 40, "noiseGain": 1, "noiseTiltDbPerOct": -2, "lengthMs": 50, "variants": 6, "attackMs": 3}
+    },
+    "tool.put.brush": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -20, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "tool.put",
+      "takes": [
+        { "url": "sfx/tool/tool.put.brush-1.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.put.brush-2.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.put.brush-3.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.put.brush-4.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.put.brush-5.wav", "trimDb": 0, "tag": null }
+      ],
+      "synth": {"modes": [[1100, 0.04, 1]], "noiseMs": 4, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 80, "variants": 6}
+    },
+    "tool.pick.rod": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -24, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "tool.pick",
+      "takes": [
+        { "url": "sfx/tool/tool.pick.rod-1.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.pick.rod-2.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.pick.rod-3.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.pick.rod-4.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.pick.rod-5.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.pick.rod-6.wav", "trimDb": 0, "tag": null }
+      ],
+      "synth": {"modes": [[2400, 0.02, 0.3]], "noiseMs": 60, "noiseGain": 1, "noiseTiltDbPerOct": -3, "lengthMs": 80, "variants": 6, "attackMs": 5}
+    },
+    "tool.put.rod": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -18, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "tool.put",
+      "takes": [
+        { "url": "sfx/tool/tool.put.rod-1.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.put.rod-2.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.put.rod-3.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.put.rod-4.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tool/tool.put.rod-5.wav", "trimDb": 0, "tag": null }
+      ],
+      "synth": {"modes": [[2400, 0.05, 1], [3900, 0.04, 0.5]], "noiseMs": 3, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 110, "variants": 6}
+    },
+    "tool.pick.lamp": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -22, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "tool.pick",
+      "takes": [],
+      "synth": {"modes": [[1800, 0.03, 1]], "noiseMs": 2, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 60, "variants": 6}
+    },
+    "tool.put.lamp": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -20, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "tool.put",
+      "takes": [],
+      "synth": {"modes": [[1800, 0.03, 1]], "noiseMs": 2, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 60, "variants": 6}
+    },
+    "box.slide": {
+      "kind": "loop", "bus": "tex", "peakDb": -26, "pitchCents": 0, "gainJitterDb": 0, "noRepeat": 0,
+      "takes": [],
+      "synth": null
+    },
+    "box.settle": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -14, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "box",
+      "takes": [],
+      "synth": {"modes": [[120, 0.09, 1], [260, 0.06, 0.5]], "noiseMs": 12, "noiseGain": 0.6, "noiseTiltDbPerOct": -6, "lengthMs": 200, "variants": 6}
+    },
+    "box.creak": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -26, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": {"modes": [[900, 0.03, 1], [1500, 0.02, 0.5]], "noiseMs": 6, "noiseGain": 0.6, "noiseTiltDbPerOct": -3, "lengthMs": 60, "variants": 6}
+    },
+    "box.flap.scrape": {
+      "kind": "loop", "bus": "tex", "peakDb": -28, "pitchCents": 0, "gainJitterDb": 0, "noRepeat": 0,
+      "takes": [],
+      "synth": null
+    },
+    "box.flap.flop": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -18, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "box.flap",
+      "takes": [],
+      "synth": {"modes": [[150, 0.07, 1], [400, 0.05, 0.4]], "noiseMs": 20, "noiseGain": 0.6, "noiseTiltDbPerOct": -6, "lengthMs": 160, "variants": 6}
+    },
+    "box.open.paper": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -20, "pitchCents": 69, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [
+        { "url": "sfx/box/box.open.paper-1.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/box/box.open.paper-2.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/box/box.open.paper-3.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/box/box.open.paper-4.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/box/box.open.paper-5.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/box/box.open.paper-6.wav", "trimDb": 0, "tag": null }
+      ],
+      "synth": {"modes": [], "noiseMs": 25, "noiseGain": 1, "noiseTiltDbPerOct": 0, "lengthMs": 30, "variants": 12, "attackMs": 1}
+    },
+    "box.foam": {
+      "kind": "loop", "bus": "foley", "peakDb": -24, "pitchCents": 0, "gainJitterDb": 0, "noRepeat": 0,
+      "takes": [],
+      "synth": null
+    },
+    "box.foam.grain": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -24, "pitchCents": 69, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": {"modes": [[2800, 0.006, 0.6]], "noiseMs": 20, "noiseGain": 1, "noiseTiltDbPerOct": 0, "lengthMs": 32, "variants": 12, "attackMs": 1}
+    },
+    "gun.land.thud": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -11, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": {"modes": [[190, 0.12, 1], [420, 0.08, 0.5], [1240, 0.06, 0.2]], "noiseMs": 12, "noiseGain": 0.5, "noiseTiltDbPerOct": -6, "lengthMs": 240, "variants": 6}
+    },
+    "gun.land.ring": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -20, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": {"modes": [[2710, 0.09, 0.5], [4130, 0.07, 0.3]], "noiseMs": 2, "noiseGain": 0.3, "noiseTiltDbPerOct": 0, "lengthMs": 160, "variants": 6}
+    },
+    "gun.land.tick": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -24, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": {"modes": [[2600, 0.02, 1], [3900, 0.015, 0.5]], "noiseMs": 1.5, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 40, "variants": 6}
+    },
+    "gun.land.sigh": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -30, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [
+        { "url": "sfx/gun/gun.land.sigh-1.wav", "trimDb": -2, "tag": null },
+        { "url": "sfx/gun/gun.land.sigh-2.wav", "trimDb": -2, "tag": null },
+        { "url": "sfx/gun/gun.land.sigh-3.wav", "trimDb": -2, "tag": null }
+      ],
+      "synth": {"modes": [], "noiseMs": 180, "noiseGain": 1, "noiseTiltDbPerOct": -20, "lengthMs": 200, "variants": 6, "attackMs": 30}
+    },
+    "tape.tweezer.grab": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -30, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "tape.tweezer",
+      "takes": [],
+      "synth": {"modes": [[3400, 0.012, 1], [1180, 0.055, 0.6], [880, 0.05, 0.4]], "noiseMs": 2, "noiseGain": 0.3, "noiseTiltDbPerOct": 0, "lengthMs": 80, "variants": 6}
+    },
+    "tape.tweezer.release": {
+      "kind": "oneshot", "bus": "mech", "peakDb": -34, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": {"modes": [[720, 0.06, 0.8], [940, 0.05, 1]], "noiseMs": 2, "noiseGain": 0.2, "noiseTiltDbPerOct": 0, "lengthMs": 90, "variants": 6}
+    },
+    "tape.strain": {
+      "kind": "loop", "bus": "tex", "peakDb": -22, "pitchCents": 0, "gainJitterDb": 0, "noRepeat": 0,
+      "takes": [
+        { "url": "sfx/tape/tape.strain-1.wav", "trimDb": 0, "tag": null }
+      ],
+      "synth": null
+    },
+    "tape.crackle": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -34, "pitchCents": 69, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [
+        { "url": "sfx/tape/tape.crackle-1.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tape/tape.crackle-2.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tape/tape.crackle-3.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tape/tape.crackle-4.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tape/tape.crackle-5.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tape/tape.crackle-6.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tape/tape.crackle-7.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tape/tape.crackle-8.wav", "trimDb": 0, "tag": null }
+      ],
+      "synth": {"modes": [], "noiseMs": 30, "noiseGain": 1, "noiseTiltDbPerOct": 0, "lengthMs": 45, "variants": 12, "attackMs": 1}
+    },
+    "tape.rip": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -18, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "tape.rip",
+      "takes": [
+        { "url": "sfx/tape/tape.rip-1.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tape/tape.rip-2.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tape/tape.rip-3.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tape/tape.rip-4.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tape/tape.rip-5.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/tape/tape.rip-6.wav", "trimDb": 0, "tag": null }
+      ],
+      "synth": {"modes": [[1600, 0.04, 0.4], [3200, 0.03, 0.4]], "noiseMs": 120, "noiseGain": 1, "noiseTiltDbPerOct": -2, "lengthMs": 140, "variants": 6, "attackMs": 4}
+    },
+    "desk.chair.back": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -24, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "desk.chair",
+      "takes": [],
+      "synth": {"modes": [[240, 0.25, 1]], "noiseMs": 350, "noiseGain": 0.8, "noiseTiltDbPerOct": -16, "lengthMs": 420, "variants": 6, "attackMs": 40}
+    },
+    "desk.chair.forward": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -26, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "desk.chair",
+      "takes": [],
+      "synth": {"modes": [[240, 0.18, 1]], "noiseMs": 220, "noiseGain": 0.8, "noiseTiltDbPerOct": -16, "lengthMs": 280, "variants": 6, "attackMs": 30}
+    },
+    "desk.laptop.hinge": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -20, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "desk.laptop.lid",
+      "takes": [],
+      "synth": {"modes": [[2200, 0.03, 1]], "noiseMs": 220, "noiseGain": 0.9, "noiseTiltDbPerOct": -8, "lengthMs": 260, "variants": 6, "attackMs": 20}
+    },
+    "desk.laptop.close": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -18, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "desk.laptop.lid",
+      "takes": [],
+      "synth": {"modes": [[300, 0.08, 1], [2200, 0.02, 0.3]], "noiseMs": 8, "noiseGain": 0.5, "noiseTiltDbPerOct": -6, "lengthMs": 160, "variants": 6}
+    },
+    "desk.laptop.key": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -26, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "desk.laptop.key",
+      "takes": [],
+      "synth": {"modes": [[3200, 0.012, 1]], "noiseMs": 2, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 40, "variants": 8}
+    },
+    "desk.laptop.enter": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -22, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": {"modes": [[2600, 0.02, 1], [900, 0.03, 0.4]], "noiseMs": 3, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 60, "variants": 6}
+    },
+    "desk.lamp.switch": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -22, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "desk.lamp",
+      "takes": [],
+      "synth": {"modes": [[2600, 0.025, 1], [4100, 0.02, 0.5]], "noiseMs": 2, "noiseGain": 0.5, "noiseTiltDbPerOct": 0, "lengthMs": 60, "variants": 6}
+    },
+    "desk.page.flip": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -22, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "desk.page",
+      "takes": [],
+      "synth": {"modes": [], "noiseMs": 160, "noiseGain": 1, "noiseTiltDbPerOct": -4, "lengthMs": 180, "variants": 6, "attackMs": 10}
+    },
+    "desk.pencil": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -28, "pitchCents": 40, "gainJitterDb": 1.5, "noRepeat": 3, "family": "desk.pencil",
+      "takes": [],
+      "synth": {"modes": [[4000, 0.01, 0.5]], "noiseMs": 50, "noiseGain": 1, "noiseTiltDbPerOct": 0, "lengthMs": 70, "variants": 8, "attackMs": 2}
+    },
+    "reward.sheen": {
+      "kind": "loop", "bus": "foley", "peakDb": -34, "pitchCents": 0, "gainJitterDb": 0, "noRepeat": 0, "family": "reward",
+      "takes": [],
+      "synth": null
+    },
+    "reward.shelf": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -14, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "reward.shelf",
+      "takes": [],
+      "synth": {"modes": [[420, 0.10, 1], [900, 0.06, 0.5], [2710, 0.05, 0.15]], "noiseMs": 10, "noiseGain": 0.5, "noiseTiltDbPerOct": -6, "lengthMs": 220, "variants": 6}
+    },
+    "reward.shelf.creak": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -28, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3,
+      "takes": [],
+      "synth": {"modes": [[180, 0.3, 1]], "noiseMs": 30, "noiseGain": 0.6, "noiseTiltDbPerOct": -8, "lengthMs": 380, "variants": 6, "attackMs": 20}
+    },
+    "brush.saturated": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -24, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "brush.saturated",
+      "takes": [],
+      "synth": {"modes": [], "noiseMs": 120, "noiseGain": 1, "noiseTiltDbPerOct": -14, "lengthMs": 140, "variants": 6, "attackMs": 10}
+    },
+    "brush.cleaned": {
+      "kind": "oneshot", "bus": "foley", "peakDb": -22, "pitchCents": 40, "gainJitterDb": 1.5, "noRepeat": 3, "family": "brush.cleaned",
+      "takes": [],
+      "synth": {"modes": [[3200, 0.01, 0.4]], "noiseMs": 40, "noiseGain": 1, "noiseTiltDbPerOct": 0, "lengthMs": 50, "variants": 8, "attackMs": 2}
+    },
+    "ambience.room": {
+      "kind": "loop", "bus": "ambience", "peakDb": -40, "pitchCents": 0, "gainJitterDb": 0, "noRepeat": 0,
+      "takes": [],
+      "synth": null
     }
   }
 }
