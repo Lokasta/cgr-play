@@ -1,0 +1,23 @@
+Travelled parcel family — user-directed project asset, 2026-09-08.
+
+Geometry, UVs, shape keys, labels, masks and physical wear authored for this
+project in Blender 5.2 and SVG. Layered finish: Substance 3D Painter 12.1.
+Three carton sizes share the authored material family; shipping labels and
+routing codes are fictional, without third-party courier logos or addresses.
+
+Kraft substrate: project-generated Codex ImageGen image.
+Native image and exact prompt: art/substance/parcel/inputs/generation.json
+Abraded kraft input, generated for the 2026-09-08 wear revision:
+  art/substance/parcel/inputs/generation-wear.json
+Both native generated images are retained without overwriting the clean input.
+Concept provenance: docs/concepts/props/parcel-2026-09-06/generation-notes.md
+Editable sources: art/substance/parcel/ (*.blend, *.spp, mesh/ FBX, SVG atlas).
+Workflow and runtime contract: docs/parcel-variants.md
+
+Painter bundled procedural resources were rendered into exported textures;
+Adobe procedural resource packages are not redistributed.
+Project-authored geometry, labels, masks and output maps follow this project's
+terms. This file records provenance and does not claim third-party ownership
+of generated imagery. No weapon model or external courier artwork is included.
+
+Spatial damage revision 3: original authored geometry and original SVG broken-fiber decals by Codex under user direction. Editable inputs/stress-fibers.svg and tools/blender/parcel_damage.py are in the project sources.

@@ -2631,8 +2631,55 @@
         }
         .los-dock-btn { min-width: 0; }
       }
+
+      /* The collection is the actual room, with only navigation/progress above it. */
+      html.booting body > :not(#boot-intro):not(#app):not(script):not(style) { visibility: hidden; }
+      #boot-intro[data-room-view='true'] { background: transparent; padding: 0; }
+      #boot-intro[data-room-view='true']::before {
+        background: linear-gradient(180deg, rgba(10,12,10,.28), transparent 20% 66%, rgba(10,12,10,.64));
+      }
+      #boot-intro[data-room-view='true']::after { display: none; }
+      #boot-intro[data-room-view='true'] .boot-intro__logo { display: none; }
+      #boot-intro[data-room-view='true'] .boot-intro__content {
+        position: absolute; inset: 0; width: 100%; max-width: none; max-height: none;
+        height: 100%; padding: 0; display: block; overflow: hidden;
+      }
+      #boot-intro[data-room-view='true'] .boot-intro__menu { width: 100%; height: 100%; max-width: none; padding: 0; margin: 0; border: 0; }
+      #boot-intro[data-room-view='true'] [data-title-screen='collection'] {
+        height: 100%; display: flex; flex-direction: column; align-items: flex-start;
+        justify-content: space-between; padding: max(22px, env(safe-area-inset-top)) 28px max(24px, env(safe-area-inset-bottom));
+        animation: none; box-sizing: border-box;
+      }
+      .collection-navigation { display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 12px; }
+      .room-views { display: flex; align-items: center; gap: 14px; padding: 4px; color: #e7dcc4; background: rgba(12,15,12,.72); font-size: 12px; }
+      .room-views button { width: 40px; height: 40px; color: inherit; background: transparent; border: 1px solid #cab48b44; cursor: pointer; }
+      .room-views button:hover, .room-views button:focus-visible { background: #cab48b33; outline: 2px solid #cab48b; }
+      #boot-intro[data-room-view='true'] .title-back { position: static; background: rgba(12,15,12,.64); padding: 12px 20px; }
+      #boot-intro[data-room-view='true'] .title-panel__head { padding-right: 0; }
+      #boot-intro[data-room-view='true'] .title-panel {
+        width: min(400px, 100%); padding: 18px 22px; box-sizing: border-box;
+        background: rgba(17,22,17,.76); border: 1px solid rgba(204,180,124,.25);
+      }
+      #boot-intro[data-room-view='true'] .title-heading { font-size: clamp(22px, 2.8vw, 34px); }
+      #boot-intro[data-room-view='true'] .collection-summary { padding-bottom: 0; gap: 20px; }
+      #boot-intro[data-room-view='true'] .collection-count { font-size: 28px; }
+      #boot-intro[data-room-view='true'] .title-copy { font-size: 12px; }
+      @media(max-width: 640px) {
+        #boot-intro[data-room-view='true'] [data-title-screen='collection'] { padding: 18px 16px 20px; }
+        #boot-intro[data-room-view='true'] .title-panel { padding: 12px 16px; }
+        #boot-intro[data-room-view='true'] .title-panel__head { margin-bottom: 4px; }
+        #boot-intro[data-room-view='true'] .title-menu-footnote { display: none; }
+      }
+      @media(max-height: 500px) and (min-width: 641px) {
+        #boot-intro[data-room-view='true'] .title-panel { width: 270px; padding: 10px 14px; }
+        #boot-intro[data-room-view='true'] .title-heading { font-size: 21px; }
+        #boot-intro[data-room-view='true'] .title-panel__head { margin-bottom: 4px; }
+        #boot-intro[data-room-view='true'] .title-menu-footnote { display: none; }
+        #boot-intro[data-room-view='true'] .title-copy { font-size: 10px; }
+      }
     </style>
-    <script type="module" crossorigin src="./assets/main-DpiSjhVk.js"></script>
+    <script type="module" crossorigin src="./assets/main-KKcOZ64K.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/brushCleaningStation-D1Y0V0x5.js">
   </head>
   <body>
     <div
@@ -2803,7 +2850,14 @@
           </section>
 
           <section class="title-screen" data-title-screen="collection" aria-labelledby="collection-heading" hidden>
-            <button class="title-back" type="button" data-title-action="back" data-autofocus>← Back</button>
+            <div class="collection-navigation">
+              <button class="title-back" type="button" data-title-action="back" data-autofocus>← Back</button>
+              <nav class="room-views" aria-label="Look around the room">
+                <button type="button" data-room-turn="-1" aria-label="Previous room view">←</button>
+                <span data-room-view-label aria-live="polite">The collection</span>
+                <button type="button" data-room-turn="1" aria-label="Next room view">→</button>
+              </nav>
+            </div>
             <div class="title-panel">
               <div class="title-panel__head">
                 <p class="title-eyebrow">Your quiet archive</p>
@@ -2812,12 +2866,6 @@
               <div class="collection-summary">
                 <p class="title-copy" data-collection-copy>No restorations yet. Your finished pieces will live here.</p>
                 <strong class="collection-count" data-collection-count>0/4</strong>
-              </div>
-              <div class="collection-slots" aria-label="Four collection slots">
-                <div class="collection-slot" data-collection-slot data-filled="false"><img src="./assets/branding/cozy-gun-restoration-mark-white.png" alt="" /></div>
-                <div class="collection-slot" data-collection-slot data-filled="false"><img src="./assets/branding/cozy-gun-restoration-mark-white.png" alt="" /></div>
-                <div class="collection-slot" data-collection-slot data-filled="false"><img src="./assets/branding/cozy-gun-restoration-mark-white.png" alt="" /></div>
-                <div class="collection-slot" data-collection-slot data-filled="false"><img src="./assets/branding/cozy-gun-restoration-mark-white.png" alt="" /></div>
               </div>
               <p class="title-menu-footnote">Progress saves after each completed restoration</p>
             </div>

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "notes": "Audio material per mesh name (src/audio/materials.ts loads this; the code table is the fallback). First matching JS regex wins, `default` when none does. Gun mesh names are the Colt Python GLB's; 'porous-brush-cleaner' and 'rod-wipe-rag' are the brush station's (src/scene/brushCleaningStation.ts); 'rod-*' are the procedural cleaning rod's materials.",
+  "default": "steel",
+  "rules": [
+    { "match": "^grip_low", "material": "wood" },
+    { "match": "^wheel_low", "material": "steel-hollow" },
+    { "match": "^barrel_low", "material": "steel-barrel" },
+    { "match": "^handle_low", "material": "steel-rod" },
+    { "match": "_low", "material": "steel" },
+    { "match": "^porous-brush-cleaner$", "material": "stone" },
+    { "match": "^rod-wipe-rag$", "material": "rag" },
+    { "match": "^rod-", "material": "brass" }
+  ]
+}
