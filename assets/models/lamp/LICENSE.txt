@@ -1,8 +1,0 @@
-Atelier desk lamp — project-authored asset, 2026-09-07.
-Concept: project-generated ImageGen reference, desk-lamp-2026-09-06.
-Geometry, UVs and metric micro-normal bake: Blender 5.2.
-Layered finish: Adobe Substance 3D Painter 12.1.
-Painter bundled procedural resources are used only as rendered output;
-standalone Adobe procedural packages are not redistributed.
-Editable sources and provenance: art/substance/lamp and docs/lamp.md.
-Project-authored geometry, masks and finish follow this project's terms.

@@ -1,0 +1,11 @@
+rust_coarse_01 — "Rust Coarse 01" texture set (Poly Haven)
+Source: https://polyhaven.com/a/rust_coarse_01
+Authors: Dimitrios Savva (photography), Rico Cilliers (processing)
+License: CC0 1.0 Universal (public domain dedication) — https://creativecommons.org/publicdomain/zero/1.0/
+Files: rust_coarse_01_diff_2k.webp (colour, sRGB) · rust_coarse_01_rd_2k.webp (R = roughness, G = displacement/height,
+packed from the two single-channel maps, linear) · rust_coarse_01_nor_gl_2k.webp — the 2K JPG originals from
+https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rust_coarse_01/ re-encoded to WebP (q86) on 2026-09-08.
+Physical size of one tile: ~2.2 m × 2.2 m.
+Use in this project: the photographic rust layer of restoration.cleaning v3 (rust film B), mapped
+triplanar in piece space; the height map drives the reveal ramp and the bump (tutorial: TutsByKai,
+"How to create a Rusty Bolt" — photo texture + bump from the same image + colour ramp mask).
