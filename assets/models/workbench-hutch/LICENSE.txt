@@ -1,0 +1,13 @@
+Workbench hutch / cozyGungame
+
+Geometry and printed ephemera: project-authored in Blender and SVG, 2026-09-08.
+Materials: authored Blender bakes and layered Substance 3D Painter finish.
+Concept: native image generation, source and prompt preserved in docs/concepts/props/workbench-hutch-2026-09-08/.
+
+Reused walnut texture input: wood_table_worn, Poly Haven contributors.
+Source: https://polyhaven.com/a/wood_table_worn
+License: CC0 1.0 Universal. https://creativecommons.org/publicdomain/zero/1.0/
+Other materials and printed fictional labels were created for this project.
+
+Editable sources: art/substance/workbench-hutch/
+Production notes: docs/workbench-hutch.md

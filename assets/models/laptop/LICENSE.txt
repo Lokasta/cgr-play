@@ -1,0 +1,11 @@
+laptop — project-authored game assets, 2026-09-08.
+
+Concept 08: laptop with independent lid and live display.
+Geometry/UVs: Blender 5.2. Layered finish: Substance 3D Painter 12.1.
+Editable sources: art/substance/laptop/.
+Concept reference: project-generated workshop prop family, 2026-09-07.
+Keyboard legends: project-authored atlas containing rendered Arial glyphs, no font files distributed.
+
+Painter bundled resources were used to produce rendered texture outputs.
+No standalone Adobe resource packages are redistributed. Project-authored
+geometry, masks and texture outputs follow this project's terms.

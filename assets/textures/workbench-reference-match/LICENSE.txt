@@ -1,0 +1,6 @@
+Reference-matched integrated workbench, 2026-09-08.
+New joinery, pegboard, six drawer fronts and cup pulls, hand tools, ledge props, physical wear masks, PBR bakes and lighting: authored for this project in Blender and Substance Painter.
+Photographic/generated sources reused from art/substance/workshop-realism/LICENSE.txt and references/sources.json (Poly Haven CC0).
+Authoritative concept reused unchanged from docs/concepts/environments/workbench-composition-2026-09-08/integrated-workbench-cozy.png. Original generation provenance is retained in art/substance/workbench-composition/inputs/generation.json. No new concept was generated in this pass.
+Existing gameplay desk props and weapon remain independent assets.
+Room source now art/substance/workbench-reference-match/; previous room sources and provenance are retained.

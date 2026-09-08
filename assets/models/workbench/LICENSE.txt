@@ -1,0 +1,17 @@
+Workbench and removable leather mat — project-authored game assets, 2026-09-07.
+
+Concept: project-owned Codex/ImageGen workshop prop family, board 01.
+Geometry and UVs: authored in Blender 5.2, following the user's modeling request.
+Layered material finish: Adobe Substance 3D Painter 12.1.
+Organic mat pigment: project-generated ImageGen input (2026-09-07), with
+Blender-derived material data and editable Painter wear layers. Original input
+and provenance are recorded in art/substance/workbench and docs/workbench-and-mat.md.
+Editable sources: art/substance/workbench (local authoring files).
+
+CC0 texture inputs, with no attribution requirement:
+- Poly Haven wood_table_worn: https://polyhaven.com/a/wood_table_worn
+- Poly Haven brown_leather (normal detail): https://polyhaven.com/a/brown_leather
+
+Painter's bundled procedural resources were used to author rendered texture
+outputs; standalone Adobe procedural resource packages are not redistributed.
+Project-authored geometry, masks and finish output follow this project's terms.

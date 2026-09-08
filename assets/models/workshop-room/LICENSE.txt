@@ -1,0 +1,43 @@
+Workshop realism source assets
+
+Poly Haven assets: CC0 1.0 Universal. License: https://polyhaven.com/license
+Source files, URLs and SHA256 hashes: references/sources.json.
+
+Downloaded sources:
+book_encyclopedia_set_01 — https://polyhaven.com/a/book_encyclopedia_set_01
+mid_century_lounge_chair — https://polyhaven.com/a/mid_century_lounge_chair
+potted_plant_02 — https://polyhaven.com/a/potted_plant_02
+potted_plant_04 — https://polyhaven.com/a/potted_plant_04
+binder_notebook — https://polyhaven.com/a/binder_notebook
+vintage_hand_drill — https://polyhaven.com/a/vintage_hand_drill
+bench_vice_01 — https://polyhaven.com/a/bench_vice_01
+combination_wrench — https://polyhaven.com/a/combination_wrench
+wooden_hammer_01 — https://polyhaven.com/a/wooden_hammer_01
+screwdrivers_02 — https://polyhaven.com/a/screwdrivers_02
+american_walnut_veneer — https://polyhaven.com/a/american_walnut_veneer
+natural_walnut_veneer — https://polyhaven.com/a/natural_walnut_veneer
+white_plaster_02 — https://polyhaven.com/a/white_plaster_02
+old_wooden_floor_02 — https://polyhaven.com/a/old_wooden_floor_02
+fabric_leather_02 — https://polyhaven.com/a/fabric_leather_02
+rough_linen — https://polyhaven.com/a/rough_linen
+
+Printed labels/correspondence: native ImageGen, 2026-09-08. Original and exact prompt in inputs/generation.json and inputs/workshop-printed-atlas-prompt.txt.
+Workshop architecture, construction details, UVs, wear placement, shaders and integration: authored for this project with Blender and Substance Painter.
+Earlier room textures and art retain the provenance recorded in art/substance/workshop-room/LICENSE.txt.
+
+Generated aged walnut finish: native ImageGen. Exact prompt and source in inputs/walnut-generation.json. Blended with scanned walnut; generated image is retained unchanged.
+Geometry delivery uses lossless EXT_meshopt_compression. Meshoptimizer MIT: https://github.com/zeux/meshoptimizer
+
+Integrated workbench composition, 2026-09-08.
+New joinery, drawer banks, cup pulls, physical wear masks, PBR bakes and lighting: authored for this project in Blender and Substance Painter.
+Photographic/generated sources reused from art/substance/workshop-realism/LICENSE.txt and references/sources.json (Poly Haven CC0).
+New concept generated with native ImageGen; exact prompt and original recorded in art/substance/workbench-composition/inputs/generation.json.
+Existing gameplay desk props and weapon remain independent assets.
+Room source now art/substance/workbench-composition/; previous room sources and provenance are retained.
+
+Reference-matched integrated workbench, 2026-09-08.
+New joinery, pegboard, six drawer fronts and cup pulls, hand tools, ledge props, physical wear masks, PBR bakes and lighting: authored for this project in Blender and Substance Painter.
+Photographic/generated sources reused from art/substance/workshop-realism/LICENSE.txt and references/sources.json (Poly Haven CC0).
+Authoritative concept reused unchanged from docs/concepts/environments/workbench-composition-2026-09-08/integrated-workbench-cozy.png. Original generation provenance is retained in art/substance/workbench-composition/inputs/generation.json. No new concept was generated in this pass.
+Existing gameplay desk props and weapon remain independent assets.
+Room source now art/substance/workbench-reference-match/; previous room sources and provenance are retained.

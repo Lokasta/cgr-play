@@ -1,0 +1,6 @@
+Integrated workbench composition, 2026-09-08.
+New joinery, drawer banks, cup pulls, physical wear masks, PBR bakes and lighting: authored for this project in Blender and Substance Painter.
+Photographic/generated sources reused from art/substance/workshop-realism/LICENSE.txt and references/sources.json (Poly Haven CC0).
+New concept generated with native ImageGen; exact prompt and original recorded in art/substance/workbench-composition/inputs/generation.json.
+Existing gameplay desk props and weapon remain independent assets.
+Room source now art/substance/workbench-composition/; previous room sources and provenance are retained.

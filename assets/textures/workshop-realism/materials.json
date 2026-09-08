@@ -1,0 +1,77 @@
+{
+  "Workshop_Wood": {
+    "id": "american_walnut_veneer",
+    "tint": [
+      0.5,
+      0.28,
+      0.13
+    ],
+    "normal": 0.28,
+    "rough_scale": 0.62,
+    "rough_add": 0.17,
+    "size": 2048,
+    "overlay": "workshop-walnut-generated.png",
+    "overlay_mix": 0.65
+  },
+  "Workshop_Leather": {
+    "id": "fabric_leather_02",
+    "tint": [
+      0.75,
+      0.65,
+      0.52
+    ],
+    "normal": 0.42,
+    "rough_scale": 0.7,
+    "rough_add": 0.12,
+    "size": 2048
+  },
+  "Workshop_Linen": {
+    "id": "rough_linen",
+    "tint": [
+      2.1,
+      1.35,
+      0.7
+    ],
+    "normal": 0.34,
+    "rough_scale": 0.2,
+    "rough_add": 0.77,
+    "size": 2048
+  },
+  "Workshop_Plaster": {
+    "id": "white_plaster_02",
+    "tint": [
+      0.86,
+      0.82,
+      0.73
+    ],
+    "normal": 0.22,
+    "rough_scale": 0.2,
+    "rough_add": 0.77,
+    "size": 2048
+  },
+  "Workshop_Parquet": {
+    "id": "american_walnut_veneer",
+    "tint": [
+      0.64,
+      0.49,
+      0.32
+    ],
+    "normal": 0.25,
+    "rough_scale": 1,
+    "rough_add": 0,
+    "size": 2048
+  },
+  "Bench_Walnut": {
+    "id": "american_walnut_veneer",
+    "tint": [
+      1,
+      1,
+      1
+    ],
+    "normal": 0.35,
+    "rough_scale": 0,
+    "rough_add": 0.5,
+    "overlay": "workshop-walnut-generated.png",
+    "overlay_mix": 0.65
+  }
+}

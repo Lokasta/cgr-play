@@ -1,0 +1,20 @@
+Complete collector room — user-directed project asset, 2026-09-08.
+
+Room concepts, rug design and artwork atlas generated with Codex ImageGen.
+Exact prompts and native images:
+  docs/concepts/collection-room-360-2026-09-08/
+  art/substance/collection-room/inputs/generation.json
+Geometry, UVs, metric bakes and physical wear: authored in Blender 5.2.
+Layered editable materials and finish: Adobe Substance 3D Painter 12.1.
+Sources: art/substance/collection-room/ (*.blend, *.spp, mesh/ FBX).
+
+Reused CC0 sources already licensed in the project:
+  Poly Haven wood_table_worn: https://polyhaven.com/a/wood_table_worn
+  Poly Haven brown_leather: https://polyhaven.com/a/brown_leather
+No attribution required for those CC0 texture inputs.
+Painter bundled procedural resources were rendered into exported textures;
+Adobe procedural resource packages are not redistributed.
+
+This GLB contains no weapon model. The adjacent collection-corner GLB and
+existing weapon assets retain their own provenance/license files.
+Project-authored geometry, masks and output maps follow this project's terms.
