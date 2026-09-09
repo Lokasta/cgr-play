@@ -1,0 +1,1 @@
+Packing foam geometry and parcel interior repair, 2026-09-08. Original project-authored Blender meshes and runtime contact solver. No third-party geometry. Parcel Painter textures retain their existing provenance in art/substance/parcel and public/assets/models/parcel/LICENSE.txt.

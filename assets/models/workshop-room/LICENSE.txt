@@ -41,3 +41,13 @@ Photographic/generated sources reused from art/substance/workshop-realism/LICENS
 Authoritative concept reused unchanged from docs/concepts/environments/workbench-composition-2026-09-08/integrated-workbench-cozy.png. Original generation provenance is retained in art/substance/workbench-composition/inputs/generation.json. No new concept was generated in this pass.
 Existing gameplay desk props and weapon remain independent assets.
 Room source now art/substance/workbench-reference-match/; previous room sources and provenance are retained.
+
+Printed-label revision, 2026-09-08.
+Six original raster label designs generated with built-in image_gen.imagegen
+at the user's direction, then UV mapped to conforming paper and finished in
+editable Substance Painter layers. 30 paper surfaces corrected; 23 floating
+text meshes removed. Existing geometry and art retain the provenance above.
+Latest editable room: art/substance/workshop-labels/source/workshop-labels-finished.blend.
+Label Painter source: art/substance/workshop-labels/workshop-labels-finished.spp.
+Originals, full prompts and source records: art/substance/workshop-labels/inputs/generation.json.
+Approved cozy lighting sources remain in art/lookdev/cozy-lighting-20260908/.
