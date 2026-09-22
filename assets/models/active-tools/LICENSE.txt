@@ -8,3 +8,11 @@ Concept reference: project-generated workshop prop family, 2026-09-07.
 Painter bundled resources were used to produce rendered texture outputs.
 No standalone Adobe resource packages are redistributed. Project-authored
 geometry, masks and texture outputs follow this project's terms.
+
+Individual brush.glb rebuilt 2026-09-21; the aggregate active-tools.glb above
+is the original family archive. New editable brush sources:
+art/substance/brush-lookdev/ (Blender geometry/UVs/morphs; Painter layers).
+Olive polymer color variation uses a project-generated image from the built-in
+imagegen tool. Original output, complete prompt and provenance are retained in
+art/substance/brush-lookdev/inputs/generation.txt. No third-party brush model.
+Production and validation record: docs/brush-lookdev.md.

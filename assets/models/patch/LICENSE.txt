@@ -1,0 +1,16 @@
+Cotton cleaning patch look development — 2026-09-09
+
+Geometry: existing project-authored cotton patch, isolated in Blender without
+changing its dimensions or UVs. Runtime deformation belongs to clothPhysics.ts.
+Cotton source: generated specifically for this project with the built-in OpenAI
+image generation tool; no external photograph or downloaded textile was used.
+Normal: baked in Blender from the generated fiber input.
+Color/roughness: editable Substance Painter layers, exported at 1024 x 1024.
+Runtime: WebP color quality 94; normal and roughness lossless.
+Icon and edge coverage: original project-authored SVG / deterministic code.
+
+Sources, exact generation prompt, and verification:
+art/substance/patch-lookdev/
+docs/patch-lookdev.md
+
+Project-generated/authored assets; no third-party attribution requirement.
