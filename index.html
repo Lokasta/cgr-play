@@ -219,7 +219,6 @@
         white-space: nowrap;
         border: 0;
       }
-      .boot-intro[data-state='loading'] #boot-status,
       .boot-intro[data-state='starting'] #boot-status {
         position: static;
         width: auto;
@@ -239,7 +238,6 @@
         white-space: nowrap;
         pointer-events: none;
       }
-      .boot-intro[data-state='loading'] .workshop-preparation,
       .boot-intro[data-state='starting'] .workshop-preparation,
       .boot-intro[data-state='error'] .workshop-preparation { display: none; }
       .scene-loading {
@@ -253,35 +251,9 @@
         font-size: 14px;
       }
       .scene-loading[hidden] { display: none; }
-      .scene-loading__content { width: min(640px, calc(100vw - 40px)); text-align: center; }
-      .scene-loading__content > p { margin: 0 0 24px; }
-      .packing-toy { width: 100%; color: #d9d3bd; text-align: center; }
-      .packing-toy[hidden], [data-open-menu-early][hidden] { display: none; }
-      .packing-toy__caption { display: flex; justify-content: space-between; gap: 16px; padding: 0 14px 12px; font-size: 13px; }
-      .packing-toy__caption span + span { color: #bba77e; font-size: 9px; letter-spacing: .15em; align-self: center; }
-      .packing-toy__canvas { display: block; width: 100%; height: clamp(160px, 31dvh, 280px); background: radial-gradient(ellipse at bottom, #34382c88, #171b1700 75%); border: 1px solid #c8b99125; border-radius: 12px; cursor: crosshair; touch-action: none; }
-      .packing-toy__canvas:focus-visible { outline: 2px solid #e7d3a6; outline-offset: 4px; }
-      .packing-toy__hint { margin: 12px 0 0; color: #bdbdaf; font-size: 12px; }
-      [data-open-menu-early] { position: absolute; bottom: max(20px, env(safe-area-inset-bottom)); justify-self: center; padding: 10px 20px; background: transparent; border: 1px solid #ffffff40; border-radius: 24px; color: #ece9dd; font: inherit; font-size: 12px; cursor: pointer; }
-      [data-open-menu-early]:hover, [data-open-menu-early]:focus-visible { background: #ffffff15; outline: 2px solid #e7d3a6; outline-offset: 3px; }
-      .boot-intro:is([data-state='loading'], [data-state='starting']) { background: radial-gradient(ellipse at 50% 90%, #252b20, #111510 70%); cursor: default; overflow-y: auto; }
-      .boot-intro:is([data-state='loading'], [data-state='starting']) .boot-intro__content { width: min(640px, 100%); gap: clamp(12px, 2.4vh, 22px); padding: 12px 0 64px; }
-      .boot-intro:is([data-state='loading'], [data-state='starting']) .boot-intro__logo { width: min(300px, 68vw); }
-      .boot-intro:is([data-state='loading'], [data-state='starting']) .boot-intro__loader-emblem { width: 36px; }
-      .boot-intro:is([data-state='loading'], [data-state='starting']) #boot-status { text-align: center; font-size: 13px; }
-      @media (max-width: 480px) {
-        .packing-toy__caption span + span { display: none; }
-        .packing-toy__caption { justify-content: center; }
-        .packing-toy__hint { font-size: 11px; }
-      }
-      @media (max-height: 540px) and (min-width: 600px) {
-        .boot-intro:is([data-state='loading'], [data-state='starting']) .boot-intro__content { width: min(560px, 100%); gap: 8px; padding-bottom: 36px; }
-        .boot-intro:is([data-state='loading'], [data-state='starting']) .boot-intro__logo { width: 160px; }
-        .boot-intro:is([data-state='loading'], [data-state='starting']) .boot-intro__loader-track { display: none; }
-        .packing-toy__canvas { height: 140px; }
-        .packing-toy__caption { padding-bottom: 6px; }
-        [data-open-menu-early] { bottom: 10px; padding: 6px 14px; }
-      }
+      .packing-foam { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; pointer-events: none; }
+      .packing-foam[hidden] { display: none; }
+      #boot-intro:focus, .scene-loading:focus { outline: none; }
       .boot-intro__error {
         display: none;
         flex-direction: column;
@@ -2815,7 +2787,7 @@
         #boot-intro[data-room-view='true'] .title-copy { font-size: 10px; }
       }
     </style>
-    <script type="module" crossorigin src="./assets/main-B8r61Hil.js"></script>
+    <script type="module" crossorigin src="./assets/main-BzMuwQbv.js"></script>
   </head>
   <body>
     <div
@@ -3095,7 +3067,6 @@
         aria-hidden="true"
       />
       <div class="title-toast" data-title-toast role="status" aria-live="polite"></div>
-      <button type="button" data-open-menu-early>Open menu · keep loading</button>
       <p class="workshop-preparation" data-workshop-preparation>Preparing your workshop</p>
     </div>
     <canvas id="app"></canvas>
