@@ -1,0 +1,13 @@
+Cozy Gun Restoration — loading foam sprite atlas
+
+Original project asset, derived from the existing three packing-foam meshes in
+public/assets/models/packing-foam/packing-foam.glb (project authorship).
+No third-party image or generated replacement geometry.
+
+Reproduction:
+  Blender --background --python tools/blender/render_loading_foam.py
+  node tools/pack-loading-foam.mjs   # dev server at CGR_DEV_URL / port 5221
+
+The bake script contains the camera, lights and EPS material. The atlas contains
+3 variants x 8 roll views, 160 x 100 pixels per frame, transparent WebP.
+The browser only loads this atlas, never Blender or the source model.
