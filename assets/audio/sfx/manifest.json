@@ -148,7 +148,9 @@
     },
     "scrub.base": {
       "kind": "loop", "bus": "tex", "peakDb": -22, "pitchCents": 0, "gainJitterDb": 0, "noRepeat": 0,
-      "takes": [],
+      "takes": [
+        { "url": "sfx/scrub/scrub.base-1.wav", "trimDb": 0, "tag": null }
+      ],
       "synth": null
     },
     "scrub.squeak": {

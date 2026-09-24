@@ -1,0 +1,24 @@
+public/assets/audio/sfx/scrub/
+==============================
+
+The WAV files in this directory are short slices cut by tools/build-sfx-assets.mjs
+from the recording packs listed below (mono, 48 kHz, peak −1 dBFS, ≤ 3 s). The
+masters stay OUTSIDE the repository; only these slices ship. packs.json (next to
+manifest.json) is the machine-readable ledger of which pack produced which file.
+
+Pack:     cloth-foley-cc0
+Source:   Fabric petting - slow, conk0018, https://freesound.org/people/conk0018/sounds/713009/ ; public HQ preview https://cdn.freesound.org/previews/713/713009_41750-hq.mp3 (SHA-256 53c3e9e35d2fb47cbfb5e4d7cfc41392609234d274b00a34209a07a1fe28cdae). CC0 verified on source page 2026-09-24. Prepared with tools/prepare-cloth-foley.py: remove handling rumble, soften upper frequencies, overlap six contact excerpts with circular fades. No synthetic noise.
+License:  https://creativecommons.org/publicdomain/zero/1.0/
+Built:    2026-09-24
+Files:    scrub.base-1.wav
+
+License text, as given in the cut-list:
+    CC0 1.0 Universal (Public Domain Dedication)
+    https://creativecommons.org/publicdomain/zero/1.0/
+
+    Source: Fabric petting - slow by conk0018, Freesound sound 713009.
+    https://freesound.org/people/conk0018/sounds/713009/
+    The source page identifies this recording as Creative Commons 0.
+    Downloaded 2026-09-24 from its public high-quality MP3 preview.
+    Author credit is retained as provenance; CC0 does not require attribution.
+    Full legal code: https://creativecommons.org/publicdomain/zero/1.0/legalcode
