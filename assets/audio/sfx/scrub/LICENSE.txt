@@ -7,7 +7,7 @@ masters stay OUTSIDE the repository; only these slices ship. packs.json (next to
 manifest.json) is the machine-readable ledger of which pack produced which file.
 
 Pack:     cloth-foley-cc0
-Source:   Fabric petting - slow, conk0018, https://freesound.org/people/conk0018/sounds/713009/ ; public HQ preview https://cdn.freesound.org/previews/713/713009_41750-hq.mp3 (SHA-256 53c3e9e35d2fb47cbfb5e4d7cfc41392609234d274b00a34209a07a1fe28cdae). CC0 verified on source page 2026-09-24. Prepared with tools/prepare-cloth-foley.py: remove handling rumble, soften upper frequencies, overlap six contact excerpts with circular fades. No synthetic noise.
+Source:   Fabric petting - slow, conk0018, https://freesound.org/people/conk0018/sounds/713009/ ; public HQ preview https://cdn.freesound.org/previews/713/713009_41750-hq.mp3 (SHA-256 53c3e9e35d2fb47cbfb5e4d7cfc41392609234d274b00a34209a07a1fe28cdae). CC0 verified on source page 2026-09-24. Prepared with tools/prepare-cloth-foley.py: remove handling rumble, soften upper frequencies, overlap six contact excerpts with circular fades. Gently compressed and darkened for the user-selected slightly damp, muffled contact. No synthetic noise.
 License:  https://creativecommons.org/publicdomain/zero/1.0/
 Built:    2026-09-24
 Files:    scrub.base-1.wav

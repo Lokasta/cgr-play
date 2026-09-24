@@ -874,7 +874,7 @@
     "cloth-foley-cc0": {
       "license": "CC0 1.0 Universal (Public Domain Dedication)\nhttps://creativecommons.org/publicdomain/zero/1.0/\n\nSource: Fabric petting - slow by conk0018, Freesound sound 713009.\nhttps://freesound.org/people/conk0018/sounds/713009/\nThe source page identifies this recording as Creative Commons 0.\nDownloaded 2026-09-24 from its public high-quality MP3 preview.\nAuthor credit is retained as provenance; CC0 does not require attribution.\nFull legal code: https://creativecommons.org/publicdomain/zero/1.0/legalcode\n",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "source": "Fabric petting - slow, conk0018, https://freesound.org/people/conk0018/sounds/713009/ ; public HQ preview https://cdn.freesound.org/previews/713/713009_41750-hq.mp3 (SHA-256 53c3e9e35d2fb47cbfb5e4d7cfc41392609234d274b00a34209a07a1fe28cdae). CC0 verified on source page 2026-09-24. Prepared with tools/prepare-cloth-foley.py: remove handling rumble, soften upper frequencies, overlap six contact excerpts with circular fades. No synthetic noise.",
+      "source": "Fabric petting - slow, conk0018, https://freesound.org/people/conk0018/sounds/713009/ ; public HQ preview https://cdn.freesound.org/previews/713/713009_41750-hq.mp3 (SHA-256 53c3e9e35d2fb47cbfb5e4d7cfc41392609234d274b00a34209a07a1fe28cdae). CC0 verified on source page 2026-09-24. Prepared with tools/prepare-cloth-foley.py: remove handling rumble, soften upper frequencies, overlap six contact excerpts with circular fades. Gently compressed and darkened for the user-selected slightly damp, muffled contact. No synthetic noise.",
       "mastersDirName": "cloth-foley-cc0",
       "cutlist": "tools/sfx-cutlists/cloth-foley-cc0.json",
       "builtAt": "2026-09-24",
@@ -888,7 +888,7 @@
           "trimDb": 0,
           "tag": null,
           "kind": "loop",
-          "note": "Real slow fabric contact, continuous 2.7 s bed. Playback has its own gentle movement envelope; no synthetic grain, dust hiss, resonance or squeak layers.",
+          "note": "Real fabric contact, gently rounded and darkened to suggest a slightly damp cloth. Continuous 2.7 s bed with soft movement envelope; no synthetic grains, hiss, squeaks or impacts.",
           "bytes": 259244
         }
       ]
