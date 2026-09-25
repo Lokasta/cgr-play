@@ -112,7 +112,10 @@
         width: 100%;
         height: 100%;
         touch-action: none; /* the game owns all gestures — no browser pan/zoom */
+        outline: none;
+        -webkit-user-drag: none;
       }
+      #app:focus, #app:focus-visible { outline: none; }
 
       /* ---- boot: the title exists before the JS bundle does ---- */
       html.booting,
@@ -2789,7 +2792,7 @@
         #boot-intro[data-room-view='true'] .title-copy { font-size: 10px; }
       }
     </style>
-    <script type="module" crossorigin src="./assets/main-KcwoOjxl.js"></script>
+    <script type="module" crossorigin src="./assets/main-CU5OnKxf.js"></script>
   </head>
   <body>
     <div
