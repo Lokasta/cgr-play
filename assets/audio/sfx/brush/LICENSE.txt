@@ -1,0 +1,20 @@
+public/assets/audio/sfx/brush/
+==============================
+
+The WAV files in this directory are short slices cut by tools/build-sfx-assets.mjs
+from the recording packs listed below (mono, 48 kHz, peak −1 dBFS, ≤ 3 s). The
+masters stay OUTSIDE the repository; only these slices ship. packs.json (next to
+manifest.json) is the machine-readable ledger of which pack produced which file.
+
+Pack:     brush-foley-cc0
+Source:   Toothbrush_Scrubbing_6_Circular_Motion by WavyWave00001, https://freesound.org/people/WavyWave00001/sounds/754335/ . CC0 verified 2026-09-25. Public HQ preview https://cdn.freesound.org/previews/754/754335_16303717-hq.mp3 ; SHA-256 c61534942efb96b1c8911b84aaed57063e3e9b715961c518f6886b129df4c423. Real bristles on a table. Prepared by tools/prepare-brush-foley.py: remove rumble, soften fibre peaks, circular overlap; no synthetic grains or ringing.
+License:  https://creativecommons.org/publicdomain/zero/1.0/
+Built:    2026-09-25
+Files:    brush.base-1.wav, brush.powder-1.wav, brush.cleaned-1.wav, brush.cleaned-2.wav, brush.cleaned-3.wav, brush.saturated-1.wav, brush.saturated-2.wav, brush.saturated-3.wav
+
+License text, as given in the cut-list:
+    CC0 1.0 Universal
+    https://creativecommons.org/publicdomain/zero/1.0/
+    Source: WavyWave00001 / Freesound 754335.
+    Downloaded from public HQ preview 2026-09-25. Attribution retained as provenance.
+

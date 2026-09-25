@@ -892,6 +892,112 @@
           "bytes": 259244
         }
       ]
+    },
+    "brush-foley-cc0": {
+      "license": "CC0 1.0 Universal\nhttps://creativecommons.org/publicdomain/zero/1.0/\nSource: WavyWave00001 / Freesound 754335.\nDownloaded from public HQ preview 2026-09-25. Attribution retained as provenance.\n",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "Toothbrush_Scrubbing_6_Circular_Motion by WavyWave00001, https://freesound.org/people/WavyWave00001/sounds/754335/ . CC0 verified 2026-09-25. Public HQ preview https://cdn.freesound.org/previews/754/754335_16303717-hq.mp3 ; SHA-256 c61534942efb96b1c8911b84aaed57063e3e9b715961c518f6886b129df4c423. Real bristles on a table. Prepared by tools/prepare-brush-foley.py: remove rumble, soften fibre peaks, circular overlap; no synthetic grains or ringing.",
+      "mastersDirName": "brush-foley-cc0",
+      "cutlist": "tools/sfx-cutlists/brush-foley-cc0.json",
+      "builtAt": "2026-09-25",
+      "cuts": [
+        {
+          "cue": "brush.base",
+          "url": "sfx/brush/brush.base-1.wav",
+          "file": "brush-contact.wav",
+          "startMs": 0,
+          "durationMs": 2700,
+          "trimDb": 0,
+          "tag": null,
+          "kind": "loop",
+          "note": "Recorded continuous bristle friction; driver applies smooth movement and soil/powder response.",
+          "bytes": 259244
+        },
+        {
+          "cue": "brush.powder",
+          "url": "sfx/brush/brush.powder-1.wav",
+          "file": "brush-powder.wav",
+          "startMs": 0,
+          "durationMs": 2700,
+          "trimDb": 0,
+          "tag": null,
+          "kind": "loop",
+          "note": "Recorded continuous bristle friction; driver applies smooth movement and soil/powder response.",
+          "bytes": 259244
+        },
+        {
+          "cue": "brush.cleaned",
+          "url": "sfx/brush/brush.cleaned-1.wav",
+          "file": "brush-soft-stroke-1.wav",
+          "startMs": 0,
+          "durationMs": 220,
+          "trimDb": 0,
+          "tag": null,
+          "kind": "oneshot",
+          "note": "Rounded bristle stroke, no tonal click.",
+          "bytes": 21164
+        },
+        {
+          "cue": "brush.cleaned",
+          "url": "sfx/brush/brush.cleaned-2.wav",
+          "file": "brush-soft-stroke-2.wav",
+          "startMs": 0,
+          "durationMs": 220,
+          "trimDb": 0,
+          "tag": null,
+          "kind": "oneshot",
+          "note": "Rounded bristle stroke, no tonal click.",
+          "bytes": 21164
+        },
+        {
+          "cue": "brush.cleaned",
+          "url": "sfx/brush/brush.cleaned-3.wav",
+          "file": "brush-soft-stroke-3.wav",
+          "startMs": 0,
+          "durationMs": 220,
+          "trimDb": 0,
+          "tag": null,
+          "kind": "oneshot",
+          "note": "Rounded bristle stroke, no tonal click.",
+          "bytes": 21164
+        },
+        {
+          "cue": "brush.saturated",
+          "url": "sfx/brush/brush.saturated-1.wav",
+          "file": "brush-soft-stroke-1.wav",
+          "startMs": 0,
+          "durationMs": 220,
+          "trimDb": 0,
+          "tag": null,
+          "kind": "oneshot",
+          "note": "Rounded bristle stroke, no tonal click.",
+          "bytes": 21164
+        },
+        {
+          "cue": "brush.saturated",
+          "url": "sfx/brush/brush.saturated-2.wav",
+          "file": "brush-soft-stroke-2.wav",
+          "startMs": 0,
+          "durationMs": 220,
+          "trimDb": 0,
+          "tag": null,
+          "kind": "oneshot",
+          "note": "Rounded bristle stroke, no tonal click.",
+          "bytes": 21164
+        },
+        {
+          "cue": "brush.saturated",
+          "url": "sfx/brush/brush.saturated-3.wav",
+          "file": "brush-soft-stroke-3.wav",
+          "startMs": 0,
+          "durationMs": 220,
+          "trimDb": 0,
+          "tag": null,
+          "kind": "oneshot",
+          "note": "Rounded bristle stroke, no tonal click.",
+          "bytes": 21164
+        }
+      ]
     }
   }
 }

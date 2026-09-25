@@ -121,6 +121,18 @@
       "takes": [],
       "synth": {"modes": [], "noiseMs": 35, "noiseGain": 1, "noiseTiltDbPerOct": -12, "lengthMs": 45, "variants": 8, "attackMs": 9}
     },
+    "brush.base": {
+      "kind": "loop", "bus": "tex", "peakDb": -26, "pitchCents": 0, "gainJitterDb": 0, "noRepeat": 0,
+      "takes": [
+        { "url": "sfx/brush/brush.base-1.wav", "trimDb": 0, "tag": null }
+      ], "synth": null
+    },
+    "brush.powder": {
+      "kind": "loop", "bus": "tex", "peakDb": -36, "pitchCents": 0, "gainJitterDb": 0, "noRepeat": 0,
+      "takes": [
+        { "url": "sfx/brush/brush.powder-1.wav", "trimDb": 0, "tag": null }
+      ], "synth": null
+    },
     "brush.bristle.2200": {
       "kind": "oneshot", "bus": "tex", "peakDb": -28, "pitchCents": 69, "gainJitterDb": 1.5, "noRepeat": 3,
       "takes": [],
@@ -523,13 +535,21 @@
     },
     "brush.saturated": {
       "kind": "oneshot", "bus": "foley", "peakDb": -24, "pitchCents": 20, "gainJitterDb": 1.5, "noRepeat": 3, "family": "brush.saturated",
-      "takes": [],
+      "takes": [
+        { "url": "sfx/brush/brush.saturated-1.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/brush/brush.saturated-2.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/brush/brush.saturated-3.wav", "trimDb": 0, "tag": null }
+      ],
       "synth": {"modes": [], "noiseMs": 120, "noiseGain": 1, "noiseTiltDbPerOct": -14, "lengthMs": 140, "variants": 6, "attackMs": 10}
     },
     "brush.cleaned": {
       "kind": "oneshot", "bus": "foley", "peakDb": -22, "pitchCents": 40, "gainJitterDb": 1.5, "noRepeat": 3, "family": "brush.cleaned",
-      "takes": [],
-      "synth": {"modes": [[3200, 0.01, 0.4]], "noiseMs": 40, "noiseGain": 1, "noiseTiltDbPerOct": 0, "lengthMs": 50, "variants": 8, "attackMs": 2}
+      "takes": [
+        { "url": "sfx/brush/brush.cleaned-1.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/brush/brush.cleaned-2.wav", "trimDb": 0, "tag": null },
+        { "url": "sfx/brush/brush.cleaned-3.wav", "trimDb": 0, "tag": null }
+      ],
+      "synth": {"modes": [], "noiseMs": 120, "noiseGain": 1, "noiseTiltDbPerOct": -12, "lengthMs": 180, "variants": 8, "attackMs": 30}
     },
     "ambience.room": {
       "kind": "loop", "bus": "ambience", "peakDb": -40, "pitchCents": 0, "gainJitterDb": 0, "noRepeat": 0,
