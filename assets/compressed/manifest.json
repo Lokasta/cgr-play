@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "models": {
+    "assets/models/workshop-room/workshop-room.glb": "assets/compressed/models/workshop-room--workshop-room-d9cf587746db2b38-66-fdae153e7321be82.glb",
+    "assets/models/collection-room/collection-room.glb": "assets/compressed/models/collection-room--collection-room-43452a12a2de2594-66-dd1a457f77e7cd09.glb",
+    "assets/models/collection-corner/collection-corner.glb": "assets/compressed/models/collection-corner--collection-corner-4a30f6b2b7e8913e-66-7e7bec713861fc10.glb",
+    "assets/models/parcel/parcel.glb": "assets/compressed/models/parcel--parcel-fa8c3d2aa5bc0e91-66-abaaa7839cb66610.glb",
+    "assets/models/packing-foam/packing-foam.glb": "assets/compressed/models/packing-foam--packing-foam-ff7adb636e049849.glb",
+    "assets/models/brush-station/brush-station.glb": "assets/compressed/models/brush-station--brush-station-5283c909baaf22d7-66-c98f3bab97451eda.glb",
+    "assets/models/lamp/lamp.glb": "assets/compressed/models/lamp--lamp-cc8a21d8792cbf1f.glb",
+    "assets/models/laptop/laptop.glb": "assets/compressed/models/laptop--laptop-502a16eab49cea45.glb",
+    "assets/models/workbench/workbench.glb": "assets/compressed/models/workbench--workbench-998ee35400c63596-66-ffc02a92558ca2f6.glb",
+    "assets/models/workbench/desk-mat.glb": "assets/compressed/models/workbench--desk-mat-1b2e55430780c0c4-66-bdd55d6f6948724b.glb",
+    "assets/models/radio/radio.glb": "assets/compressed/models/radio--radio-889a206d5130905a.glb"
+  },
+  "textures": {
+    "assets/textures/workshop-realism/american_walnut_veneer/Diffuse.webp": {
+      "url": "assets/compressed/images/6045209ac57ee2fb96c738b23e78dbe62b2909320445c4c0f87c0ba32bf06e77.webp",
+      "compressed": false,
+      "color": true
+    },
+    "assets/textures/workshop-realism/american_walnut_veneer/Normal.webp": {
+      "url": "assets/compressed/images/7b19e11eb579b0617d372dacf88d8922a535310fa06c803202696903dc425da7.webp",
+      "compressed": false,
+      "color": false
+    },
+    "assets/textures/workshop-realism/Workshop_Wood-clean.webp": {
+      "url": "assets/compressed/images/5e4059d74214a1e708fb7a1cd86ddef8dddb242e255fde598080c12cd67479bd.webp",
+      "compressed": false,
+      "color": true
+    },
+    "assets/textures/workshop-realism/Workshop_Wood-rough.webp": {
+      "url": "assets/compressed/images/cb998375d5ce27a917189e29aff89a7c19b686f20e4cb1d47df5109c3ab011df.ktx2",
+      "compressed": false,
+      "color": false,
+      "container": "ktx2",
+      "format": "VK_FORMAT_R8_UNORM",
+      "channels": "r",
+      "mipPolicy": "backend",
+      "supercompression": "zstd18",
+      "width": 2048,
+      "height": 2048,
+      "sourceSha256": "dce8272acab335433db092e76fb6d9e11fdd9b0bcc1396a996db4475210fa02f",
+      "derivedSha256": "cb998375d5ce27a917189e29aff89a7c19b686f20e4cb1d47df5109c3ab011df",
+      "sourceBytes": 1074606,
+      "bytes": 1105002,
+      "redSha256": "a747afe1b32c1a732b340b35691db4ce69a42000ebd8151c529d568946a92b71"
+    },
+    "assets/textures/workshop-realism/walnut-aged.webp": {
+      "url": "assets/compressed/images/54d4456d641a27176f0e541bdb18def4cecc657276c06cecb09c5d359c73c78b.webp",
+      "compressed": false,
+      "color": true
+    },
+    "assets/textures/workshop-realism/fabric_leather_02/Diffuse.webp": {
+      "url": "assets/compressed/images/45e7ad4f63046876866079f4f9672fe2b47dd2219f65bc1f344b0d95355dd28d.webp",
+      "compressed": false,
+      "color": true
+    },
+    "assets/textures/workshop-realism/fabric_leather_02/Normal.webp": {
+      "url": "assets/compressed/images/95a2eaeecbabf0e18db4e7bf2c06e8c87961481d15a46b8fba726434e7b5b194.webp",
+      "compressed": false,
+      "color": false
+    },
+    "assets/textures/workshop-realism/fabric_leather_02/Rough.webp": {
+      "url": "assets/compressed/images/977999f1343d4e913ca558e75079eca2fe9f4f4ecf94e0ff8bc145730e8eff04.ktx2",
+      "compressed": false,
+      "color": false,
+      "container": "ktx2",
+      "format": "VK_FORMAT_R8_UNORM",
+      "channels": "r",
+      "mipPolicy": "backend",
+      "supercompression": "zstd18",
+      "width": 2048,
+      "height": 2048,
+      "sourceSha256": "ced1237745619c7b919e653c40a24c98f99a80ae8a5dd1bf224e3962ff862842",
+      "derivedSha256": "977999f1343d4e913ca558e75079eca2fe9f4f4ecf94e0ff8bc145730e8eff04",
+      "sourceBytes": 3414358,
+      "bytes": 3822827,
+      "redSha256": "90d68ab524a016c317068978a118d8a24f1154013030f84df16211e07b88c807"
+    },
+    "assets/textures/workshop-realism/Workshop_Leather-clean.webp": {
+      "url": "assets/compressed/images/407f7d4cca209dd984e862ea011e8966b19f68d76aa2a42990316bc4061d4dd2.webp",
+      "compressed": false,
+      "color": true
+    },
+    "assets/textures/workshop-realism/Workshop_Leather-rough.webp": {
+      "url": "assets/compressed/images/b8c0b81b5206b9cba80799c326ea5d75f8c8972a334111f69b2f97888720eebe.ktx2",
+      "compressed": false,
+      "color": false,
+      "container": "ktx2",
+      "format": "VK_FORMAT_R8_UNORM",
+      "channels": "r",
+      "mipPolicy": "backend",
+      "supercompression": "zstd18",
+      "width": 2048,
+      "height": 2048,
+      "sourceSha256": "72ac2cea39c40caf2b8badade37ac7deeb8f8c6d561741162f8173e65e8f9b1b",
+      "derivedSha256": "b8c0b81b5206b9cba80799c326ea5d75f8c8972a334111f69b2f97888720eebe",
+      "sourceBytes": 2786468,
+      "bytes": 2819380,
+      "redSha256": "6e5e6509f4cb102387d30020fe35b7674801717b26cf10612e50a5ad3c616dc1"
+    },
+    "assets/textures/workshop-realism/rough_linen/Diffuse.webp": {
+      "url": "assets/compressed/images/11b5db6615fdc19d484db44fe776cce6f8a48c17e7d437e73424c15a7da3db5d.webp",
+      "compressed": false,
+      "color": true
+    },
+    "assets/textures/workshop-realism/rough_linen/Normal.webp": {
+      "url": "assets/compressed/images/982d9b186bc07ef339abe3a641f8947e669cf5490ff3aa78b8417aac6fbedb90.webp",
+      "compressed": false,
+      "color": false
+    },
+    "assets/textures/workshop-realism/rough_linen/Rough.webp": {
+      "url": "assets/compressed/images/f50b6bd9bdd4d326de861a95212489ae51d891def2ec5370effe227f9f09584d.ktx2",
+      "compressed": false,
+      "color": false,
+      "container": "ktx2",
+      "format": "VK_FORMAT_R8_UNORM",
+      "channels": "r",
+      "mipPolicy": "backend",
+      "supercompression": "zstd18",
+      "width": 2044,
+      "height": 2048,
+      "sourceSha256": "16b573408555fd8b3591951bb3015f81ac0a032bd3a444efea8ea8c42024e7a3",
+      "derivedSha256": "f50b6bd9bdd4d326de861a95212489ae51d891def2ec5370effe227f9f09584d",
+      "sourceBytes": 260,
+      "bytes": 415,
+      "redSha256": "58e141b7548eb64648f1e288d754f8702d52c0a331a86d9f71e4a4d81c928ce3"
+    },
+    "assets/textures/workshop-realism/Workshop_Linen-clean.webp": {
+      "url": "assets/compressed/images/80a758d7b6338272624841b457ae8753da8ed3320352fda12daae124689de915.ktx2",
+      "compressed": true,
+      "color": true
+    },
+    "assets/textures/workshop-realism/Workshop_Linen-rough.webp": {
+      "url": "assets/compressed/images/c5f6903eb2802796e714049cacc7be46745e3186f9823f0da0cef84b6aba95df.ktx2",
+      "compressed": false,
+      "color": false,
+      "container": "ktx2",
+      "format": "VK_FORMAT_R8_UNORM",
+      "channels": "r",
+      "mipPolicy": "backend",
+      "supercompression": "zstd18",
+      "width": 2048,
+      "height": 2048,
+      "sourceSha256": "e3fd1780f76c680a23e1c177ecfdc162c6d8d75b67230ad311e772045582f8df",
+      "derivedSha256": "c5f6903eb2802796e714049cacc7be46745e3186f9823f0da0cef84b6aba95df",
+      "sourceBytes": 1387836,
+      "bytes": 1429971,
+      "redSha256": "54626745ce8a3d5bdce24eb51671a8ec0fc45f262c97524f84e44d782fdc5827"
+    },
+    "assets/textures/workshop-realism/white_plaster_02/Diffuse.webp": {
+      "url": "assets/compressed/images/668aac0ba8d526c073b40cb4d3f4be21e11150c60e1e770e7baba072e9d28d9f.webp",
+      "compressed": false,
+      "color": true
+    },
+    "assets/textures/workshop-realism/white_plaster_02/Normal.webp": {
+      "url": "assets/compressed/images/cdb7eed417e44cde3216efee7343c49b8298700628e05774690e1e9e54c65e79.webp",
+      "compressed": false,
+      "color": false
+    },
+    "assets/textures/workshop-realism/white_plaster_02/Rough.webp": {
+      "url": "assets/compressed/images/35a0bfd603c16201b41a0fe7e6998cb0b69a13f366028999b49e636aa1169731.ktx2",
+      "compressed": false,
+      "color": false,
+      "container": "ktx2",
+      "format": "VK_FORMAT_R8_UNORM",
+      "channels": "r",
+      "mipPolicy": "backend",
+      "supercompression": "zstd18",
+      "width": 2048,
+      "height": 2048,
+      "sourceSha256": "0258c8abbe0fd0fd191277d345c8674ce2dda5b854a10a510695396a201b8b2c",
+      "derivedSha256": "35a0bfd603c16201b41a0fe7e6998cb0b69a13f366028999b49e636aa1169731",
+      "sourceBytes": 2459664,
+      "bytes": 2636800,
+      "redSha256": "9e2a914b0388324d0ea003a81bb4ea63ae0b27afbde0f06cc20ac1b9dc7f1fa4"
+    },
+    "assets/textures/workshop-realism/Workshop_Plaster-clean.webp": {
+      "url": "assets/compressed/images/d61c4a6a7a801d4f419295982f72c5a879b1323f071e409eb2c80a077b096654.webp",
+      "compressed": false,
+      "color": true
+    },
+    "assets/textures/workshop-realism/Workshop_Plaster-rough.webp": {
+      "url": "assets/compressed/images/395536bb8ad128889bca8dd7b54f1bda5840cb0b6c38a31bed8b78005ded3859.ktx2",
+      "compressed": false,
+      "color": false,
+      "container": "ktx2",
+      "format": "VK_FORMAT_R8_UNORM",
+      "channels": "r",
+      "mipPolicy": "backend",
+      "supercompression": "zstd18",
+      "width": 2048,
+      "height": 2048,
+      "sourceSha256": "17fb4639f90fec347e6ff80d5aa302ef194be1c6ff6c6a14f19c254474a924fc",
+      "derivedSha256": "395536bb8ad128889bca8dd7b54f1bda5840cb0b6c38a31bed8b78005ded3859",
+      "sourceBytes": 844188,
+      "bytes": 799523,
+      "redSha256": "dd9201c9065e3a8c8eabd8e3b4d512f1852f9224efe736592cfac3073af955bb"
+    },
+    "assets/textures/workshop-realism/american_walnut_veneer/Rough.webp": {
+      "url": "assets/compressed/images/293f7fa12d3c43a82286d2daea9363b696842c72fa2f346a52b78da2629efb89.png",
+      "compressed": false,
+      "color": false
+    },
+    "assets/textures/workshop-realism/Bench_Walnut-clean.webp": {
+      "url": "assets/compressed/images/fa77798fe462a503b840a6a1365efd0682a6692bf0380f1a415be8dcd9d3974b.webp",
+      "compressed": false,
+      "color": true
+    },
+    "assets/textures/workshop-realism/Bench_Walnut-rough.webp": {
+      "url": "assets/compressed/images/9701be0209d635da28168c819286b7a20ccbef5acee8c0dbfa4af050b18c9021.ktx2",
+      "compressed": false,
+      "color": false,
+      "container": "ktx2",
+      "format": "VK_FORMAT_R8_UNORM",
+      "channels": "r",
+      "mipPolicy": "backend",
+      "supercompression": "zstd18",
+      "width": 2048,
+      "height": 2048,
+      "sourceSha256": "123d617db836100d335ab0b2d3ddab0949bbb001c422b092c56ce9717be2204e",
+      "derivedSha256": "9701be0209d635da28168c819286b7a20ccbef5acee8c0dbfa4af050b18c9021",
+      "sourceBytes": 26982,
+      "bytes": 31445,
+      "redSha256": "d5dd20281ee01025529ea06863e0f497cc4cc06e364d703216ecfc513a73108e"
+    }
+  }
+}
