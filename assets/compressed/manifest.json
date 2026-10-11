@@ -1,17 +1,17 @@
 {
   "version": 1,
   "models": {
-    "assets/models/workshop-room/workshop-room.glb": "assets/compressed/models/workshop-room-rg8-bf342e0307e6aa41.glb",
+    "assets/models/workshop-room/workshop-room.glb": "assets/compressed/models/workshop-room-data-color-94b74181bb1acd99.gltf",
     "assets/models/collection-room/collection-room.glb": "assets/compressed/models/collection-room--collection-room-43452a12a2de2594-66-dd1a457f77e7cd09.glb",
     "assets/models/collection-corner/collection-corner.glb": "assets/compressed/models/collection-corner--collection-corner-4a30f6b2b7e8913e-66-7e7bec713861fc10.glb",
     "assets/models/parcel/parcel.glb": "assets/compressed/models/parcel--parcel-fa8c3d2aa5bc0e91-66-abaaa7839cb66610.glb",
     "assets/models/packing-foam/packing-foam.glb": "assets/compressed/models/packing-foam--packing-foam-ff7adb636e049849.glb",
     "assets/models/brush-station/brush-station.glb": "assets/compressed/models/brush-station--brush-station-5283c909baaf22d7-66-c98f3bab97451eda.glb",
-    "assets/models/lamp/lamp.glb": "assets/compressed/models/lamp--lamp-cc8a21d8792cbf1f.glb",
+    "assets/models/lamp/lamp.glb": "assets/compressed/models/lamp-data-color-1918e462c9207c82.gltf",
     "assets/models/laptop/laptop.glb": "assets/compressed/models/laptop--laptop-502a16eab49cea45.glb",
     "assets/models/workbench/workbench.glb": "assets/compressed/models/workbench--workbench-998ee35400c63596-66-ffc02a92558ca2f6.glb",
     "assets/models/workbench/desk-mat.glb": "assets/compressed/models/workbench--desk-mat-1b2e55430780c0c4-66-bdd55d6f6948724b.glb",
-    "assets/models/radio/radio.glb": "assets/compressed/models/radio--radio-889a206d5130905a.glb"
+    "assets/models/radio/radio.glb": "assets/compressed/models/radio-data-color-6a8a0c1d5fdeea7f.gltf"
   },
   "textures": {
     "assets/textures/workshop-realism/american_walnut_veneer/Diffuse.webp": {
@@ -227,17 +227,17 @@
     }
   },
   "nativeModels": {
-    "assets/models/workshop-room/workshop-room.glb": "assets/compressed/models/workshop-room-native-906eda8d21d11ee9.glb",
+    "assets/models/workshop-room/workshop-room.glb": "assets/compressed/models/workshop-room-data-original-b3cf3b3f554c0c17.gltf",
     "assets/models/collection-room/collection-room.glb": "assets/compressed/models/collection-room-native-f1df2b6dd79929c2.glb",
     "assets/models/collection-corner/collection-corner.glb": "assets/compressed/models/collection-corner-native-95551001ccb4ec3c.glb",
     "assets/models/parcel/parcel.glb": "assets/compressed/models/parcel-native-dcea547661480e78.glb",
     "assets/models/packing-foam/packing-foam.glb": "assets/compressed/models/packing-foam-native-a6d77e2b93f0b47b.glb",
     "assets/models/brush-station/brush-station.glb": "assets/compressed/models/brush-station-native-3a0e7dbeabd8b6d9.glb",
-    "assets/models/lamp/lamp.glb": "assets/compressed/models/lamp-native-d80cfa39bf8392c0.glb",
+    "assets/models/lamp/lamp.glb": "assets/compressed/models/lamp-data-original-215d136bd6808287.gltf",
     "assets/models/laptop/laptop.glb": "assets/compressed/models/laptop-native-e44234836af3adfc.glb",
     "assets/models/workbench/workbench.glb": "assets/compressed/models/workbench-native-ff610631f10bdeda.glb",
     "assets/models/workbench/desk-mat.glb": "assets/compressed/models/desk-mat-native-cc14a3cecfe0d659.glb",
-    "assets/models/radio/radio.glb": "assets/compressed/models/radio-native-685f48aa6b6e9008.glb"
+    "assets/models/radio/radio.glb": "assets/compressed/models/radio-data-original-eb44d50c1fb0e8ba.gltf"
   },
   "nativeModelTextures": {
     "assets/compressed/images/ed2ff631d1bdc19afe2edc429b1b03a57d05200bd77a9d5c1ce01c291d1af730.ktx2": {
@@ -302,6 +302,498 @@
       "height": 2048,
       "channels": "rg",
       "mipPolicy": "backend"
+    },
+    "assets/compressed/images/496171f28e3d8725a4b72f70a67c572ad015d792224018a269f57e8e149b4962.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 1024,
+      "height": 1024,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/b6b6ee40b6cae0c018b27cee73efbd1f5f4f571aeeafdb0f996da84e0144ca76.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 512,
+      "height": 512,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/01b56858b8044c5794993e832515221b8fc60d59f62b02eeb3bf2420452b9b1a.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 512,
+      "height": 512,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/c91d5a06e55cd067583bb5499a2a7590ff98d579b6ea1e7271740076494f77cd.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/2bc796eef4e4f384094e0aea835593092b9f4f95a451a47b1af81244d65e4c42.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 256,
+      "height": 256,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/ea1257e6047dc940edceba875f8389deff08d7155935efdf32091e55f0a1b520.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/bc8754d299f7b0c1a12206ac56506dd843c337e74fbaa3be29c6fe1c3b77e76c.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 512,
+      "height": 512,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/9f2c1d0a1af5e82d0ccef0ec4921be91da4e574f5a3d65595b5e43b9e81e4f29.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/2138d91f356447d794623e8da7b7c510d5785eb57a5cc56ebce2e62e63209461.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/1ab625b6b6c96d118869c655e7d0a4073be020400f07706f84192208f9c93d89.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 1024,
+      "height": 1024,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/9d6715abfa78bc295e37077cba94291582c483a11588c4c070989aa2e31d18f9.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/481e0b1d09e22909657c35d34a7b129e196ee92a175d9c61d65f3825cf85c37d.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 512,
+      "height": 512,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/91975ca792610c398da5e5ea79de7f69d36bc6a782df3bfa34d5f7e803513a1d.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 1024,
+      "height": 1024,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/1f6553680eb56297b4e41740e7987c7a2e3713a85869c6416ea3d71b98872ec7.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 512,
+      "height": 512,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/f37693a4fb3c4cdf68ee66435599fba35ee1fd92139b69818fe8453476c56ffc.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/c578a5acdd182a306afeb95876bd4290e1154eb23ad58c53e6fdfb5676abe393.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/aa7a59e955b80c241dbf19b3364b9001b38ac8a279effc47cba9736a31e785c7.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 512,
+      "height": 512,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/442081a938f1a4fea22ce73d9550c9163387820658a751f1290ca70ac0052c02.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 1024,
+      "height": 1024,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/cd272aea86226bce0f2d04412bc555ad66fc3ac42eee7485c21bd1a62ba8c598.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 512,
+      "height": 512,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/a86836f517a7f618506e4cbd104d2f8e648077def57483a9d451773531f0bcc6.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 512,
+      "height": 512,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/d9820100cc15e9e25df9e45647c66157666c217dd44e14f7665a9042d451e3da.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    }
+  },
+  "linearModelTextures": {
+    "assets/compressed/images/4073ef7ac112554397f8f558aa18f49986f6de5d9e25bd130cfb1f5f567941f4.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/52b0c91d6f3bde4ca575d698b83f50bfea4764faa81652fc75314cd10559eb92.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/6e88d15a61ed279eb3cb7f8b3e4fb2a9b2c029f170fb777de0cf893a8ce900d9.ktx2": {
+      "width": 512,
+      "height": 512,
+      "mipLevels": 10
+    },
+    "assets/compressed/images/c4c5aa43dc3d8a4a8bf0861cd27a91729f572ffe3be07345add7ea7d9dbc0f62.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/e6984f93fff95167b46e878775fc4f5f2ffbc6dec14b2075dc711fb4824df62a.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/663086b2594605c2edf6e449cf6692625c3240689672536f134a72215c5050d2.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/07baf625681f4e7f9db80a6b40c4c8cb0b4637784fe090a5adeddceaeec78694.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/bee760fdca4559506a49b5ef2aa39fb1732fcd1833000154584f15fa503c42de.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/ab8adc87aec20ea720f7bbe96d23803140397a5104469a9e38867160dcc3b73f.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/756ad7c043fe1d4289fe0acd03baab6fb795f09faf8174e6873f93cbecc665ed.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/9dda031ddc97e3ab93f835f1267a6ff5e1221b21dc54e48567e0777713dcc2a9.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/8b7efa00cd1aef79ceac02fb47aae160fc62acfbabc050f1f284ca024e6c6889.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/edec7ea4ce85bc1c9d6c7d1fb9e47a784ce77b75a863ea9856ab49ca77e68f9f.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/2fe1bc733eccdab0a822764f7d632a29fd7474130747e4015566502339025c20.ktx2": {
+      "width": 512,
+      "height": 512,
+      "mipLevels": 10
+    },
+    "assets/compressed/images/20995c1310e0e15284a89d62fee63900384d683f37e25b88ed876cea7ef28362.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/782d621925caccbf8eaf207ad84db3c769dcf7b15302e40eae561a0a0bf263e8.ktx2": {
+      "width": 512,
+      "height": 512,
+      "mipLevels": 10
+    },
+    "assets/compressed/images/c39526ddb03c97ea92559840e4aa5495ee00a4dd7d6812d8bfd853de1d91ded9.ktx2": {
+      "width": 512,
+      "height": 512,
+      "mipLevels": 10
+    },
+    "assets/compressed/images/89a7749d308501d738e781afa9f38b9766685019c045837b20db034750fabac7.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/a792580e767d77ed280e35f0d605b755024ef2eb15f7692726065379bdf9796a.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/424eeb8c143b948745babeded36c51101e9e0688209f44a89c49ec6d03dac741.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/7c9cd2fc3ffcb0cd09f3f1fa3f7a7f6166e48d9efb9152e65a98593d182a96f5.ktx2": {
+      "width": 512,
+      "height": 512,
+      "mipLevels": 10
+    },
+    "assets/compressed/images/dc379c60d8619ed5bf440ef9309742fc01c12b4df3ab113a4dea380eb07d968c.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/33f752d77687f89485b15e8d9c0ee7367ecb0a52b910360e11f0776ee24ffc51.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/25a6ba577211609c50a2b5b9a2b6cc8e87c0aef8445ac485b43ae1fd92128d66.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/595f21b95169f3d584f47f414e979c22e48cfb372e836456cca7a00e80ad3f92.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/15ad51557823143b1e35bca8384060accd9f7402f7e1dc66b0a7bb3164f681bc.ktx2": {
+      "width": 512,
+      "height": 512,
+      "mipLevels": 10
+    },
+    "assets/compressed/images/7c4a81e85614368f48621631247b068b855d20be3cb26884ddb20b9d89b45f69.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/f569ddfbae67d08045588309fc9d6ef8d90bd64a8c19be519106156d4459616d.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/6e642fb5d62869be922010acfcedc56d23194d499576d62c11281a6f58f97adc.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/8b0b99fc1ca663735fc9013f76aef79e118fba23636cd5e868547e76ba7adb43.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/22949d424f0fcc7dfb5eef89eb5ad7c81f45fcafc8efd3a180780fda0b203e66.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/9c832ce699072fb0d89af4f29bfd5967f58f3f5a4b1cf598ad871185791deea7.ktx2": {
+      "width": 512,
+      "height": 512,
+      "mipLevels": 10
+    },
+    "assets/compressed/images/74566abe438369b16b9967e44ff1b020a90c0f7501582de4a86c71b4d4b3bc53.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/0e1df0013228fdc53574739ab02612823ae941fe62722cf6beda14d270b92a32.ktx2": {
+      "width": 512,
+      "height": 512,
+      "mipLevels": 10
+    },
+    "assets/compressed/images/8ffa1835952f212d594f2df7f3748b6bd1abf99bc808d222ce6f058a7e6ed0ce.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/714e6f9d5a31f58733ede0cae7ac0e62b9f43616140819765d8ae85e08bd3312.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/1fca89d5709b62041bb7acf282d4428cb263818243f670260cd1924c683d7c64.ktx2": {
+      "width": 512,
+      "height": 512,
+      "mipLevels": 10
+    },
+    "assets/compressed/images/3458c7a9aa22aa54395be31e6dd61019712ec95e11bdf34a8fc7b2eb6051bd0e.ktx2": {
+      "width": 512,
+      "height": 512,
+      "mipLevels": 10
+    },
+    "assets/compressed/images/bb8676e7eff7c5a04851065a40403c2ecd40deb1563155ca6dd03d60c9fc2d17.ktx2": {
+      "width": 512,
+      "height": 512,
+      "mipLevels": 10
+    },
+    "assets/compressed/images/b54936d57d63f5f7d9603e322dc1d66d5b2ef0bbe60cbf8a01de06fb139a5410.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/778efadee3fc25e014c2208b86dce625cba1ba73b3a3fc61561046d16c12e051.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/7664d5757c6109d5c4712a737439824dfcf9e0ec035a29773ed2329583c58077.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/da84fa6c7b3d51426311c1d8da08b4056776227d48193d8eba39c856b717722b.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/30f67155fb707439395b1165bd29955339529d42eea75e88d376ba40c38f3630.ktx2": {
+      "width": 2044,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/7d402d5bf8adad8e64be8914b977480efe277b2fde861dc58216c208b783c0c8.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/467c019351e464bda0b4807d98469568d015fac25a41338376972a82204ac0cc.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/66d13b55739cf6dd78fec169166f126e28997e794436a8f6cf6052c623c329c1.ktx2": {
+      "width": 512,
+      "height": 512,
+      "mipLevels": 10
+    },
+    "assets/compressed/images/22f29dcdd69caef978d4a5d42d1c2dddb60870507bb391d5bd26f532aa656cf0.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/f97a134ea5eb96413d6859c6b7123c22aaedd5220c7b2e0cf7bc87715d52769c.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/43d26c6868596b153469f58c424930367d0a6f493599af5be4d0214bf8390181.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/d7a4fc7fd854677b97661101b648704d546634a57948e2ae59079d501d36fead.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/29c14e257337e0ee93cc48161efcd6dc0d5e3477ac0857b68b98e368b1679f54.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/77204a34d67d843434a8d803712107854546fa844882a519e15f155465195e7b.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/cc12c9294424f6a473d1108f0b29abfd96a6fe09fe7e021d158bdbce224e6c73.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/e3e9425e42b19f6ad2a8c257ee034cf941e4d088069fc1c0ba046f5c4d74bf60.ktx2": {
+      "width": 2048,
+      "height": 2048,
+      "mipLevels": 12
+    },
+    "assets/compressed/images/b30704fd0f94190a9b4b85356826e5b4a8ebee1eebbc54de72e17734390949cb.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/f25ce5abc20402a71f0c7d6b4215baf535017cc879aff470de44d3476c9671d6.ktx2": {
+      "width": 512,
+      "height": 512,
+      "mipLevels": 10
+    },
+    "assets/compressed/images/415c77cc680851626c4e854dfafb7d25e11cb173c0225903a2f256868c6a7ad1.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    },
+    "assets/compressed/images/ce213af37ce396a356965a1cf758bdd4afb2c11e54d45bf880c18673424152aa.ktx2": {
+      "width": 1024,
+      "height": 1024,
+      "mipLevels": 11
+    }
+  },
+  "linearModels": {
+    "assets/models/workshop-room/workshop-room.glb": "assets/compressed/models/workshop-room-linear-original-27b1293ab2f30152.gltf",
+    "assets/models/collection-room/collection-room.glb": "assets/compressed/models/collection-room-linear-original-11bda91147bc9bbd.gltf",
+    "assets/models/collection-corner/collection-corner.glb": "assets/compressed/models/collection-corner-native-95551001ccb4ec3c.glb",
+    "assets/models/parcel/parcel.glb": "assets/compressed/models/parcel-linear-original-3d7654b2f19bd12d.gltf",
+    "assets/models/packing-foam/packing-foam.glb": "assets/compressed/models/packing-foam-native-a6d77e2b93f0b47b.glb",
+    "assets/models/brush-station/brush-station.glb": "assets/compressed/models/brush-station-linear-original-b9c8a1e7575483a7.gltf",
+    "assets/models/lamp/lamp.glb": "assets/compressed/models/lamp-linear-original-73fb5a2ab8d2cdc4.gltf",
+    "assets/models/laptop/laptop.glb": "assets/compressed/models/laptop-linear-original-f1c729917e54f989.gltf",
+    "assets/models/workbench/workbench.glb": "assets/compressed/models/workbench-linear-original-f50c6bd308aff392.gltf",
+    "assets/models/workbench/desk-mat.glb": "assets/compressed/models/desk-mat-linear-original-8a7310c2f013ef1c.gltf",
+    "assets/models/radio/radio.glb": "assets/compressed/models/radio-linear-original-47c282ec13882575.gltf"
+  },
+  "linearColorModels": {
+    "assets/models/workshop-room/workshop-room.glb": "assets/compressed/models/workshop-room-linear-color-cf956d1fcbe55a5f.gltf",
+    "assets/models/collection-room/collection-room.glb": "assets/compressed/models/collection-room-linear-color-ab4b56c924545d5f.gltf",
+    "assets/models/collection-corner/collection-corner.glb": "assets/compressed/models/collection-corner--collection-corner-4a30f6b2b7e8913e-66-7e7bec713861fc10.glb",
+    "assets/models/parcel/parcel.glb": "assets/compressed/models/parcel-linear-color-2aa64f07623ce67e.gltf",
+    "assets/models/packing-foam/packing-foam.glb": "assets/compressed/models/packing-foam--packing-foam-ff7adb636e049849.glb",
+    "assets/models/brush-station/brush-station.glb": "assets/compressed/models/brush-station-linear-color-d5612aa6abd07561.gltf",
+    "assets/models/lamp/lamp.glb": "assets/compressed/models/lamp-linear-color-54e22a9d01088460.gltf",
+    "assets/models/laptop/laptop.glb": "assets/compressed/models/laptop-linear-color-ef215e9eddb209d0.gltf",
+    "assets/models/workbench/workbench.glb": "assets/compressed/models/workbench-linear-color-6c5e20cacf875150.gltf",
+    "assets/models/workbench/desk-mat.glb": "assets/compressed/models/desk-mat-linear-color-1cec15dd82681199.gltf",
+    "assets/models/radio/radio.glb": "assets/compressed/models/radio-linear-color-a4a0f3015db7423e.gltf"
+  },
+  "linearTextures": {
+    "assets/textures/workshop-realism/american_walnut_veneer/Normal.webp": {
+      "url": "assets/compressed/images/714e6f9d5a31f58733ede0cae7ac0e62b9f43616140819765d8ae85e08bd3312.ktx2",
+      "color": false,
+      "compressed": true
+    },
+    "assets/textures/workshop-realism/fabric_leather_02/Normal.webp": {
+      "url": "assets/compressed/images/da84fa6c7b3d51426311c1d8da08b4056776227d48193d8eba39c856b717722b.ktx2",
+      "color": false,
+      "compressed": true
+    },
+    "assets/textures/workshop-realism/rough_linen/Normal.webp": {
+      "url": "assets/compressed/images/30f67155fb707439395b1165bd29955339529d42eea75e88d376ba40c38f3630.ktx2",
+      "color": false,
+      "compressed": true
+    },
+    "assets/textures/workshop-realism/white_plaster_02/Normal.webp": {
+      "url": "assets/compressed/images/d7a4fc7fd854677b97661101b648704d546634a57948e2ae59079d501d36fead.ktx2",
+      "color": false,
+      "compressed": true
     }
   }
 }
