@@ -1,7 +1,7 @@
 {
   "version": 1,
   "models": {
-    "assets/models/workshop-room/workshop-room.glb": "assets/compressed/models/workshop-room--workshop-room-d9cf587746db2b38-66-fdae153e7321be82.glb",
+    "assets/models/workshop-room/workshop-room.glb": "assets/compressed/models/workshop-room-rg8-bf342e0307e6aa41.glb",
     "assets/models/collection-room/collection-room.glb": "assets/compressed/models/collection-room--collection-room-43452a12a2de2594-66-dd1a457f77e7cd09.glb",
     "assets/models/collection-corner/collection-corner.glb": "assets/compressed/models/collection-corner--collection-corner-4a30f6b2b7e8913e-66-7e7bec713861fc10.glb",
     "assets/models/parcel/parcel.glb": "assets/compressed/models/parcel--parcel-fa8c3d2aa5bc0e91-66-abaaa7839cb66610.glb",
@@ -224,6 +224,84 @@
       "sourceBytes": 26982,
       "bytes": 31445,
       "redSha256": "d5dd20281ee01025529ea06863e0f497cc4cc06e364d703216ecfc513a73108e"
+    }
+  },
+  "nativeModels": {
+    "assets/models/workshop-room/workshop-room.glb": "assets/compressed/models/workshop-room-native-906eda8d21d11ee9.glb",
+    "assets/models/collection-room/collection-room.glb": "assets/compressed/models/collection-room-native-f1df2b6dd79929c2.glb",
+    "assets/models/collection-corner/collection-corner.glb": "assets/compressed/models/collection-corner-native-95551001ccb4ec3c.glb",
+    "assets/models/parcel/parcel.glb": "assets/compressed/models/parcel-native-dcea547661480e78.glb",
+    "assets/models/packing-foam/packing-foam.glb": "assets/compressed/models/packing-foam-native-a6d77e2b93f0b47b.glb",
+    "assets/models/brush-station/brush-station.glb": "assets/compressed/models/brush-station-native-3a0e7dbeabd8b6d9.glb",
+    "assets/models/lamp/lamp.glb": "assets/compressed/models/lamp-native-d80cfa39bf8392c0.glb",
+    "assets/models/laptop/laptop.glb": "assets/compressed/models/laptop-native-e44234836af3adfc.glb",
+    "assets/models/workbench/workbench.glb": "assets/compressed/models/workbench-native-ff610631f10bdeda.glb",
+    "assets/models/workbench/desk-mat.glb": "assets/compressed/models/desk-mat-native-cc14a3cecfe0d659.glb",
+    "assets/models/radio/radio.glb": "assets/compressed/models/radio-native-685f48aa6b6e9008.glb"
+  },
+  "nativeModelTextures": {
+    "assets/compressed/images/ed2ff631d1bdc19afe2edc429b1b03a57d05200bd77a9d5c1ce01c291d1af730.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/fca7ad6a7d208e85ea2955c289b60bc11199a5d953993b250ca8f795e2e954ef.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/6d531a39b8628021fd1916de57b1263f71846615d686b7b003a6c501b05cd698.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/9c1706c61f5ecd6ab923cdbcd36e8e59a8ebb5682efdc764e0337d840f39d988.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/114a483e22c69872de1ab115312497d06ba8d39a0308b77f0c5cd3a8e0461c79.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/12e3cf8bd9ae5a6d8a0f86842a513c885eef3194ad49374f7bdb259c5ac323c0.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/abb9ff4325a495c558ba48400316094909ab92824b81b5064921d0e8e129f9f5.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/874568ee1c5dce404b0750f842e1e312a4a9c59de985702160b8559d40add807.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
+    },
+    "assets/compressed/images/7cba3c2f98c3e0ad0c1f81cb60640c5d80f3cafac689f0310d9bcb5e149bfc08.ktx2": {
+      "format": "VK_FORMAT_R8G8_UNORM",
+      "width": 2048,
+      "height": 2048,
+      "channels": "rg",
+      "mipPolicy": "backend"
     }
   }
 }
