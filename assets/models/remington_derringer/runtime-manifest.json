@@ -1,0 +1,500 @@
+{
+  "version": 1,
+  "id": "remington-derringer",
+  "runtime": {
+    "file": "remington-derringer-restoration.glb",
+    "sha256": "16cf651e8491717594eb2d620d5faef341d31555808b4250b39e1554292ade95",
+    "bytes": 3953552
+  },
+  "lineage": {
+    "ancestor_asset_sha256": "18cd9211715230002d65996c136981b82721f3d5914738865663ec8c19323f76",
+    "ancestor_canonical_sha256": "52aeacb4ba4043a8a2138e828776988add865a59b9a12037e52ec876f467220f",
+    "repair_manifest_sha256": "412c403d009506c3bed7edf757731761f1a79eae66a69e946bbdf653cb20d036",
+    "compatibility": "Nodes/bindings and triangle positions/normals/UV1 independently verified in f6-closure.md; copied source canonical is ancestor data, not a current runtime hash",
+    "ancestor_asset_file": "../../../../art/weapons/remington_derringer/runtime-ancestor-18cd.glb",
+    "ancestor_canonical_file": "../../../../art/weapons/remington_derringer/canonical-parts.ancestor.json",
+    "repair_manifest_file": "../../../../art/weapons/remington_derringer/gutter-fix-manifest.json"
+  },
+  "cleaning_uv": 0,
+  "appearance_uv": 1,
+  "mask_resolution": 1024,
+  "canonical_parts": [
+    {
+      "part_index": 1,
+      "node_name": "grip_pair",
+      "node_index": 11,
+      "source_path": "remington_derringer_hd/frame/grip_pair",
+      "source_transform_path_id": "-2217403186323211380",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "grip_pair",
+          "node_index": 11,
+          "mesh_name": "grip_pair"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 2,
+      "node_name": "grip_l",
+      "node_index": 7,
+      "source_path": "remington_derringer_hd/frame/grip_l",
+      "source_transform_path_id": "-5152714804228453766",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "grip_l",
+          "node_index": 7,
+          "mesh_name": "grip_l"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 3,
+      "node_name": "grip_fixing_screw",
+      "node_index": 2,
+      "source_path": "remington_derringer_hd/frame/grip_fixing_screw",
+      "source_transform_path_id": "-8448224198806398849",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "grip_fixing_screw",
+          "node_index": 2,
+          "mesh_name": "grip_fixing_screw"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 4,
+      "node_name": "locking_cam_retaining_screw",
+      "node_index": 3,
+      "source_path": "remington_derringer_hd/frame/locking_cam_retaining_screw",
+      "source_transform_path_id": "-8236306303624654499",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "locking_cam_retaining_screw",
+          "node_index": 3,
+          "mesh_name": "locking_cam_retaining_screw"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 5,
+      "node_name": "hammer",
+      "node_index": 26,
+      "source_path": "remington_derringer_hd/frame/hammer",
+      "source_transform_path_id": "6493766664686806085",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "hammer",
+          "node_index": 26,
+          "mesh_name": "hammer"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 6,
+      "node_name": "barrel_locking_cam",
+      "node_index": 15,
+      "source_path": "remington_derringer_hd/frame/barrel_locking_cam",
+      "source_transform_path_id": "-1077354045091317091",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "barrel_locking_cam",
+          "node_index": 15,
+          "mesh_name": "barrel_locking_cam"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 7,
+      "node_name": "trigger_pivot_pin",
+      "node_index": 25,
+      "source_path": "remington_derringer_hd/frame/trigger_pivot_pin",
+      "source_transform_path_id": "5429396637262493397",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "trigger_pivot_pin",
+          "node_index": 25,
+          "mesh_name": "trigger_pivot_pin"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 8,
+      "node_name": "firing_pin_cam_spring_screw",
+      "node_index": 16,
+      "source_path": "remington_derringer_hd/frame/firing_pin_cam_spring_screw",
+      "source_transform_path_id": "437732919771246858",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "firing_pin_cam_spring_screw",
+          "node_index": 16,
+          "mesh_name": "firing_pin_cam_spring_screw"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 9,
+      "node_name": "hammer_spring_screw",
+      "node_index": 1,
+      "source_path": "remington_derringer_hd/frame/hammer_spring_screw",
+      "source_transform_path_id": "-8883246837090697990",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "hammer_spring_screw",
+          "node_index": 1,
+          "mesh_name": "hammer_spring_screw"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 10,
+      "node_name": "trigger",
+      "node_index": 8,
+      "source_path": "remington_derringer_hd/frame/trigger",
+      "source_transform_path_id": "-3400237596942942721",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "trigger",
+          "node_index": 8,
+          "mesh_name": "trigger"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 11,
+      "node_name": "hammer_spring",
+      "node_index": 22,
+      "source_path": "remington_derringer_hd/frame/hammer_spring",
+      "source_transform_path_id": "3270724608000540111",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "hammer_spring2",
+          "node_index": 4,
+          "mesh_name": "hammer_spring2"
+        },
+        {
+          "node_name": "hammer_spring1",
+          "node_index": 18,
+          "mesh_name": "hammer_spring1"
+        },
+        {
+          "node_name": "hammer_spring",
+          "node_index": 22,
+          "mesh_name": "hammer_spring"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 12,
+      "node_name": "alternating_cam_spring",
+      "node_index": 19,
+      "source_path": "remington_derringer_hd/frame/alternating_cam_spring",
+      "source_transform_path_id": "1540441164730011677",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "alternating_cam_spring1",
+          "node_index": 6,
+          "mesh_name": "alternating_cam_spring1"
+        },
+        {
+          "node_name": "alternating_cam_spring",
+          "node_index": 19,
+          "mesh_name": "alternating_cam_spring"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 13,
+      "node_name": "hammer_pivot_pin",
+      "node_index": 28,
+      "source_path": "remington_derringer_hd/frame/hammer_pivot_pin",
+      "source_transform_path_id": "7521221481174280577",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "hammer_pivot_pin",
+          "node_index": 28,
+          "mesh_name": "hammer_pivot_pin"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 14,
+      "node_name": "stirrup",
+      "node_index": 9,
+      "source_path": "remington_derringer_hd/frame/hammer/stirrup",
+      "source_transform_path_id": "-2787286325840919236",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "stirrup",
+          "node_index": 9,
+          "mesh_name": "stirrup"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 15,
+      "node_name": "fire_alternating_cam",
+      "node_index": 14,
+      "source_path": "remington_derringer_hd/frame/hammer/fire_alternating_cam",
+      "source_transform_path_id": "-1135556259676844881",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "fire_alternating_cam",
+          "node_index": 14,
+          "mesh_name": "fire_alternating_cam"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 16,
+      "node_name": "stirrup_pin",
+      "node_index": 17,
+      "source_path": "remington_derringer_hd/frame/hammer/stirrup_pin",
+      "source_transform_path_id": "730346567159803448",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "stirrup_pin",
+          "node_index": 17,
+          "mesh_name": "stirrup_pin"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 17,
+      "node_name": "pivoted_firing_pin",
+      "node_index": 20,
+      "source_path": "remington_derringer_hd/frame/hammer/pivoted_firing_pin",
+      "source_transform_path_id": "1591072128714685640",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "pivoted_firing_pin",
+          "node_index": 20,
+          "mesh_name": "pivoted_firing_pin"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 18,
+      "node_name": "trigger_spring",
+      "node_index": 0,
+      "source_path": "remington_derringer_hd/frame/trigger/trigger_spring",
+      "source_transform_path_id": "-9182124746359812975",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "trigger_spring",
+          "node_index": 0,
+          "mesh_name": "trigger_spring"
+        },
+        {
+          "node_name": "trigger_spring1",
+          "node_index": 21,
+          "mesh_name": "trigger_spring1"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 19,
+      "node_name": "monoblock_barrels",
+      "node_index": 29,
+      "source_path": "remington_derringer_hd/frame/_pCube1/monoblock_barrels",
+      "source_transform_path_id": "8655532559431351606",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "monoblock_barrels",
+          "node_index": 29,
+          "mesh_name": "monoblock_barrels"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 20,
+      "node_name": "barrel_hinge_fulcrum",
+      "node_index": 13,
+      "source_path": "remington_derringer_hd/frame/_pCube1/barrel_hinge_fulcrum",
+      "source_transform_path_id": "-1599044054215594223",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "barrel_hinge_fulcrum",
+          "node_index": 13,
+          "mesh_name": "barrel_hinge_fulcrum"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 21,
+      "node_name": "firing_pin_spring",
+      "node_index": 5,
+      "source_path": "remington_derringer_hd/frame/hammer/pivoted_firing_pin/firing_pin_spring",
+      "source_transform_path_id": "-6128417930501071631",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "firing_pin_spring",
+          "node_index": 5,
+          "mesh_name": "firing_pin_spring"
+        },
+        {
+          "node_name": "firing_pin_spring1",
+          "node_index": 24,
+          "mesh_name": "firing_pin_spring1"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 22,
+      "node_name": "sliding_ejector",
+      "node_index": 27,
+      "source_path": "remington_derringer_hd/frame/_pCube1/monoblock_barrels/sliding_ejector",
+      "source_transform_path_id": "6665811504082765080",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "sliding_ejector",
+          "node_index": 27,
+          "mesh_name": "sliding_ejector"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    },
+    {
+      "part_index": 23,
+      "node_name": "ejector_retaining_screw",
+      "node_index": 10,
+      "source_path": "remington_derringer_hd/frame/_pCube1/monoblock_barrels/ejector_retaining_screw",
+      "source_transform_path_id": "-2420080934261001748",
+      "source_active_self": true,
+      "source_renderer_enabled": true,
+      "runtime_render_default": true,
+      "cleanable_mesh_nodes": [
+        {
+          "node_name": "ejector_retaining_screw",
+          "node_index": 10,
+          "mesh_name": "ejector_retaining_screw"
+        }
+      ],
+      "binding": "Move canonical node with its descendant spring segments; child canonical parts keep their own logical identity"
+    }
+  ],
+  "fixed_cleanable_anchor": [
+    {
+      "node_name": "frame",
+      "node_index": 30
+    }
+  ],
+  "non_renderable_transform_helpers": [
+    {
+      "node_name": "_pCube1",
+      "node_index": 12,
+      "cleanable": false
+    }
+  ],
+  "counts": {
+    "canonical_parts": 23,
+    "physical_mesh_nodes": 29,
+    "primitives": 37,
+    "triangles": 9582,
+    "nodes": 31
+  },
+  "sources": {
+    "../../../../art/weapons/remington_derringer/LICENSE.md": "179ceab97375c251ac410ad77eba6865cb55ef2774a11b7605abc322869745f2",
+    "../../../../art/weapons/remington_derringer/RECIPE.md": "248aa58a1e133531d29ee06f5aa5e4b0bc760b2b609cc5889afe3ac672fb7f60",
+    "../../../../art/weapons/remington_derringer/canonical-parts.ancestor.json": "52aeacb4ba4043a8a2138e828776988add865a59b9a12037e52ec876f467220f",
+    "../../../../art/weapons/remington_derringer/cleaning-uv-source.blend": "bf65e0b82275d9194636bdfc16c790d616b02b09efce4b76dbe05bcff263c3aa",
+    "../../../../art/weapons/remington_derringer/cleaning-uv.json": "25d3735913d5fff1ba9742c241fb7cbfeae68eb9e2884c010e65a835f47fc802",
+    "../../../../art/weapons/remington_derringer/gutter-fix-manifest.json": "412c403d009506c3bed7edf757731761f1a79eae66a69e946bbdf653cb20d036",
+    "../../../../art/weapons/remington_derringer/gutter_fix.py": "318e20795697f364b41df4e6bdbaf7f4d544dce13ab44f9b84ad25be0cc76ae0",
+    "../../../../art/weapons/remington_derringer/reproduce_runtime.py": "59c638e702c030a07d2f63145a8f4585c7f323705d4cd2524ec4141970ab4dfd",
+    "../../../../art/weapons/remington_derringer/runtime-ancestor-18cd.glb": "18cd9211715230002d65996c136981b82721f3d5914738865663ec8c19323f76",
+    "../../../../art/weapons/remington_derringer/runtime-uv-manifest.json": "33341758d0b5fd6e5dab1aa31351ae5d84b14269c86327c190f9c4e9be8d605e",
+    "../../../../art/weapons/remington_derringer/unwrap-input.json": "e345c329d86f674b43d63584290f4f6caa5077826d1f0e82e3f4a7fcb746a836",
+    "LICENSE.md": "179ceab97375c251ac410ad77eba6865cb55ef2774a11b7605abc322869745f2",
+    "SOURCE.md": "0f2b3cb37e068d45beab90be0a87693bc737f198b9c303d0bc526be9b2be4a3a",
+    "audio-materials.json": "339991859eb6ab70b66671aad7a357496709acb5bb514401aa412364adc72a3f"
+  },
+  "authorization": "Project owner confirmed specific use of this WOG model on 2026-10-22; see LICENSE.md",
+  "sources_path_base": "Directory containing runtime-manifest.json; art paths are repository references, not web downloads"
+}

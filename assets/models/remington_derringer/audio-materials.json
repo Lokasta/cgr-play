@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "default": "steel",
+  "rules": [
+    {
+      "match": "^grip_(pair|l)(?:_|$)",
+      "material": "pearl"
+    },
+    {
+      "match": "^monoblock_barrels",
+      "material": "steel-barrel"
+    },
+    {
+      "match": "^porous-brush-cleaner$",
+      "material": "stone"
+    },
+    {
+      "match": "^rod-wipe-rag$",
+      "material": "rag"
+    },
+    {
+      "match": "^rod-",
+      "material": "brass"
+    }
+  ]
+}
